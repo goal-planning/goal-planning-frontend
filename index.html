@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cal.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <title>Document</title>
 </head>
@@ -16,22 +17,22 @@
     </div>
     <div class="row week container-fluid no-marging-padding">
       <div class="col-md-7 no-marging-padding">
-        <div class"row container-fluid">
+        <div class="row container-fluid">
         <div class="col-md-3 column" id="column1">
-          <h2 id="hm">Monday</h2>
+          <h2 id="hsu">Sunday</h2>
           <div class="row">
             <div class="col-md-12">
             <div>
               <p>Add new acitivity </p>
-              <input type="text" class="newaddTaskMonday">
-              <button class = "addButtonMonday">Acitivity</button>
+              <input type="text" class="newaddTaskSunday">
+              <button class = "addButtonSunday">Acitivity</button>
             </div>
             <div>
-              <ul class="todoListMonday">
+              <ul class="todoListSunday">
 
 
               </ul>
-              <p id="countMonday"> You have zero activities today </p>
+              <p id="countSunday"> You have zero activities today </p>
             </div>
               <!-- //light bulb  -->
               <!-- <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
@@ -43,6 +44,28 @@
           </div>
         </div>
         <div class="col-md-3 column" id="column2">
+          <h2 id="hm">Monday</h2>
+            <div class="row">
+              <div class="col-md-12">
+              <div>
+                <p>Add new acitivity </p>
+                <input type="text" class="newaddTaskMonday">
+                <button class = "addButtonMonday">Acitivity</button>
+              </div>
+              <div>
+                <ul class="todoListMonday">
+
+
+                </ul>
+                <p id="countMonday"> You have zero activities today </p>
+              </div>
+
+
+
+            </div> <!-- first form row end -->
+          </div>
+        </div>
+        <div class="col-md-3 column" id="column3">
           <h2 id="ht">Tuesday</h2>
             <div class="row">
               <div class="col-md-12">
@@ -56,16 +79,15 @@
 
 
                 </ul>
-                <p id="countTuesday"> You have zero activities today </p>
+  <p id="countTuesday"> You have zero activities today </p>
               </div>
-
-
 
             </div> <!-- first form row end -->
           </div>
         </div>
+        <!-- first form row end -->
         <div class="col-md-3 column" id="column3">
-          <h2 id="hw">Wednesday</h2>
+          <h2 id="hwd">Wednesday</h2>
             <div class="row">
               <div class="col-md-12">
               <div>
@@ -84,27 +106,6 @@
             </div> <!-- first form row end -->
           </div>
         </div>
-        <!-- first form row end -->
-        <div class="col-md-3 column" id="column3">
-          <h2 id="hth">Thursday</h2>
-            <div class="row">
-              <div class="col-md-12">
-              <div>
-                <p>Add new acitivity </p>
-                <input type="text" class="newaddTaskThursday">
-                <button class = "addButtonThursday">Acitivity</button>
-              </div>
-              <div>
-                <ul class="todoListThursday">
-
-
-                </ul>
-  <p id="countThursday"> You have zero activities today </p>
-              </div>
-
-            </div> <!-- first form row end -->
-          </div>
-        </div>
         <!-- first form row end  Friday-->
 
       </div>
@@ -112,26 +113,47 @@
         <div class="col-md-5 no-marging-padding">
           <div class"row container-fluid">
           <div class="col-md-4 column" id="column5">
-              <h2 id="hf">Friday</h2>
+              <h2 id="hth">Thursday</h2>
                 <div class="row">
                   <div class="col-md-12">
                   <div>
                     <p>Add new acitivity </p>
-                    <input type="text" class="newaddTaskFriday">
-                    <button class = "addButtonFriday">Acitivity</button>
+                    <input type="text" class="newaddTaskThursday">
+                    <button class = "addButtonThursday">Acitivity</button>
                   </div>
                   <div>
-                    <ul class="todoListFriday">
+                    <ul class="todoListThursday">
 
 
                     </ul>
-      <p id="countFriday"> You have zero activities today </p>
+      <p id="countThursday"> You have zero activities today </p>
                   </div>
 
                 </div> <!-- first form row end -->
               </div>
           </div>
           <div class="col-md-4 column" id="column6">
+            <h2 id="hf">Friday</h2>
+              <div class="row">
+                <div class="col-md-12">
+                <div>
+                  <p>Add new acitivity </p>
+                  <input type="text" class="newaddTaskFriday">
+                  <button class = "addButtonFriday">Acitivity</button>
+                </div>
+                <div>
+                  <ul class="todoListFriday">
+
+
+                  </ul>
+    <p id="countFriday"> You have zero activities today </p>
+                </div>
+
+              </div> <!-- first form row end -->
+            </div>
+        </div>
+<!-- first form row Sunday begin -->
+          <div class="col-md-4 column" id="column7">
             <h2 id="hs">Saturday</h2>
               <div class="row">
                 <div class="col-md-12">
@@ -151,27 +173,6 @@
               </div> <!-- first form row end -->
             </div>
         </div>
-<!-- first form row Sunday begin -->
-          <div class="col-md-4 column" id="column7">
-            <h2 id="hsu">Sunday</h2>
-              <div class="row">
-                <div class="col-md-12">
-                <div>
-                  <p>Add new acitivity </p>
-                  <input type="text" class="newaddTaskSunday">
-                  <button class = "addButtonSunday">Acitivity</button>
-                </div>
-                <div>
-                  <ul class="todoListSunday">
-
-
-                  </ul>
-    <p id="countSunday"> You have zero activities today </p>
-                </div>
-
-              </div> <!-- first form row end -->
-            </div>
-        </div>
           </div>
           </div>
 
@@ -179,16 +180,21 @@
         </div>
         </div>
 
+  <!-- Test calendar -->
 
+   <div id="calendar-container" class="center-cal">
+     <div id="calendar-header">
+       <span id="calendar-month-year"></span>
+     </div>
+     <div id="calendar-dates">
 
-   <!-- <p>This example uses the addEventListener() method to attach a click event to a button.</p> -->
+     </div>
+   </div>
 
-<!-- <button id="myBtn">Try it</button> -->
+  <!-- End test calendar-->
 
-
-
-
-<!-- <p id="demo"></p> -->
   <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/cal.js"></script>
+  <script type="text/javascript" src="js/daynumTest.js"></script>
 </body>
 </html>
