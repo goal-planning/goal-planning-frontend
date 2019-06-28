@@ -34,10 +34,15 @@ let addButtonMonday = document.querySelector(".addButtonMonday"); //<button clas
 let todoListMonday = document.querySelector(".todoListMonday"); //<ul class="todoList">
 let todoListTues = document.querySelector(".todoListTuesday");
 document.getElementById("hm").style.color = "red";
+addInputMonday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonMonday.click();
+  };
+});
 
 addButtonMonday.addEventListener("click", (e)=>{
   console.log('hit');
-  let input = addInputMonday.value;
+  let input = addInputMonday.value.trim();
   console.log(input)
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -48,13 +53,14 @@ addButtonMonday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-trash');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListMonday.appendChild(li)
 
 
@@ -145,13 +151,14 @@ addButtonTuesday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-trash');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListTuesday.appendChild(li)
 
 
@@ -196,13 +203,14 @@ addButtonWednesday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-trash');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListWednesday.appendChild(li)
 
 
@@ -248,13 +256,14 @@ addButtonThursday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-trash');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListThursday.appendChild(li)
 
 
@@ -299,13 +308,14 @@ addButtonFriday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-trash');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+   // editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListFriday.appendChild(li)
 
 
@@ -350,13 +360,14 @@ addButtonSaturday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-trash');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListSaturday.appendChild(li)
 
 
@@ -405,13 +416,14 @@ addButtonSunday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-trash');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListSunday.appendChild(li)
 
 
