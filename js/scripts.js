@@ -187,7 +187,7 @@ addButtonTuesday.addEventListener("click", (e)=>{
 let addInputWednesday= document.querySelector(".newaddTaskWednesday");
 let addButtonWednesday= document.querySelector(".addButtonWednesday"); //<button class = "addButton">Activity</button>
 let todoListWednesday = document.querySelector(".todoListWednesday");
-document.getElementById("ht").style.color = "orange";
+document.getElementById("hwd").style.color = "orange";
 
 
 addButtonWednesday.addEventListener("click", (e)=>{
@@ -446,7 +446,5 @@ addButtonSunday.addEventListener("click", (e)=>{
      activityNumber.innerText="total number of activites is " + countSunday.length;
   }
 });
-
-
 
 //Sunday end
