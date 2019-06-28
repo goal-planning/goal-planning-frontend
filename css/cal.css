@@ -1,0 +1,28 @@
+.center-cal{
+    margin: 0 auto;
+}
+
+#calendar-container{
+    padding: 10px;
+    width: 215px;
+    height: 275px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial;
+    background-image: linear-gradient(#fff, #d3d3d3);
+}
+
+#calendar-container>div{
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#calendar-month-year{
+    margin: 5px;
+}
+
+#calendar-dates>table>tr>td{
+    padding: 5px;
+}
