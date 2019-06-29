@@ -1,6 +1,5 @@
 
 
-
 body{
   height: 100%;
   width: 100%;
@@ -15,7 +14,7 @@ body{
 }
 .main-container{
   border: 1px dashed red;
-  height: inherit;
+  /* height: inherit; */
   /* width: 100%; */
 }
 .week{
@@ -25,6 +24,7 @@ body{
   border: 1px dashed black;
   /* height: 100px; */
   padding: 0px;
+  overflow: hidden;
 }
 .icon{
   color: red;
