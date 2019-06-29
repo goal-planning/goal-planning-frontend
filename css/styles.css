@@ -39,3 +39,12 @@ body{
   margin: 0!important;
 
 }
+.weekNum {
+  float: right;
+  position: relative;
+  height: 20px;
+  width: 30px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}

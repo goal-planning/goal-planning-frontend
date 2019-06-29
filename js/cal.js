@@ -21,15 +21,6 @@ window.onload = function(){
 
 function get_calendar(day_no, days){
     var table = document.createElement('table');
-    var tr = document.createElement('tr');
-    
-    //row for the day letters
-    for(var c=0; c<=6; c++){
-        var td = document.createElement('td');
-        td.innerHTML = "SMTWTFS"[c];
-        tr.appendChild(td);
-    }
-    table.appendChild(tr);
     
     //create 2nd row
     tr = document.createElement('tr');
@@ -39,14 +30,20 @@ function get_calendar(day_no, days){
             break;
         }
         var td = document.createElement('td');
-        td.innerHTML = "";
+        var p = document.createElement('p');
+        p.className += 'calBoxNum'
+        p.innerText = "";
+        td.appendChild(p);
         tr.appendChild(td);
     }
     
     var count = 1;
     for(; c<=6; c++){
         var td = document.createElement('td');
-        td.innerHTML = count;
+        p = document.createElement('p');
+        p.className += 'calBoxNum'
+        p.innerText = count.toString();
+        td.appendChild(p);
         count++;
         tr.appendChild(td);
     }
@@ -61,7 +58,10 @@ function get_calendar(day_no, days){
                 return table;
             }
             var td = document.createElement('td');
-            td.innerHTML = count;
+            p = document.createElement('p');
+            p.className += 'calBoxNum'
+            p.innerText = count.toString();
+            td.appendChild(p);
             count++;
             tr.appendChild(td);
         }
