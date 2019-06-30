@@ -81,19 +81,19 @@ function getWeekDate(day_name, day_num, _month, year, date){
         switch(max_days){
             case 31:
                 day_num++;
-                if(day_name > 31) day_name = 1;
+                if(day_num > 31) day_num = 1;
                 break;
             case 30:
                 day_num++;
-                if(day_name > 30) day_name = 1;
+                if(day_num > 30) day_num = 1;
                 break;
             case 28:
                 day_num++;
-                if(day_name > 28) day_name = 1;
+                if(day_num > 28) day_num = 1;
                 break;
             case 29:
                 day_num++;
-                if(day_name > 29) day_name = 1;
+                if(day_num > 29) day_num = 1;
                 break;
             default:
                 break;
@@ -106,19 +106,19 @@ function getWeekDate(day_name, day_num, _month, year, date){
         switch(max_days){
             case 31:
                 day_num++;
-                if(day_name > 31) day_name = 1;
+                if(day_num > 31) day_num = 1;
                 break;
             case 30:
                 day_num++;
-                if(day_name > 30) day_name = 1;
+                if(day_num > 30) day_num = 1;
                 break;
             case 28:
                 day_num++;
-                if(day_name > 28) day_name = 1;
+                if(day_num > 28) day_num = 1;
                 break;
             case 29:
                 day_num++;
-                if(day_name > 29) day_name = 1;
+                if(day_num > 29) day_num = 1;
                 break;
             default:
                 break;
