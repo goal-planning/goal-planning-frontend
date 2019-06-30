@@ -39,3 +39,29 @@ body{
   margin: 0!important;
 
 }
+.weekNum {
+  float: right;
+  position: relative;
+  height: 20px;
+  width: 30px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+li input[type="text"]{
+  width: 100px;
+  margin-left: 5px;
+  padding-right: 5px;
+}
+
+.plus-icon {
+  color: blue;
+  cursor: pointer;
+}
+
+.minus-icon {
+  color: red;
+  cursor: pointer;
+
+}

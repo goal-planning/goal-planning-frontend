@@ -12,6 +12,24 @@ console.log(month, day_num, day_name, year);
 var week = getWeekDate(day_name, day_num, _month, year, date);
 console.log(week);
 
+// Current week number elements
+var _SunNum = document.getElementById('SunNum');
+_SunNum.innerText = week[0].toString();
+var _MonNum = document.getElementById('MonNum');
+_MonNum.innerText = week[1].toString();
+var _TueNum = document.getElementById('TueNum');
+_TueNum.innerText = week[2].toString();
+var _WedNum = document.getElementById('WedNum');
+_WedNum.innerText = week[3].toString();
+var _ThuNum = document.getElementById('ThuNum');
+_ThuNum.innerText = week[4].toString();
+var _FriNum = document.getElementById('FriNum');
+_FriNum.innerText = week[5].toString();
+var _SatNum = document.getElementById('SatNum');
+_SatNum.innerText = week[6].toString();
+
+
+
 function getWeekDate(day_name, day_num, _month, year, date){
     var week_num = [0, 0, 0, 0, 0, 0, 0];
     var max_days = 0;
@@ -63,19 +81,19 @@ function getWeekDate(day_name, day_num, _month, year, date){
         switch(max_days){
             case 31:
                 day_num++;
-                if(day_name > 31) day_name = 1;
+                if(day_num > 31) day_num = 1;
                 break;
             case 30:
                 day_num++;
-                if(day_name > 30) day_name = 1;
+                if(day_num > 30) day_num = 1;
                 break;
             case 28:
                 day_num++;
-                if(day_name > 28) day_name = 1;
+                if(day_num > 28) day_num = 1;
                 break;
             case 29:
                 day_num++;
-                if(day_name > 29) day_name = 1;
+                if(day_num > 29) day_num = 1;
                 break;
             default:
                 break;
@@ -88,19 +106,19 @@ function getWeekDate(day_name, day_num, _month, year, date){
         switch(max_days){
             case 31:
                 day_num++;
-                if(day_name > 31) day_name = 1;
+                if(day_num > 31) day_num = 1;
                 break;
             case 30:
                 day_num++;
-                if(day_name > 30) day_name = 1;
+                if(day_num > 30) day_num = 1;
                 break;
             case 28:
                 day_num++;
-                if(day_name > 28) day_name = 1;
+                if(day_num > 28) day_num = 1;
                 break;
             case 29:
                 day_num++;
-                if(day_name > 29) day_name = 1;
+                if(day_num > 29) day_num = 1;
                 break;
             default:
                 break;
