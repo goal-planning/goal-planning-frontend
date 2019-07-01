@@ -29,6 +29,9 @@
 
 // for (i=0; i<10; i++) {
 // 	if (i > 5)
+
+let numberCheckedSunday = 0;
+
 let addInputMonday = document.querySelector(".newaddTaskMonday");
 let addButtonMonday = document.querySelector(".addButtonMonday"); //<button class = "addButton">Activity</button>
 let todoListMonday = document.querySelector(".todoListMonday"); //<ul class="todoList">
@@ -41,9 +44,9 @@ addInputMonday.addEventListener("keyup", (e)=>{
 });
 
 addButtonMonday.addEventListener("click", (e)=>{
-  console.log('hit');
+  //console.log('hit');
   let input = addInputMonday.value.trim();
-  console.log(input)
+  //console.log(input)
   if (input === '') {
     alert("Write down a minimum of five activities")
   } else {
@@ -77,10 +80,10 @@ addButtonMonday.addEventListener("click", (e)=>{
     });
 // count number of activities
     let countMonday= todoListMonday.querySelectorAll("li");
-    console.log(countMonday);
+    //console.log(countMonday);
 
     let activityNumber = document.querySelector("#countMonday");
-    console.log(countMonday.length);
+    //console.log(countMonday.length);
     activityNumber.innerText="total number of activites is " + countMonday.length;
 
 
@@ -143,8 +146,8 @@ addInputTuesday.addEventListener("keyup", (e)=>{
   };
 });
 addButtonTuesday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputTuesday.value;
+  //console.log('hit');
+  let input = addInputTuesday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -179,7 +182,7 @@ addButtonTuesday.addEventListener("click", (e)=>{
     });
     // count number of activities
         let countTuesday= todoListTuesday.querySelectorAll("li");
-        console.log(countTuesday);
+        //console.log(countTuesday);
 
         let activityNumber = document.querySelector("#countTuesday");
         activityNumber.innerText="total number of activites is " + countTuesday.length;
@@ -199,8 +202,8 @@ addInputWednesday.addEventListener("keyup", (e)=>{
   };
 });
 addButtonWednesday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputWednesday.value;
+  //console.log('hit');
+  let input = addInputWednesday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -235,7 +238,7 @@ addButtonWednesday.addEventListener("click", (e)=>{
     });
     // count number of activities
         let countWednesday= todoListWednesday.querySelectorAll("li");
-        console.log(countWednesday);
+        //console.log(countWednesday);
 
         let activityNumber = document.querySelector("#countWednesday");
         activityNumber.innerText="total number of activites is " + countWednesday.length;
@@ -257,8 +260,8 @@ addInputThursday.addEventListener("keyup", (e)=>{
   };
 });
 addButtonThursday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputThursday.value;
+  //console.log('hit');
+  let input = addInputThursday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -293,7 +296,7 @@ addButtonThursday.addEventListener("click", (e)=>{
     });
     // count number of activities
         let countThursday= todoListThursday.querySelectorAll("li");
-        console.log(countThursday);
+        //console.log(countThursday);
 
         let activityNumber = document.querySelector("#countThursday");
         activityNumber.innerText="total number of activites is " + countThursday.length;
@@ -313,8 +316,8 @@ addInputFriday.addEventListener("keyup", (e)=>{
   };
 });
 addButtonFriday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputFriday.value;
+  //console.log('hit');
+  let input = addInputFriday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -349,7 +352,7 @@ addButtonFriday.addEventListener("click", (e)=>{
     });
     // count number of activities Friday
         let countFriday= todoListFriday.querySelectorAll("li");
-        console.log(countFriday);
+        //console.log(countFriday);
 
         let activityNumber = document.querySelector("#countFriday");
         activityNumber.innerText="total number of activites is " + countFriday.length;
@@ -369,8 +372,8 @@ addInputSaturday.addEventListener("keyup", (e)=>{
   };
 });
 addButtonSaturday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputSaturday.value;
+  //console.log('hit');
+  let input = addInputSaturday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -405,7 +408,7 @@ addButtonSaturday.addEventListener("click", (e)=>{
     });
     // count number of activities Saturday
      let countSaturday= todoListSaturday.querySelectorAll("li");
-     console.log(countSaturday);
+     //console.log(countSaturday);
 
      let activityNumber = document.querySelector("#countSaturday");
      activityNumber.innerText="total number of activites is " + countSaturday.length;
@@ -428,9 +431,11 @@ addInputSunday.addEventListener("keyup", (e)=>{
     addButtonSunday.click();
   };
 });
+let sundayCompleted = document.querySelector("#countCompletedSunday");
+
 addButtonSunday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputSunday.value;
+  //console.log('hit');
+  let input = addInputSunday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -459,17 +464,32 @@ addButtonSunday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputSunday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedSunday--;
+        sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
+      }
       todoListSunday.removeChild(li);
       let count = todoListSunday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
     // count number of activities Saturday
      let countSunday= todoListSunday.querySelectorAll("li");
-     console.log(countSunday);
+     //console.log(countSunday);
 
      let activityNumber = document.querySelector("#countSunday");
      activityNumber.innerText="total number of activites is " + countSunday.length;
+
+     checkBox.addEventListener('click', function(e) {
+       if(e.target.checked == true){
+         numberCheckedSunday++;
+       } else {
+         numberCheckedSunday--;
+       }
+       sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
+     })
   }
 });
+
+
 
 //Sunday end
