@@ -29,6 +29,15 @@
 
 // for (i=0; i<10; i++) {
 // 	if (i > 5)
+
+let numberCheckedSunday = 0;
+let numberCheckedMonday = 0;
+let numberCheckedTuesday = 0;
+let numberCheckedWednesday = 0;
+let numberCheckedThursday = 0;
+let numberCheckedFriday = 0;
+let numberCheckedSaturday = 0;
+
 let addInputMonday = document.querySelector(".newaddTaskMonday");
 let addButtonMonday = document.querySelector(".addButtonMonday"); //<button class = "addButton">Activity</button>
 let todoListMonday = document.querySelector(".todoListMonday"); //<ul class="todoList">
@@ -40,10 +49,12 @@ addInputMonday.addEventListener("keyup", (e)=>{
   };
 });
 
+let mondayCompleted = document.querySelector("#countCompletedMonday");
+
 addButtonMonday.addEventListener("click", (e)=>{
-  console.log('hit');
+  //console.log('hit');
   let input = addInputMonday.value.trim();
-  console.log(input)
+  //console.log(input)
   if (input === '') {
     alert("Write down a minimum of five activities")
   } else {
@@ -51,6 +62,17 @@ addButtonMonday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedMonday--;
+          mondayCompleted.innerText = "You have " + numberCheckedMonday + " activities completed";
+        }
+        todoListMonday.removeChild(li);
+        let count = todoListMonday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -71,17 +93,30 @@ addButtonMonday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputMonday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedMonday--;
+        mondayCompleted.innerText = "You have " + numberCheckedMonday + " activities completed";
+      }
       todoListMonday.removeChild(li);
       let count = todoListMonday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
 // count number of activities
     let countMonday= todoListMonday.querySelectorAll("li");
-    console.log(countMonday);
+    //console.log(countMonday);
 
     let activityNumber = document.querySelector("#countMonday");
-    console.log(countMonday.length);
+    //console.log(countMonday.length);
     activityNumber.innerText="total number of activites is " + countMonday.length;
+
+    checkBox.addEventListener('click', function(e) {
+      if(e.target.checked == true){
+        numberCheckedMonday++;
+      } else {
+        numberCheckedMonday--;
+      }
+      mondayCompleted.innerText = "You have " + numberCheckedMonday + " activities completed";
+    })
 
 
   }
@@ -142,9 +177,11 @@ addInputTuesday.addEventListener("keyup", (e)=>{
     addButtonTuesday.click();
   };
 });
+let tuesdayCompleted = document.querySelector("#countCompletedTuesday");
+
 addButtonTuesday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputTuesday.value;
+  //console.log('hit');
+  let input = addInputTuesday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -153,6 +190,17 @@ addButtonTuesday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedTuesday--;
+          tuesdayCompleted.innerText = "You have " + numberCheckedTuesday + " activities completed";
+        }
+        todoListTuesday.removeChild(li);
+        let count = todoListTuesday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -173,17 +221,28 @@ addButtonTuesday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputTuesday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedTuesday--;
+        tuesdayCompleted.innerText = "You have " + numberCheckedTuesday + " activities completed";
+      }
       todoListTuesday.removeChild(li);
       let count = todoListTuesday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
     // count number of activities
         let countTuesday= todoListTuesday.querySelectorAll("li");
-        console.log(countTuesday);
+        //console.log(countTuesday);
 
         let activityNumber = document.querySelector("#countTuesday");
         activityNumber.innerText="total number of activites is " + countTuesday.length;
-
+        checkBox.addEventListener('click', function(e) {
+          if(e.target.checked == true){
+            numberCheckedTuesday++;
+          } else {
+            numberCheckedTuesday--;
+          }
+          tuesdayCompleted.innerText = "You have " + numberCheckedTuesday + " activities completed";
+        })
 
   }
 });//start Wednesday
@@ -198,9 +257,11 @@ addInputWednesday.addEventListener("keyup", (e)=>{
     addButtonWednesday.click();
   };
 });
+let wednesdayCompleted = document.querySelector("#countCompletedWednesday");
+
 addButtonWednesday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputWednesday.value;
+  //console.log('hit');
+  let input = addInputWednesday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -209,6 +270,17 @@ addButtonWednesday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedWednesday--;
+          wednesdayCompleted.innerText = "You have " + numberCheckedWednesday + " activities completed";
+        }
+        todoListWednesday.removeChild(li);
+        let count = todoListWednesday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -229,16 +301,28 @@ addButtonWednesday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputWednesday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedWednesday--;
+        wednesdayCompleted.innerText = "You have " + numberCheckedWednesday + " activities completed";
+      }
       todoListWednesday.removeChild(li);
       let count = todoListWednesday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
     // count number of activities
         let countWednesday= todoListWednesday.querySelectorAll("li");
-        console.log(countWednesday);
+        //console.log(countWednesday);
 
         let activityNumber = document.querySelector("#countWednesday");
         activityNumber.innerText="total number of activites is " + countWednesday.length;
+        checkBox.addEventListener('click', function(e) {
+          if(e.target.checked == true){
+            numberCheckedWednesday++;
+          } else {
+            numberCheckedWednesday--;
+          }
+          wednesdayCompleted.innerText = "You have " + numberCheckedWednesday + " activities completed";
+        })
 
 
   }
@@ -256,9 +340,12 @@ addInputThursday.addEventListener("keyup", (e)=>{
     addButtonThursday.click();
   };
 });
+
+let thursdayCompleted = document.querySelector("#countCompletedThursday");
+
 addButtonThursday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputThursday.value;
+  //console.log('hit');
+  let input = addInputThursday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -267,6 +354,17 @@ addButtonThursday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedThursday--;
+          thursdayCompleted.innerText = "You have " + numberCheckedThursday + " activities completed";
+        }
+        todoListThursday.removeChild(li);
+        let count = todoListThursday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -287,16 +385,29 @@ addButtonThursday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputThursday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedThursday--;
+        thursdayCompleted.innerText = "You have " + numberCheckedThursday + " activities completed";
+      }
       todoListThursday.removeChild(li);
       let count = todoListThursday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
     // count number of activities
         let countThursday= todoListThursday.querySelectorAll("li");
-        console.log(countThursday);
+        //console.log(countThursday);
 
         let activityNumber = document.querySelector("#countThursday");
         activityNumber.innerText="total number of activites is " + countThursday.length;
+
+        checkBox.addEventListener('click', function(e) {
+          if(e.target.checked == true){
+            numberCheckedThursday++;
+          } else {
+            numberCheckedThursday--;
+          }
+          thursdayCompleted.innerText = "You have " + numberCheckedThursday + " activities completed";
+        })
   }
 });//Thursdayend
 
@@ -312,9 +423,12 @@ addInputFriday.addEventListener("keyup", (e)=>{
     addButtonFriday.click();
   };
 });
+
+let fridayCompleted = document.querySelector("#countCompletedFriday");
+
 addButtonFriday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputFriday.value;
+  //console.log('hit');
+  let input = addInputFriday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -323,6 +437,17 @@ addButtonFriday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedFriday--;
+          fridayCompleted.innerText = "You have " + numberCheckedFriday + " activities completed";
+        }
+        todoListFriday.removeChild(li);
+        let count = todoListFriday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -343,16 +468,29 @@ addButtonFriday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputFriday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedFriday--;
+        fridayCompleted.innerText = "You have " + numberCheckedFriday + " activities completed";
+      }
       todoListFriday.removeChild(li);
       let count = todoListFriday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
     // count number of activities Friday
         let countFriday= todoListFriday.querySelectorAll("li");
-        console.log(countFriday);
+        //console.log(countFriday);
 
         let activityNumber = document.querySelector("#countFriday");
         activityNumber.innerText="total number of activites is " + countFriday.length;
+
+        checkBox.addEventListener('click', function(e) {
+          if(e.target.checked == true){
+            numberCheckedFriday++;
+          } else {
+            numberCheckedFriday--;
+          }
+          fridayCompleted.innerText = "You have " + numberCheckedFriday + " activities completed";
+        })
   }
 });//Fridayend
 
@@ -368,9 +506,12 @@ addInputSaturday.addEventListener("keyup", (e)=>{
     addButtonSaturday.click();
   };
 });
+
+let saturdayCompleted = document.querySelector("#countCompletedSaturday");
+
 addButtonSaturday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputSaturday.value;
+  //console.log('hit');
+  let input = addInputSaturday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -379,6 +520,17 @@ addButtonSaturday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedSaturday--;
+          saturdayCompleted.innerText = "You have " + numberCheckedSaturday + " activities completed";
+        }
+        todoListSaturday.removeChild(li);
+        let count = todoListSaturday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -399,16 +551,29 @@ addButtonSaturday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputSaturday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedSaturday--;
+        saturdayCompleted.innerText = "You have " + numberCheckedSaturday + " activities completed";
+      }
       todoListSaturday.removeChild(li);
       let count = todoListSaturday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
     // count number of activities Saturday
      let countSaturday= todoListSaturday.querySelectorAll("li");
-     console.log(countSaturday);
+     //console.log(countSaturday);
 
      let activityNumber = document.querySelector("#countSaturday");
      activityNumber.innerText="total number of activites is " + countSaturday.length;
+
+     checkBox.addEventListener('click', function(e) {
+      if(e.target.checked == true){
+        numberCheckedSaturday++;
+      } else {
+        numberCheckedSaturday--;
+      }
+      saturdayCompleted.innerText = "You have " + numberCheckedSaturday + " activities completed";
+    })
   }
 });
 
@@ -428,9 +593,11 @@ addInputSunday.addEventListener("keyup", (e)=>{
     addButtonSunday.click();
   };
 });
+let sundayCompleted = document.querySelector("#countCompletedSunday");
+
 addButtonSunday.addEventListener("click", (e)=>{
-  console.log('hit');
-  let input = addInputSunday.value;
+  //console.log('hit');
+  let input = addInputSunday.value.trim();
 
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -439,6 +606,17 @@ addButtonSunday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedSunday--;
+          sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
+        }
+        todoListSunday.removeChild(li);
+        let count = todoListSunday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -459,17 +637,34 @@ addButtonSunday.addEventListener("click", (e)=>{
     li.appendChild(trashButton);
     addInputSunday.value = "";
     trashButton.addEventListener('click', function(e) {
+      if(e.target.parentElement.children[0].checked == true){
+        numberCheckedSunday--;
+        sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
+      }
       todoListSunday.removeChild(li);
       let count = todoListSunday.querySelectorAll("li");
       activityNumber.innerText="total number of activites is " + count.length;
     });
     // count number of activities Saturday
      let countSunday= todoListSunday.querySelectorAll("li");
-     console.log(countSunday);
+     //console.log(countSunday);
 
      let activityNumber = document.querySelector("#countSunday");
      activityNumber.innerText="total number of activites is " + countSunday.length;
+
+     checkBox.addEventListener('click', function(e) {
+       if(e.target.checked == true){
+         numberCheckedSunday++;
+       } else {
+         numberCheckedSunday--;
+       }
+       sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
+     })
   }
 });
+
+function checkIfEmpty() {
+  console.log("hello");
+}
 
 //Sunday end

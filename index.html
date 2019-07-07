@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/cal.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
@@ -35,6 +36,7 @@
 
               </ul>
               <p id="countSunday"> You have zero activities today </p>
+              <p id="countCompletedSunday">You have 0 activities completed</p>
             </div>
               <!-- //light bulb  -->
               <!-- <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
@@ -61,6 +63,8 @@
 
                 </ul>
                 <p id="countMonday"> You have zero activities today </p>
+                <p id="countCompletedMonday">You have 0 activities completed</p>
+
               </div>
 
 
@@ -84,6 +88,8 @@
 
                 </ul>
   <p id="countTuesday"> You have zero activities today </p>
+  <p id="countCompletedTuesday">You have 0 activities completed</p>
+
               </div>
 
             </div> <!-- first form row end -->
@@ -106,6 +112,8 @@
 
                 </ul>
   <p id="countWednesday"> You have zero activities today </p>
+  <p id="countCompletedWednesday">You have 0 activities completed</p>
+
               </div>
 
             </div> <!-- first form row end -->
@@ -133,6 +141,8 @@
 
                     </ul>
       <p id="countThursday"> You have zero activities today </p>
+      <p id="countCompletedThursday">You have 0 activities completed</p>
+
                   </div>
 
                 </div> <!-- first form row end -->
@@ -154,6 +164,8 @@
 
                   </ul>
     <p id="countFriday"> You have zero activities today </p>
+    <p id="countCompletedFriday">You have 0 activities completed</p>
+
                 </div>
 
               </div> <!-- first form row end -->
@@ -176,6 +188,8 @@
 
                   </ul>
     <p id="countSaturday"> You have zero activities today </p>
+    <p id="countCompletedSaturday">You have 0 activities completed</p>
+
                 </div>
 
               </div> <!-- first form row end -->
@@ -192,7 +206,13 @@
 
    <div id="calendar-container">
      <div id="calendar-header">
+       <span id="cal_left_arrow" class="float-left cal_arrow_l">
+          <i class="material-icons">keyboard_arrow_left</i>
+       </span>
        <span id="calendar-month-year"></span>
+       <span id="cal-rigth_arrow" class="float-right cal_arrow_r">
+          <i class="material-icons">keyboard_arrow_right</i>
+       </span>
      </div>
      <div id="calendar-dates">
 
