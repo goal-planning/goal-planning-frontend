@@ -62,6 +62,17 @@ addButtonMonday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedMonday--;
+          mondayCompleted.innerText = "You have " + numberCheckedMonday + " activities completed";
+        }
+        todoListMonday.removeChild(li);
+        let count = todoListMonday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -179,6 +190,17 @@ addButtonTuesday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedTuesday--;
+          tuesdayCompleted.innerText = "You have " + numberCheckedTuesday + " activities completed";
+        }
+        todoListTuesday.removeChild(li);
+        let count = todoListTuesday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -248,6 +270,17 @@ addButtonWednesday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedWednesday--;
+          wednesdayCompleted.innerText = "You have " + numberCheckedWednesday + " activities completed";
+        }
+        todoListWednesday.removeChild(li);
+        let count = todoListWednesday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -321,6 +354,17 @@ addButtonThursday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedThursday--;
+          thursdayCompleted.innerText = "You have " + numberCheckedThursday + " activities completed";
+        }
+        todoListThursday.removeChild(li);
+        let count = todoListThursday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -393,6 +437,17 @@ addButtonFriday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedFriday--;
+          fridayCompleted.innerText = "You have " + numberCheckedFriday + " activities completed";
+        }
+        todoListFriday.removeChild(li);
+        let count = todoListFriday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -465,6 +520,17 @@ addButtonSaturday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedSaturday--;
+          saturdayCompleted.innerText = "You have " + numberCheckedSaturday + " activities completed";
+        }
+        todoListSaturday.removeChild(li);
+        let count = todoListSaturday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -540,6 +606,17 @@ addButtonSunday.addEventListener("click", (e)=>{
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     let item = document.createElement("input");
+    item.addEventListener('keyup', function(e){
+      if(item.value.trim() === ''){
+        if(e.target.parentElement.children[0].checked == true){
+          numberCheckedSunday--;
+          sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
+        }
+        todoListSunday.removeChild(li);
+        let count = todoListSunday.querySelectorAll("li");
+        activityNumber.innerText="total number of activites is " + count.length;
+      };
+    });
     item.type = "text";
     item.value = input;
     //let editButton = document.createElement("span"); 
@@ -586,6 +663,8 @@ addButtonSunday.addEventListener("click", (e)=>{
   }
 });
 
-
+function checkIfEmpty() {
+  console.log("hello");
+}
 
 //Sunday end
