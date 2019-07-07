@@ -34,10 +34,15 @@ let addButtonMonday = document.querySelector(".addButtonMonday"); //<button clas
 let todoListMonday = document.querySelector(".todoListMonday"); //<ul class="todoList">
 let todoListTues = document.querySelector(".todoListTuesday");
 document.getElementById("hm").style.color = "red";
+addInputMonday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonMonday.click();
+  };
+});
 
 addButtonMonday.addEventListener("click", (e)=>{
   console.log('hit');
-  let input = addInputMonday.value;
+  let input = addInputMonday.value.trim();
   console.log(input)
   if (input === '') {
     alert("Write down a minimum of five activities")
@@ -48,20 +53,21 @@ addButtonMonday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    //let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListMonday.appendChild(li)
 
 
     li.appendChild(checkBox);
     li.appendChild(item);
     // li.appendChild(editInput);
-    li.appendChild(editButton);
+    //li.appendChild(editButton);
     li.appendChild(trashButton);
     addInputMonday.value = "";
     trashButton.addEventListener('click', function(e) {
@@ -131,7 +137,11 @@ let addButtonTuesday = document.querySelector(".addButtonTuesday"); //<button cl
 let todoListTuesday = document.querySelector(".todoListTuesday");
 document.getElementById("ht").style.color = "orange";
 
-
+addInputTuesday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonTuesday.click();
+  };
+});
 addButtonTuesday.addEventListener("click", (e)=>{
   console.log('hit');
   let input = addInputTuesday.value;
@@ -145,20 +155,21 @@ addButtonTuesday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    //let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListTuesday.appendChild(li)
 
 
     li.appendChild(checkBox);
     li.appendChild(item);
     // li.appendChild(editInput);
-    li.appendChild(editButton);
+    //li.appendChild(editButton);
     li.appendChild(trashButton);
     addInputTuesday.value = "";
     trashButton.addEventListener('click', function(e) {
@@ -180,9 +191,13 @@ addButtonTuesday.addEventListener("click", (e)=>{
 let addInputWednesday= document.querySelector(".newaddTaskWednesday");
 let addButtonWednesday= document.querySelector(".addButtonWednesday"); //<button class = "addButton">Activity</button>
 let todoListWednesday = document.querySelector(".todoListWednesday");
-document.getElementById("ht").style.color = "orange";
+document.getElementById("hwd").style.color = "orange";
 
-
+addInputWednesday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonWednesday.click();
+  };
+});
 addButtonWednesday.addEventListener("click", (e)=>{
   console.log('hit');
   let input = addInputWednesday.value;
@@ -196,20 +211,21 @@ addButtonWednesday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    //let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListWednesday.appendChild(li)
 
 
     li.appendChild(checkBox);
     li.appendChild(item);
     // li.appendChild(editInput);
-    li.appendChild(editButton);
+    //li.appendChild(editButton);
     li.appendChild(trashButton);
     addInputWednesday.value = "";
     trashButton.addEventListener('click', function(e) {
@@ -235,6 +251,11 @@ let addButtonThursday = document.querySelector(".addButtonThursday"); //<button 
 let todoListThursday= document.querySelector(".todoListThursday");
 document.getElementById("hth").style.color = "coral";
 
+addInputThursday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonThursday.click();
+  };
+});
 addButtonThursday.addEventListener("click", (e)=>{
   console.log('hit');
   let input = addInputThursday.value;
@@ -248,20 +269,21 @@ addButtonThursday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    //let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListThursday.appendChild(li)
 
 
     li.appendChild(checkBox);
     li.appendChild(item);
     // li.appendChild(editInput);
-    li.appendChild(editButton);
+    //li.appendChild(editButton);
     li.appendChild(trashButton);
     addInputThursday.value = "";
     trashButton.addEventListener('click', function(e) {
@@ -285,7 +307,11 @@ let addButtonFriday = document.querySelector(".addButtonFriday"); //<button clas
 let todoListFriday= document.querySelector(".todoListFriday");
 document.getElementById("hf").style.color = "DarkOliveGreen";
 
-
+addInputFriday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonFriday.click();
+  };
+});
 addButtonFriday.addEventListener("click", (e)=>{
   console.log('hit');
   let input = addInputFriday.value;
@@ -299,20 +325,21 @@ addButtonFriday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    //let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+   // editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListFriday.appendChild(li)
 
 
     li.appendChild(checkBox);
     li.appendChild(item);
     // li.appendChild(editInput);
-    li.appendChild(editButton);
+    //li.appendChild(editButton);
     li.appendChild(trashButton);
     addInputFriday.value = "";
     trashButton.addEventListener('click', function(e) {
@@ -336,7 +363,11 @@ let addButtonSaturday = document.querySelector(".addButtonSaturday"); //<button 
 let todoListSaturday= document.querySelector(".todoListSaturday");
 document.getElementById("hs").style.color = "DarkViolet";
 
-
+addInputSaturday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonSaturday.click();
+  };
+});
 addButtonSaturday.addEventListener("click", (e)=>{
   console.log('hit');
   let input = addInputSaturday.value;
@@ -350,20 +381,21 @@ addButtonSaturday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    //let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListSaturday.appendChild(li)
 
 
     li.appendChild(checkBox);
     li.appendChild(item);
     // li.appendChild(editInput);
-    li.appendChild(editButton);
+    //li.appendChild(editButton);
     li.appendChild(trashButton);
     addInputSaturday.value = "";
     trashButton.addEventListener('click', function(e) {
@@ -391,7 +423,11 @@ let addButtonSunday = document.querySelector(".addButtonSunday"); //<button clas
 let todoListSunday= document.querySelector(".todoListSunday");
 document.getElementById("hsu").style.color = "crimson";
 
-
+addInputSunday.addEventListener("keyup", (e)=>{
+  if(e.keyCode === 13) {
+    addButtonSunday.click();
+  };
+});
 addButtonSunday.addEventListener("click", (e)=>{
   console.log('hit');
   let input = addInputSunday.value;
@@ -405,20 +441,21 @@ addButtonSunday.addEventListener("click", (e)=>{
     let item = document.createElement("input");
     item.type = "text";
     item.value = input;
-    let editButton = document.createElement("button");  //edit button
-    let trashButton = document.createElement("button");
-    trashButton.classList.add('trash-button');
+    //let editButton = document.createElement("span"); 
+    let trashButton = document.createElement("span");
+    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
+    trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     //delete button
   // my input
-    editButton.innerText="Edit"; //inner text encodes special characters
-    trashButton.innerText="trash";
+    //editButton.innerText="Edit"; //inner text encodes special characters
+    //trashButton.innerText="trash";
     todoListSunday.appendChild(li)
 
 
     li.appendChild(checkBox);
     li.appendChild(item);
     // li.appendChild(editInput);
-    li.appendChild(editButton);
+    //li.appendChild(editButton);
     li.appendChild(trashButton);
     addInputSunday.value = "";
     trashButton.addEventListener('click', function(e) {
@@ -434,7 +471,5 @@ addButtonSunday.addEventListener("click", (e)=>{
      activityNumber.innerText="total number of activites is " + countSunday.length;
   }
 });
-
-
 
 //Sunday end

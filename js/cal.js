@@ -15,15 +15,6 @@ window.onload = function(){
     var days = new Date(year, month+1, 0).getDate();    //30, 31, 28, 29
     //Tue Sep 30 2014 ...
 
-    // Test set month
-        // d.setFullYear(year, 1, 1);
-        // month = d.getMonth();
-
-        // console.log(d);
-        // day_no = d.getDay();
-        // days = new Date(year, 2, 0).getDate();
-    // End Test
-
     var calendar = get_calendar(day_no, days);
 
     append_month(month_name[month], year, calendar);
@@ -117,7 +108,22 @@ function get_calendar(day_no, days){
 
 var cal_arrow_left = document.querySelector("#cal_left_arrow");
 var cal_arrow_right = document.querySelector("#cal_right_arrow")
+var year_tracker;
+var month_tracker;
 
-.addEventListener("click", (e)=>{
+cal_arrow_left.addEventListener("click", (e)=>{
+    // Set month
+        let d = d.setFullYear(year, 1, 1);
+        let month = d.getMonth();
+        console.log(d);
+        let day_no = d.getDay();
+        let days = new Date(year, 2, 0).getDate();
+    let calendar = get_calendar(day_no, days);
+    append_month(month_name[month], year, calendar);
+
+
+});
+
+cal_arrow_right.addEventListener("click", (e)=>{
 
 });
