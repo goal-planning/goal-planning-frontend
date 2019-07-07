@@ -14,15 +14,35 @@ window.onload = function(){
     var day_no = day_name.indexOf(first_day);   //1
     var days = new Date(year, month+1, 0).getDate();    //30, 31, 28, 29
     //Tue Sep 30 2014 ...
+
+    // Test set month
+        // d.setFullYear(year, 1, 1);
+        // month = d.getMonth();
+
+        // console.log(d);
+        // day_no = d.getDay();
+        // days = new Date(year, 2, 0).getDate();
+    // End Test
+
     var calendar = get_calendar(day_no, days);
-    document.getElementById("calendar-month-year").innerHTML = month_name[month]+" "+year;
+
+    append_month(month_name[month], year, calendar);
+
+}
+
+function append_month(month_name, year, calendar){
+    document.getElementById("calendar-month-year").innerHTML = month_name+" "+year;
     document.getElementById("calendar-dates").appendChild(calendar);
 }
 
 function get_calendar(day_no, days){
     var table = document.createElement('table');
-    
-    //create 2nd row
+    // For labeling first and last row numbers on months
+    var Ftd;
+    var Ltd;
+    var Ftd_count = 0;
+    var Ltd_count = 0;   
+    //create 1nd row
     tr = document.createElement('tr');
     var c;
     for(c=0; c<=6; c++){
@@ -31,6 +51,8 @@ function get_calendar(day_no, days){
         }
         var td = document.createElement('td');
         var p = document.createElement('p');
+        Ftd = "Ftd" + Ftd_count;
+        p.setAttribute("id", Ftd);
         p.className += 'calBoxNum'
         p.innerText = "";
         td.appendChild(p);
@@ -41,6 +63,8 @@ function get_calendar(day_no, days){
     for(; c<=6; c++){
         var td = document.createElement('td');
         p = document.createElement('p');
+        Ftd = "Ftd" + Ftd_count;
+        p.setAttribute("id", Ftd);
         p.className += 'calBoxNum'
         p.innerText = count.toString();
         td.appendChild(p);
@@ -50,22 +74,50 @@ function get_calendar(day_no, days){
     table.appendChild(tr);
     
     //rest of the date rows
-    for(var r=3; r<=7; r++){
+    for(var r=3; r<=6; r++){
         tr = document.createElement('tr');
         for(var c=0; c<=6; c++){
             if(count > days){
-                table.appendChild(tr);
-                return table;
-            }
-            var td = document.createElement('td');
-            p = document.createElement('p');
-            p.className += 'calBoxNum'
-            p.innerText = count.toString();
-            td.appendChild(p);
-            count++;
-            tr.appendChild(td);
+                var td = document.createElement('td');
+                var p = document.createElement('p');
+                Ltd = "Ltd" + Ltd_count;
+                p.setAttribute("id", Ltd);
+                p.className += 'calBoxNum'
+                p.innerText = "";
+                td.appendChild(p);
+                tr.appendChild(td);
+                td_count++;
+            }else if(r == 6){
+                var td = document.createElement('td');
+                p = document.createElement('p');
+                Ltd = "Ltd" + Ltd_count;
+                p.setAttribute("id", Ltd);
+                p.className += 'calBoxNum'
+                p.innerText = count.toString();
+                td.appendChild(p);
+                count++;
+                td_count++;
+                tr.appendChild(td);
+            }else{
+                var td = document.createElement('td');
+                p = document.createElement('p');
+                p.className += 'calBoxNum'
+                p.innerText = count.toString();
+                td.appendChild(p);
+                count++;
+                tr.appendChild(td);
+                }
+
         }
         table.appendChild(tr);
+        td_count = 0;
     }
 	return table;
 }
+
+var cal_arrow_left = document.querySelector("#cal_left_arrow");
+var cal_arrow_right = document.querySelector("#cal_right_arrow")
+
+.addEventListener("click", (e)=>{
+
+});
