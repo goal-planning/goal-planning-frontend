@@ -21,6 +21,7 @@
         <div class="col-md-3 column" id="column1">
           <span id="SunNum" class="weekNum"></span>
           <h2 id="hsu">Sunday</h2>
+          <button onclick="moveToTomorrow()" data-toggle="modal" data-target="#myModal">Move</button>
           <div class="row">
             <div class="col-md-12">
             <div>
@@ -211,10 +212,34 @@
      </div>
    </div>
 
+   <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Incomplete Actvities</h4>
+        </div>
+        <div class="modal-body">
+          <p>These are the activites you have not completed. Please select activities to reschedule.</p>
+          <ul class="incompleteActivities"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default move-activities-btn" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
   <!-- End test calendar-->
 
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="js/cal.js"></script>
   <script type="text/javascript" src="js/weekDays.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>

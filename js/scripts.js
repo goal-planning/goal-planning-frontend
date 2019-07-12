@@ -663,8 +663,41 @@ addButtonSunday.addEventListener("click", (e)=>{
   }
 });
 
-function checkIfEmpty() {
-  console.log("hello");
+
+function moveToTomorrow() {
+  let incompleteActivities = [];
+  let incompleteActivitiesList = document.querySelector('.incompleteActivities');
+  incompleteActivitiesList.innerHTML = '';
+  todoListSunday.querySelectorAll('li').forEach(function(e){
+    if(!e.children[0].checked){
+      incompleteActivities.push(e);
+    }
+  });
+  if(incompleteActivities.length){
+    incompleteActivities.forEach(function(e){
+      let li = document.createElement("li");
+      let checkBox = document.createElement("input");
+      checkBox.type = "checkbox";
+      let item = document.createElement("input");
+      item.value = e.children[1].value;
+      li.appendChild(checkBox);
+      li.appendChild(item);
+      incompleteActivitiesList.appendChild(li);
+      })
+      let moveBtn = document.querySelector('.move-activities-btn')
+      moveBtn.addEventListener('click', function() {
+        incompleteActivitiesList.querySelectorAll('li').forEach( function(e){
+          console.log(e.children[0].checked);
+          if(e.children[0].checked){
+            console.log(e.children[1].value);
+            addInputMonday.value = e.children[1].value;
+            addButtonMonday.click();
+          }
+        })
+      })
+    //
+    //todoListMonday.appendChild();
+  }
 }
 
 //Sunday end
