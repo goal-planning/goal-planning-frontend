@@ -75,7 +75,7 @@ addButtonMonday.addEventListener("click", (e)=>{
     });
     item.type = "text";
     item.value = input;
-    //let editButton = document.createElement("span"); 
+    //let editButton = document.createElement("span");
     let trashButton = document.createElement("span");
     //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
@@ -203,7 +203,7 @@ addButtonTuesday.addEventListener("click", (e)=>{
     });
     item.type = "text";
     item.value = input;
-    //let editButton = document.createElement("span"); 
+    //let editButton = document.createElement("span");
     let trashButton = document.createElement("span");
     //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
@@ -283,7 +283,7 @@ addButtonWednesday.addEventListener("click", (e)=>{
     });
     item.type = "text";
     item.value = input;
-    //let editButton = document.createElement("span"); 
+    //let editButton = document.createElement("span");
     let trashButton = document.createElement("span");
     //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
@@ -367,7 +367,7 @@ addButtonThursday.addEventListener("click", (e)=>{
     });
     item.type = "text";
     item.value = input;
-    //let editButton = document.createElement("span"); 
+    //let editButton = document.createElement("span");
     let trashButton = document.createElement("span");
     //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
@@ -450,7 +450,7 @@ addButtonFriday.addEventListener("click", (e)=>{
     });
     item.type = "text";
     item.value = input;
-    //let editButton = document.createElement("span"); 
+    //let editButton = document.createElement("span");
     let trashButton = document.createElement("span");
     //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
@@ -533,7 +533,7 @@ addButtonSaturday.addEventListener("click", (e)=>{
     });
     item.type = "text";
     item.value = input;
-    //let editButton = document.createElement("span"); 
+    //let editButton = document.createElement("span");
     let trashButton = document.createElement("span");
     //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
@@ -619,7 +619,7 @@ addButtonSunday.addEventListener("click", (e)=>{
     });
     item.type = "text";
     item.value = input;
-    //let editButton = document.createElement("span"); 
+    //let editButton = document.createElement("span");
     let trashButton = document.createElement("span");
     //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
