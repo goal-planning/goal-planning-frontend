@@ -37,6 +37,7 @@ let numberCheckedWednesday = 0;
 let numberCheckedThursday = 0;
 let numberCheckedFriday = 0;
 let numberCheckedSaturday = 0;
+let moveBtn = document.querySelector('.move-activities-btn')
 
 let addInputMonday = document.querySelector(".newaddTaskMonday");
 let addButtonMonday = document.querySelector(".addButtonMonday"); //<button class = "addButton">Activity</button>
@@ -647,8 +648,6 @@ addButtonSunday.addEventListener("click", (e)=>{
     });
     // count number of activities Saturday
      let countSunday= todoListSunday.querySelectorAll("li");
-     //console.log(countSunday);
-
      let activityNumber = document.querySelector("#countSunday");
      activityNumber.innerText="total number of activites is " + countSunday.length;
 
@@ -665,8 +664,7 @@ addButtonSunday.addEventListener("click", (e)=>{
 
 
 function moveToTomorrow() {
-  let incompleteActivities = [];
-  let incompleteActivitiesList = document.querySelector('.incompleteActivities');
+  incompleteActivities = [];
   incompleteActivitiesList.innerHTML = '';
   todoListSunday.querySelectorAll('li').forEach(function(e){
     if(!e.children[0].checked){
@@ -684,20 +682,22 @@ function moveToTomorrow() {
       li.appendChild(item);
       incompleteActivitiesList.appendChild(li);
       })
-      let moveBtn = document.querySelector('.move-activities-btn')
-      moveBtn.addEventListener('click', function() {
-        incompleteActivitiesList.querySelectorAll('li').forEach( function(e){
-          console.log(e.children[0].checked);
-          if(e.children[0].checked){
-            console.log(e.children[1].value);
-            addInputMonday.value = e.children[1].value;
-            addButtonMonday.click();
-          }
-        })
-      })
-    //
-    //todoListMonday.appendChild();
-  }
+    }
 }
 
-//Sunday end
+let incompleteActivities = [];
+let incompleteActivitiesList = document.querySelector('.incompleteActivities');
+
+moveBtn.addEventListener('click', function() {
+  console.log(incompleteActivities);
+  let i = 0;
+  incompleteActivitiesList.querySelectorAll('li').forEach( function(e){
+    console.log(incompleteActivities[i]);
+    i++;
+    if(e.children[0].checked){
+      addInputMonday.value = e.children[1].value;
+      addButtonMonday.click();
+    }
+  })
+}) 
+
