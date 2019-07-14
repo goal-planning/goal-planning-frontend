@@ -664,7 +664,9 @@ addButtonSunday.addEventListener("click", (e)=>{
 let todoList = [todoListSunday, todoListMonday, todoListTuesday, todoListWednesday, todoListThursday, todoListFriday, todoListSaturday];
 let addInput = [addInputSunday, addInputMonday, addInputTuesday, addInputWednesday, addInputThursday, addInputFriday, addInputSaturday];
 let addButton = [addButtonSunday, addButtonMonday, addButtonTuesday, addButtonWednesday, addButtonThursday, addButtonFriday, addButtonSaturday];
+
 let selectedDay;
+
 function moveToTomorrow(i) {
   selectedDay = i;
   incompleteActivities = [];
@@ -703,3 +705,9 @@ moveBtn.addEventListener('click', function() {
     }
   })
 }) 
+
+function checkGoal() {
+  console.log(document.querySelector('.goal').value);
+  let goalLeft = document.querySelector('.goal').value - numberCheckedSunday;
+  console.log(goalLeft);
+}
