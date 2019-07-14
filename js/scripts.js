@@ -38,7 +38,6 @@ let numberCheckedThursday = 0;
 let numberCheckedFriday = 0;
 let numberCheckedSaturday = 0;
 let moveBtn = document.querySelector('.move-activities-btn')
-
 let addInputMonday = document.querySelector(".newaddTaskMonday");
 let addButtonMonday = document.querySelector(".addButtonMonday"); //<button class = "addButton">Activity</button>
 let todoListMonday = document.querySelector(".todoListMonday"); //<ul class="todoList">
@@ -662,11 +661,15 @@ addButtonSunday.addEventListener("click", (e)=>{
   }
 });
 
-
-function moveToTomorrow() {
+let todoList = [todoListSunday, todoListMonday, todoListTuesday, todoListWednesday, todoListThursday, todoListFriday, todoListSaturday];
+let addInput = [addInputSunday, addInputMonday, addInputTuesday, addInputWednesday, addInputThursday, addInputFriday, addInputSaturday];
+let addButton = [addButtonSunday, addButtonMonday, addButtonTuesday, addButtonWednesday, addButtonThursday, addButtonFriday, addButtonSaturday];
+let selectedDay;
+function moveToTomorrow(i) {
+  selectedDay = i;
   incompleteActivities = [];
   incompleteActivitiesList.innerHTML = '';
-  todoListSunday.querySelectorAll('li').forEach(function(e){
+  todoList[i].querySelectorAll('li').forEach(function(e){
     if(!e.children[0].checked){
       incompleteActivities.push(e);
     }
@@ -695,9 +698,8 @@ moveBtn.addEventListener('click', function() {
     console.log(incompleteActivities[i]);
     i++;
     if(e.children[0].checked){
-      addInputMonday.value = e.children[1].value;
-      addButtonMonday.click();
+      addInput[(selectedDay+1)%7].value = e.children[1].value;
+      addButton[(selectedDay+1)%7].click();
     }
   })
 }) 
-
