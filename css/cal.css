@@ -46,9 +46,10 @@ td{
 }
 .calBoxNum{
     position: relative;
-    bottom: 55px;
+    bottom: 62px;
     text-align: right;
-    padding: 5px;
+    padding-right: 5px;
+    margin: 0;
 }
 .cal_arrow_l{
     background: #f0f0f0;
