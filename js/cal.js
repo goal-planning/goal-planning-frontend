@@ -55,10 +55,19 @@ function append_month(month_name, year, calendar){
         track--;
         j++;
     }
+    var table = document.getElementById("cal_table");
+    count = 0;
+    for (let i = 0; i<= 4; i++) {
+        for (let j=0; j<=6; j++) {
+            table.rows[i].cells[j].setAttribute('id', 'td'+count);
+            count++;
+        }
+}
 }
 
 function get_calendar(day_no, days){
     var table = document.createElement('table');
+    table.setAttribute("id", 'cal_table');
     // For labeling first and last row numbers on months
     var Ftd;
     var Ltd;
@@ -125,10 +134,13 @@ function get_calendar(day_no, days){
             }else{
                 var td = document.createElement('td');
                 p = document.createElement('p');
+                Ftd = "Ftd" + Ftd_count;
+                p.setAttribute("id", Ftd);
                 p.className += 'calBoxNum'
                 p.innerText = count.toString();
                 td.appendChild(p);
                 count++;
+                Ftd_count++;
                 tr.appendChild(td);
                 }
 
