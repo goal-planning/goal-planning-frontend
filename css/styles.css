@@ -57,18 +57,87 @@ body{
 }
 
 li input[type="text"]{
-  width: 100px;
+  width: 95px;
   margin-left: 5px;
   padding-right: 5px;
 }
-
+@media only screen and (max-width: 991px) {
+   li input[type="text"]{
+    width: 131px;
+}
+}
 .plus-icon {
   color: blue;
   cursor: pointer;
 }
 
 .minus-icon {
+  padding-left: 2px;
   color: red;
   cursor: pointer;
 
+
 }
+.newaddTaskSunday{
+  width: auto;
+}
+@media only screen and (min-width: 992px) and (max-width: 1204px) {
+  .newaddTaskSunday {
+    width: 115px;
+  }
+}
+.newaddTaskMonday{
+  width: auto;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1204px) {
+ .newaddTaskMonday {
+   width: 115px;
+ }
+  }
+  .newaddTaskTuesday{
+    width: auto;
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1204px) {
+   .newaddTaskTuesday {
+     width: 115px;
+   }
+    }
+    .newaddTaskWednesday{
+      width: auto;
+      }
+      @media only screen and (min-width: 992px) and (max-width: 1204px) {
+      h2 {
+        font-size: 25px;
+      }
+     .newaddTaskWednesday {
+       width: 115px;
+     }
+      }
+      .newaddTaskThursday{
+        width: auto;
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1204px) {
+       .newaddTaskThursday {
+         width: 115px;
+       }
+        }
+        .newaddTaskFriday{
+          width: auto;
+          }
+          @media only screen and (min-width: 992px) and (max-width: 1204px) {
+         .newaddTaskFriday {
+           width: 115px;
+         }
+          }
+          .newaddTaskSaturday{
+            width: auto;
+            }
+            @media only screen and (min-width: 992px) and (max-width: 1204px) {
+           .newaddTaskSaturday {
+             width: 115px;
+           }
+            }
+            ul{
+              list-style: none;
+              padding-left: 3px;
+            }
