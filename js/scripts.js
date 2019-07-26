@@ -50,8 +50,6 @@ let todoListSunday= document.querySelector(".todoListSunday");
 let sundayCompleted = document.querySelector("#countCompletedSunday");
 let sundayCount = document.querySelector("#countSunday");
 
-
-
 let todoList = [todoListSunday, todoListMonday, todoListTuesday, todoListWednesday, todoListThursday, todoListFriday, todoListSaturday];
 let addInput = [addInputSunday, addInputMonday, addInputTuesday, addInputWednesday, addInputThursday, addInputFriday, addInputSaturday];
 let addButton = [addButtonSunday, addButtonMonday, addButtonTuesday, addButtonWednesday, addButtonThursday, addButtonFriday, addButtonSaturday];
@@ -62,8 +60,6 @@ let numberActivitiesElements = [sundayCount, mondayCount, tuesdayCount, wednesda
 let selectedDay = 0;
 let incompleteActivities = [];
 let incompleteActivitiesList = document.querySelector('.incompleteActivities');
-
-document.getElementById("hm").style.color = "red";
 
 addInput.forEach(function(e){
   let selectedButton = addButton[selectedDay];
@@ -150,16 +146,12 @@ alert(document.querySelectorAll('input[type="checkbox"]:checked').length);
   }
 }
 
+document.getElementById("hm").style.color = "red";
 document.getElementById("ht").style.color = "orange";
-
 document.getElementById("hwd").style.color = "orange";
-
 document.getElementById("hth").style.color = "coral";
-
 document.getElementById("hf").style.color = "DarkOliveGreen";
-
 document.getElementById("hs").style.color = "DarkViolet";
-
 document.getElementById("hsu").style.color = "crimson";
 
 function moveToTomorrow(i) {
@@ -199,6 +191,7 @@ moveBtn.addEventListener('click', function() {
 }) 
 
 function checkGoal() {
+  console.log(todoListSunday.querySelectorAll('li').length);
   console.log(document.querySelector('.goal').value);
   let goalLeft = document.querySelector('.goal').value - numberCheckedSunday;
   console.log(goalLeft);
