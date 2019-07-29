@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/cal.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -230,58 +230,220 @@
      <div id="calendar-dates">
         <table id="cal_table">
           <tr>
-            <td id="td0"></td>
-            <td id="td1"></td>
-            <td id="td2"></td>
-            <td id="td3"></td>
-            <td id="td4"></td>
-            <td id="td5"></td>
-            <td id="td6"></td>
+            <td id="td0">
+                <button id="add0" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td1">
+                <button id="add1" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td2">
+                <button id="add2" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td3">
+                <button id="add3" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td4">
+                <button id="add4" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td5">
+                <button id="add5" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td6">
+                <button id="add6" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
           </tr>
           <tr>
-            <td id="td7"></td>
-            <td id="td8"></td>
-            <td id="td9"></td>
-            <td id="td10"></td>
-            <td id="td11"></td>
-            <td id="td12"></td>
-            <td id="td13"></td>
+            <td id="td7">
+                <button id="add7" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td8">
+                <button id="add8" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td9">
+                <button id="add9" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td10">
+                <button id="add10" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td11">
+                <button id="add11" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td12">
+                <button id="add12" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td13">
+                <button id="add13" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
           </tr>
           <tr>
-            <td id="td14"></td>
-            <td id="td15"></td>
-            <td id="td16"></td>
-            <td id="td17"></td>
-            <td id="td18"></td>
-            <td id="td19"></td>
-            <td id="td20"></td>
+            <td id="td14">
+                <button id="add14" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td15">
+                <button id="add15" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td16">
+                <button id="add16" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td17">
+                <button id="add17" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td18">
+                <button id="add18" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td19">
+                <button id="add19" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td20">
+                <button id="add20" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
           </tr>
           <tr>
-            <td id="td21"></td>
-            <td id="td22"></td>
-            <td id="td23"></td>
-            <td id="td24"></td>
-            <td id="td25"></td>
-            <td id="td26"></td>
-            <td id="td27"></td>
+            <td id="td21">
+                <button id="add21" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td22">
+                <button id="add22" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td23">
+                <button id="add23" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td24">
+                <button id="add24" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td25">
+                <button id="add25" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td26">
+                <button id="add26" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td27">
+                <button id="add27" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
           </tr>
           <tr>
-            <td id="td28"></td>
-            <td id="td29"></td>
-            <td id="td30"></td>
-            <td id="td31"></td>
-            <td id="td32"></td>
-            <td id="td33"></td>
-            <td id="td34"></td>
+            <td id="td28">
+                <button id="add28" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td29">
+                <button id="add29" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td30">
+                <button id="add30" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td31">
+                <button id="add31" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td32">
+                <button id="add32" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td33">
+                <button id="add33" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
+            <td id="td34">
+                <button id="add34" class="no-visible" data-toggle="modal" data-target="#myModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+            </td>
           </tr>
         </table>
      </div>
    </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    
+      </div>
+  </div>
 
   <!-- End test calendar-->
 
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="js/cal.js"></script>
   <script type="text/javascript" src="js/weekDays.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -14,6 +14,7 @@ table{
 }
 td{
     height: 150px;
+    position: relative;
     border: 1px solid black;
 }
 #calendar-container>div{
@@ -75,6 +76,23 @@ td{
 }
 .non_current_month_num{
     color: gray;
+}
+.cal_add{
+    color: #00FA9A;
+    visibility: visible !important;
+    z-index: 2;
+}
+.cal_add:hover{
+    cursor: pointer;
+    color: #3CB371;
+    transition-duration: .3s;
+}
+.no-visible{
+    visibility: hidden;
+    position: absolute;
+    top: -2px;
+    left: -6px;
+    z-index: 2;
 }
 .noSelect {
     -webkit-touch-callout: none;

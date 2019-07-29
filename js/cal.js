@@ -153,10 +153,10 @@ cal_arrow_left.addEventListener("click", (e)=>{
     let day_no = d.getDay();
     let days = new Date(y, m+1, 0).getDate();
     for(let i=0; i<=34; i++){  
-        var myNode = document.getElementById("td"+i);
-            while (myNode.firstChild) {
-            myNode.removeChild(myNode.firstChild);
-            }
+        var cntnt = document.getElementById("td"+i);
+        while (cntnt.lastChild.className !== 'no-visible') {
+            cntnt.removeChild(cntnt.lastChild);
+        }
     }
     let calendar = get_calendar(day_no, days);
     append_month(month_name[m], y, calendar);
@@ -173,16 +173,16 @@ cal_arrow_right.addEventListener("click", (e)=>{
     let day_no = d.getDay();
     let days = new Date(y, m+1, 0).getDate();
     for(let i=0; i<=34; i++){  
-        var myNode = document.getElementById("td"+i);
-            while (myNode.firstChild) {
-            myNode.removeChild(myNode.firstChild);
-            }
+        var cntnt = document.getElementById("td"+i);
+        while (cntnt.lastChild.className !== 'no-visible') {
+            cntnt.removeChild(cntnt.lastChild);
+        }
     }
     let calendar = get_calendar(day_no, days);
     append_month(month_name[m], y, calendar);
 });
 
-    var td0 = document.getElementById('td0');
+    // var td0 = document.getElementById('td0');
     var td1 = document.getElementById('td1');
     var td2 = document.getElementById('td2');
     var td3 = document.getElementById('td3');
@@ -219,109 +219,109 @@ cal_arrow_right.addEventListener("click", (e)=>{
     var td34 = document.getElementById('td34');
     var td35 = document.getElementById('td35');
 
-    td0.addEventListener("click", (e)=>{
-        td0.children[0].innerHTML = 'wow!!!';
-    });
-    td1.addEventListener("click", (e)=>{
-        td1.children[0].innerHTML = 'wow!!!';
-    });
-    td2.addEventListener("click", (e)=>{
-        td2.children[0].innerHTML = 'wow!!!';
-    });
-    td3.addEventListener("click", (e)=>{
-        td3.children[0].innerHTML = 'wow!!!';
-    });
-    td4.addEventListener("click", (e)=>{
-        td4.children[0].innerHTML = 'wow!!!';
-    });
-    td5.addEventListener("click", (e)=>{
-        td5.children[0].innerHTML = 'wow!!!';
-    });
-    td6.addEventListener("click", (e)=>{
-        td6.children[0].innerHTML = 'wow!!!';
-    });
-    td7.addEventListener("click", (e)=>{
-        td7.children[0].innerHTML = 'wow!!!';
-    });
-    td8.addEventListener("click", (e)=>{
-        td8.children[0].innerHTML = 'wow!!!';
-    });
-    td9.addEventListener("click", (e)=>{
-        td9.children[0].innerHTML = 'wow!!!';
-    });
-    td10.addEventListener("click", (e)=>{
-        td10.children[0].innerHTML = 'wow!!!';
-    });
-    td11.addEventListener("click", (e)=>{
-        td11.children[0].innerHTML = 'wow!!!';
-    });
-    td12.addEventListener("click", (e)=>{
-        td12.children[0].innerHTML = 'wow!!!';
-    });
-    td13.addEventListener("click", (e)=>{
-        td13.children[0].innerHTML = 'wow!!!';
-    });
-    td14.addEventListener("click", (e)=>{
-        td14.children[0].innerHTML = 'wow!!!';
-    });
-    td15.addEventListener("click", (e)=>{
-        td15.children[0].innerHTML = 'wow!!!';
-    });
-    td16.addEventListener("click", (e)=>{
-        td16.children[0].innerHTML = 'wow!!!';
-    });
-    td17.addEventListener("click", (e)=>{
-        td17.children[0].innerHTML = 'wow!!!';
-    });
-    td18.addEventListener("click", (e)=>{
-        td18.children[0].innerHTML = 'wow!!!';
-    });
-    td19.addEventListener("click", (e)=>{
-        td19.children[0].innerHTML = 'wow!!!';
-    });
-    td20.addEventListener("click", (e)=>{
-        td20.children[0].innerHTML = 'wow!!!';
-    });
-    td21.addEventListener("click", (e)=>{
-        td21.children[0].innerHTML = 'wow!!!';
-    });
-    td22.addEventListener("click", (e)=>{
-        td22.children[0].innerHTML = 'wow!!!';
-    });
-    td23.addEventListener("click", (e)=>{
-        td23.children[0].innerHTML = 'wow!!!';
-    });
-    td24.addEventListener("click", (e)=>{
-        td24.children[0].innerHTML = 'wow!!!';
-    });
-    td25.addEventListener("click", (e)=>{
-        td25.children[0].innerHTML = 'wow!!!';
-    });
-    td26.addEventListener("click", (e)=>{
-        td26.children[0].innerHTML = 'wow!!!';
-    });
-    td27.addEventListener("click", (e)=>{
-        td27.children[0].innerHTML = 'wow!!!';
-    });
-    td28.addEventListener("click", (e)=>{
-        td28.children[0].innerHTML = 'wow!!!';
-    });
-    td29.addEventListener("click", (e)=>{
-        td29.children[0].innerHTML = 'wow!!!';
-    });
-    td30.addEventListener("click", (e)=>{
-        td30.children[0].innerHTML = 'wow!!!';
-    });
-    td31.addEventListener("click", (e)=>{
-        td31.children[0].innerHTML = 'wow!!!';
-    });
-    td32.addEventListener("click", (e)=>{
-        td32.children[0].innerHTML = 'wow!!!';
-    });
-    td33.addEventListener("click", (e)=>{
-        td33.children[0].innerHTML = 'wow!!!';
-    });
-    td34.addEventListener("click", (e)=>{
-        td34.children[0].innerHTML = 'wow!!!';
-    });
+    // td0.addEventListener("click", (e)=>{
+    //     td0.children[0].innerHTML = 'wow!!!';
+    // });
+    // td1.addEventListener("click", (e)=>{
+    //     td1.children[0].innerHTML = 'wow!!!';
+    // });
+    // td2.addEventListener("click", (e)=>{
+    //     td2.children[0].innerHTML = 'wow!!!';
+    // });
+    // td3.addEventListener("click", (e)=>{
+    //     td3.children[0].innerHTML = 'wow!!!';
+    // });
+    // td4.addEventListener("click", (e)=>{
+    //     td4.children[0].innerHTML = 'wow!!!';
+    // });
+    // td5.addEventListener("click", (e)=>{
+    //     td5.children[0].innerHTML = 'wow!!!';
+    // });
+    // td6.addEventListener("click", (e)=>{
+    //     td6.children[0].innerHTML = 'wow!!!';
+    // });
+    // td7.addEventListener("click", (e)=>{
+    //     td7.children[0].innerHTML = 'wow!!!';
+    // });
+    // td8.addEventListener("click", (e)=>{
+    //     td8.children[0].innerHTML = 'wow!!!';
+    // });
+    // td9.addEventListener("click", (e)=>{
+    //     td9.children[0].innerHTML = 'wow!!!';
+    // });
+    // td10.addEventListener("click", (e)=>{
+    //     td10.children[0].innerHTML = 'wow!!!';
+    // });
+    // td11.addEventListener("click", (e)=>{
+    //     td11.children[0].innerHTML = 'wow!!!';
+    // });
+    // td12.addEventListener("click", (e)=>{
+    //     td12.children[0].innerHTML = 'wow!!!';
+    // });
+    // td13.addEventListener("click", (e)=>{
+    //     td13.children[0].innerHTML = 'wow!!!';
+    // });
+    // td14.addEventListener("click", (e)=>{
+    //     td14.children[0].innerHTML = 'wow!!!';
+    // });
+    // td15.addEventListener("click", (e)=>{
+    //     td15.children[0].innerHTML = 'wow!!!';
+    // });
+    // td16.addEventListener("click", (e)=>{
+    //     td16.children[0].innerHTML = 'wow!!!';
+    // });
+    // td17.addEventListener("click", (e)=>{
+    //     td17.children[0].innerHTML = 'wow!!!';
+    // });
+    // td18.addEventListener("click", (e)=>{
+    //     td18.children[0].innerHTML = 'wow!!!';
+    // });
+    // td19.addEventListener("click", (e)=>{
+    //     td19.children[0].innerHTML = 'wow!!!';
+    // });
+    // td20.addEventListener("click", (e)=>{
+    //     td20.children[0].innerHTML = 'wow!!!';
+    // });
+    // td21.addEventListener("click", (e)=>{
+    //     td21.children[0].innerHTML = 'wow!!!';
+    // });
+    // td22.addEventListener("click", (e)=>{
+    //     td22.children[0].innerHTML = 'wow!!!';
+    // });
+    // td23.addEventListener("click", (e)=>{
+    //     td23.children[0].innerHTML = 'wow!!!';
+    // });
+    // td24.addEventListener("click", (e)=>{
+    //     td24.children[0].innerHTML = 'wow!!!';
+    // });
+    // td25.addEventListener("click", (e)=>{
+    //     td25.children[0].innerHTML = 'wow!!!';
+    // });
+    // td26.addEventListener("click", (e)=>{
+    //     td26.children[0].innerHTML = 'wow!!!';
+    // });
+    // td27.addEventListener("click", (e)=>{
+    //     td27.children[0].innerHTML = 'wow!!!';
+    // });
+    // td28.addEventListener("click", (e)=>{
+    //     td28.children[0].innerHTML = 'wow!!!';
+    // });
+    // td29.addEventListener("click", (e)=>{
+    //     td29.children[0].innerHTML = 'wow!!!';
+    // });
+    // td30.addEventListener("click", (e)=>{
+    //     td30.children[0].innerHTML = 'wow!!!';
+    // });
+    // td31.addEventListener("click", (e)=>{
+    //     td31.children[0].innerHTML = 'wow!!!';
+    // });
+    // td32.addEventListener("click", (e)=>{
+    //     td32.children[0].innerHTML = 'wow!!!';
+    // });
+    // td33.addEventListener("click", (e)=>{
+    //     td33.children[0].innerHTML = 'wow!!!';
+    // });
+    // td34.addEventListener("click", (e)=>{
+    //     td34.children[0].innerHTML = 'wow!!!';
+    // });
     
