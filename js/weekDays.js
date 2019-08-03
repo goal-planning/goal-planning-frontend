@@ -4,10 +4,10 @@ var _month = ['January','February','March','April','May','June','July','August',
 
 var day_name = _day_name[date.getDay()];
 var day_num = date.getDate();
-var month = _month[date.getMonth()];
+var month = date.getMonth();
 var year = date.getFullYear();
 
-var week = getWeekDate(day_name, day_num, _month, year, date);
+var week = getWeekDate(day_name, day_num, month, year, date);
 
 // Current week number elements
 var _SunNum = document.getElementById('SunNum');
@@ -27,7 +27,7 @@ _SatNum.innerText = week[6].toString();
 
 
 
-function getWeekDate(day_name, day_num, month, year){
+function getWeekDate(day_name, day_num, month, year, date){
     var week_num = [0, 0, 0, 0, 0, 0, 0];
     var max_days = 0;
     var i = 0;
@@ -37,12 +37,17 @@ function getWeekDate(day_name, day_num, month, year){
         leap_year = true;
     }
     // Check month and get maximum days
-    if(month % 2 === 0){
+    if(month === 0){ 
         max_days = 31;
-    } else if(month === 1){
-        if(leap_year) { max_days = 29; }
-        else max_days = 28;
-    } else max_days = 30;
+    } else {
+        if(month % 2 === 0){
+            max_days = 31;
+        } else if(date.getMonth() === 1){
+            if(leap_year) { max_days = 29; }
+            else max_days = 28;
+        } else max_days = 30;
+    }
+    console.log(max_days);
     // Get day name as reference
     switch(day_name){
         case 'Sun':
@@ -119,9 +124,10 @@ function getWeekDate(day_name, day_num, month, year){
                 break;
         }
     }
+    console.log(week_num);
     // Negative check to get start of the week (left-handside values)
     if(week_num[0] <= 0){
-        var count = 1;
+        var count = 0;
         j = 0;
         while(week_num[j] <= 0){
             count++;
@@ -130,14 +136,15 @@ function getWeekDate(day_name, day_num, month, year){
         if(date.getMonth() === 0){ 
             max_days = 31;
         } else {
-            if(date.getMonth()-1 % 2 === 0){
+            if((month-1) % 2 === 0){
                 max_days = 31;
             } else if(date.getMonth()-1 === 1){
                 if(leap_year) { max_days = 29; }
                 else max_days = 28;
             } else max_days = 30;
         }
-        max_days = max_days - count;
+        console.log(max_days);
+        max_days = max_days - count + 1;
         j = 0;
         while(count > 0){
             week_num[j] = max_days;
