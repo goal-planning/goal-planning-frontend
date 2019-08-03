@@ -1,35 +1,3 @@
-// function createRow() {
-//   const row = document.createElement('div');
-//   row.classList.add('row');
-//   for(let i = 5; i > 0; i--) {
-//     let column = document.createElement('div')
-//     column.classList.add('col-md-2');
-//     column.classList.add('column');
-//user input element
-// dom manipulation
-//  net ninja
-// traversy media add item lister changing style individual li's
-//     row.appendChild(column);
-//   }
-//   return row;
-// }
-//
-// let bob = createRow();
-// console.log(bob);
-//
-//
-//
-// document.getElementById("myBtn").addEventListener("click", displayDate);
-//
-// function displayDate() {
-//     document.getElementById("demo").innerHTML = Date();
-// }
-//
-// var i;
-
-// for (i=0; i<10; i++) {
-// 	if (i > 5)
-
 let numberCheckedSunday = 0;
 let numberCheckedMonday = 0;
 let numberCheckedTuesday = 0;
@@ -37,21 +5,16 @@ let numberCheckedWednesday = 0;
 let numberCheckedThursday = 0;
 let numberCheckedFriday = 0;
 let numberCheckedSaturday = 0;
+
 let moveBtn = document.querySelector('.move-activities-btn')
 
 let addInputMonday = document.querySelector(".newaddTaskMonday");
-let addButtonMonday = document.querySelector(".addButtonMonday"); //<button class = "addButton">Activity</button>
-let todoListMonday = document.querySelector(".todoListMonday"); //<ul class="todoList">
-let todoListTues = document.querySelector(".todoListTuesday");
-document.getElementById("hm").style.color = "red";
-addInputMonday.addEventListener("keyup", (e)=>{
-  if(e.keyCode === 13) {
-    addButtonMonday.click();
-  };
-});
-
+let addButtonMonday = document.querySelector(".addButtonMonday");
+let todoListMonday = document.querySelector(".todoListMonday");
 let mondayCompleted = document.querySelector("#countCompletedMonday");
+let mondayCount = document.querySelector("#countMonday");
 
+<<<<<<< HEAD
 addButtonMonday.addEventListener("click", (e)=>{
   //console.log('hit');
   let input = addInputMonday.value.trim();
@@ -168,17 +131,13 @@ alert(document.querySelectorAll('input[type="checkbox"]:checked').length);
 //      f.value = "123";
 
 // start tuesday
+=======
+>>>>>>> cc8ce17a89e4cb98e785930567181488c262aea3
 let addInputTuesday = document.querySelector(".newaddTaskTuesday");
-let addButtonTuesday = document.querySelector(".addButtonTuesday"); //<button class = "addButton">Activity</button>
+let addButtonTuesday = document.querySelector(".addButtonTuesday");
 let todoListTuesday = document.querySelector(".todoListTuesday");
-document.getElementById("ht").style.color = "orange";
-
-addInputTuesday.addEventListener("keyup", (e)=>{
-  if(e.keyCode === 13) {
-    addButtonTuesday.click();
-  };
-});
 let tuesdayCompleted = document.querySelector("#countCompletedTuesday");
+<<<<<<< HEAD
 
 addButtonTuesday.addEventListener("click", (e)=>{
   //console.log('hit');
@@ -247,18 +206,15 @@ addButtonTuesday.addEventListener("click", (e)=>{
 
   }
 });//start Wednesday
+=======
+let tuesdayCount = document.querySelector("#countTuesday");
+>>>>>>> cc8ce17a89e4cb98e785930567181488c262aea3
 
 let addInputWednesday= document.querySelector(".newaddTaskWednesday");
-let addButtonWednesday= document.querySelector(".addButtonWednesday"); //<button class = "addButton">Activity</button>
+let addButtonWednesday= document.querySelector(".addButtonWednesday");
 let todoListWednesday = document.querySelector(".todoListWednesday");
-document.getElementById("hwd").style.color = "orange";
-
-addInputWednesday.addEventListener("keyup", (e)=>{
-  if(e.keyCode === 13) {
-    addButtonWednesday.click();
-  };
-});
 let wednesdayCompleted = document.querySelector("#countCompletedWednesday");
+<<<<<<< HEAD
 
 addButtonWednesday.addEventListener("click", (e)=>{
   //console.log('hit');
@@ -330,19 +286,15 @@ addButtonWednesday.addEventListener("click", (e)=>{
 });
 
 // start Thursday
+=======
+let wednesdayCount = document.querySelector("#countWednesday");
+>>>>>>> cc8ce17a89e4cb98e785930567181488c262aea3
 
 let addInputThursday = document.querySelector(".newaddTaskThursday");
-let addButtonThursday = document.querySelector(".addButtonThursday"); //<button class = "addButton">Activity</button>
+let addButtonThursday = document.querySelector(".addButtonThursday");
 let todoListThursday= document.querySelector(".todoListThursday");
-document.getElementById("hth").style.color = "coral";
-
-addInputThursday.addEventListener("keyup", (e)=>{
-  if(e.keyCode === 13) {
-    addButtonThursday.click();
-  };
-});
-
 let thursdayCompleted = document.querySelector("#countCompletedThursday");
+<<<<<<< HEAD
 
 addButtonThursday.addEventListener("click", (e)=>{
   //console.log('hit');
@@ -413,20 +365,17 @@ addButtonThursday.addEventListener("click", (e)=>{
 });//Thursdayend
 
 // start Friday
+=======
+let thursdayCount = document.querySelector("#countThursday");
+>>>>>>> cc8ce17a89e4cb98e785930567181488c262aea3
 
 let addInputFriday = document.querySelector(".newaddTaskFriday");
-let addButtonFriday = document.querySelector(".addButtonFriday"); //<button class = "addButton">Activity</button>
+let addButtonFriday = document.querySelector(".addButtonFriday");
 let todoListFriday= document.querySelector(".todoListFriday");
-document.getElementById("hf").style.color = "DarkOliveGreen";
-
-addInputFriday.addEventListener("keyup", (e)=>{
-  if(e.keyCode === 13) {
-    addButtonFriday.click();
-  };
-});
-
 let fridayCompleted = document.querySelector("#countCompletedFriday");
+let fridayCount = document.querySelector("#countFriday");
 
+<<<<<<< HEAD
 addButtonFriday.addEventListener("click", (e)=>{
   //console.log('hit');
   let input = addInputFriday.value.trim();
@@ -480,40 +429,49 @@ addButtonFriday.addEventListener("click", (e)=>{
     // count number of activities Friday
         let countFriday= todoListFriday.querySelectorAll("li");
         //console.log(countFriday);
-
-        let activityNumber = document.querySelector("#countFriday");
-        activityNumber.innerText="total number of activites is " + countFriday.length;
-
-        checkBox.addEventListener('click', function(e) {
-          if(e.target.checked == true){
-            numberCheckedFriday++;
-          } else {
-            numberCheckedFriday--;
-          }
-          fridayCompleted.innerText = "You have " + numberCheckedFriday + " activities completed";
-        })
-  }
-});//Fridayend
-
-// Start Saturday
-
+=======
 let addInputSaturday = document.querySelector(".newaddTaskSaturday");
-let addButtonSaturday = document.querySelector(".addButtonSaturday"); //<button class = "addButton">Activity</button>
+let addButtonSaturday = document.querySelector(".addButtonSaturday");
 let todoListSaturday= document.querySelector(".todoListSaturday");
-document.getElementById("hs").style.color = "DarkViolet";
-
-addInputSaturday.addEventListener("keyup", (e)=>{
-  if(e.keyCode === 13) {
-    addButtonSaturday.click();
-  };
-});
-
 let saturdayCompleted = document.querySelector("#countCompletedSaturday");
+let saturdayCount = document.querySelector("#countSaturday");
+>>>>>>> cc8ce17a89e4cb98e785930567181488c262aea3
 
-addButtonSaturday.addEventListener("click", (e)=>{
-  //console.log('hit');
-  let input = addInputSaturday.value.trim();
+let addInputSunday = document.querySelector(".newaddTaskSunday");
+let addButtonSunday = document.querySelector(".addButtonSunday");
+let todoListSunday= document.querySelector(".todoListSunday");
+let sundayCompleted = document.querySelector("#countCompletedSunday");
+let sundayCount = document.querySelector("#countSunday");
 
+
+
+let todoList = [todoListSunday, todoListMonday, todoListTuesday, todoListWednesday, todoListThursday, todoListFriday, todoListSaturday];
+let addInput = [addInputSunday, addInputMonday, addInputTuesday, addInputWednesday, addInputThursday, addInputFriday, addInputSaturday];
+let addButton = [addButtonSunday, addButtonMonday, addButtonTuesday, addButtonWednesday, addButtonThursday, addButtonFriday, addButtonSaturday];
+let completedCount = [sundayCompleted, mondayCompleted, tuesdayCompleted, wednesdayCompleted, thursdayCompleted, fridayCompleted, saturdayCompleted];
+let numberChecked = [0, 0, 0, 0, 0, 0, 0];
+let numberActivities = new Array(7);
+let numberActivitiesElements = [sundayCount, mondayCount, tuesdayCount, wednesdayCount, thursdayCount, fridayCount, saturdayCount];
+let selectedDay = 0;
+let incompleteActivities = [];
+let incompleteActivitiesList = document.querySelector('.incompleteActivities');
+
+document.getElementById("hm").style.color = "red";
+
+addInput.forEach(function(e){
+  let selectedButton = addButton[selectedDay];
+  selectedDay++;
+  e.addEventListener("keyup", (event)=>{
+    if(event.keyCode === 13) {
+      console.log(selectedButton)
+      selectedButton.click();
+    }
+  })
+})
+
+function createActivity(day) {
+  console.log(day);
+  let input = addInput[day].value.trim();
   if (input === '') {
     alert("Write down a minimum of five activities")
   } else {
@@ -524,82 +482,74 @@ addButtonSaturday.addEventListener("click", (e)=>{
     item.addEventListener('keyup', function(e){
       if(item.value.trim() === ''){
         if(e.target.parentElement.children[0].checked == true){
-          numberCheckedSaturday--;
-          saturdayCompleted.innerText = "You have " + numberCheckedSaturday + " activities completed";
+          numberChecked[day]--;
+          completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
         }
-        todoListSaturday.removeChild(li);
-        let count = todoListSaturday.querySelectorAll("li");
+        todoList[day].removeChild(li);
+        let count = todoList[day].querySelectorAll("li");
         activityNumber.innerText="total number of activites is " + count.length;
       };
     });
     item.type = "text";
     item.value = input;
+<<<<<<< HEAD
     //let editButton = document.createElement("span");
+=======
+>>>>>>> cc8ce17a89e4cb98e785930567181488c262aea3
     let trashButton = document.createElement("span");
-    //editButton.classList.add('glyphicon', 'glyphicon-pencil');
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
-    //delete button
-  // my input
-    //editButton.innerText="Edit"; //inner text encodes special characters
-    //trashButton.innerText="trash";
-    todoListSaturday.appendChild(li)
-
-
+    todoList[day].appendChild(li)
     li.appendChild(checkBox);
     li.appendChild(item);
-    // li.appendChild(editInput);
-    //li.appendChild(editButton);
     li.appendChild(trashButton);
-    addInputSaturday.value = "";
+    addInput[day].value = "";
     trashButton.addEventListener('click', function(e) {
       if(e.target.parentElement.children[0].checked == true){
-        numberCheckedSaturday--;
-        saturdayCompleted.innerText = "You have " + numberCheckedSaturday + " activities completed";
+        numberChecked[day]--;
+        completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
       }
-      todoListSaturday.removeChild(li);
-      let count = todoListSaturday.querySelectorAll("li");
-      activityNumber.innerText="total number of activites is " + count.length;
+      todoList[day].removeChild(li);
+      numberActivities[day] = todoList[day].querySelectorAll("li");
+      numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
     });
-    // count number of activities Saturday
-     let countSaturday= todoListSaturday.querySelectorAll("li");
-     //console.log(countSaturday);
+    numberActivities[day] = todoList[day].querySelectorAll("li");
+    numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
 
-     let activityNumber = document.querySelector("#countSaturday");
-     activityNumber.innerText="total number of activites is " + countSaturday.length;
-
-     checkBox.addEventListener('click', function(e) {
+    checkBox.addEventListener('click', function(e) {
       if(e.target.checked == true){
-        numberCheckedSaturday++;
+        numberChecked[day]++;
       } else {
-        numberCheckedSaturday--;
+        numberChecked[day]--;
       }
-      saturdayCompleted.innerText = "You have " + numberCheckedSaturday + " activities completed";
+      completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
     })
+
+
   }
-});
+}
 
+addButtonSunday.addEventListener("click", function() {createActivity(0)});
+addButtonMonday.addEventListener("click", function(){createActivity(1)});
+addButtonTuesday.addEventListener("click", function() {createActivity(2)});
+addButtonWednesday.addEventListener("click", function() {createActivity(3)});
+addButtonThursday.addEventListener("click", function(){createActivity(4)});
+addButtonFriday.addEventListener("click", function() {createActivity(5)});
+addButtonSaturday.addEventListener("click", function() {createActivity(6)});
 
+// Click on a close button to hide the current list item
+let i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+// alert for number of boxes checked
+alert(document.querySelectorAll('input[type="checkbox"]:checked').length);
+  }
+}
 
-//Saturday end
+document.getElementById("ht").style.color = "orange";
 
-// Start Sunday
-
-let addInputSunday = document.querySelector(".newaddTaskSunday");
-let addButtonSunday = document.querySelector(".addButtonSunday"); //<button class = "addButton">Activity</button>
-let todoListSunday= document.querySelector(".todoListSunday");
-document.getElementById("hsu").style.color = "crimson";
-
-addInputSunday.addEventListener("keyup", (e)=>{
-  if(e.keyCode === 13) {
-    addButtonSunday.click();
-  };
-});
-let sundayCompleted = document.querySelector("#countCompletedSunday");
-
-addButtonSunday.addEventListener("click", (e)=>{
-  //console.log('hit');
-  let input = addInputSunday.value.trim();
-
+<<<<<<< HEAD
   if (input === '') {
     alert("Write down a minimum of five activities")
   } else {
@@ -629,44 +579,23 @@ addButtonSunday.addEventListener("click", (e)=>{
     //editButton.innerText="Edit"; //inner text encodes special characters
     //trashButton.innerText="trash";
     todoListSunday.appendChild(li)
+=======
+document.getElementById("hwd").style.color = "orange";
+>>>>>>> cc8ce17a89e4cb98e785930567181488c262aea3
 
+document.getElementById("hth").style.color = "coral";
 
-    li.appendChild(checkBox);
-    li.appendChild(item);
-    // li.appendChild(editInput);
-    //li.appendChild(editButton);
-    li.appendChild(trashButton);
-    addInputSunday.value = "";
-    trashButton.addEventListener('click', function(e) {
-      if(e.target.parentElement.children[0].checked == true){
-        numberCheckedSunday--;
-        sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
-      }
-      todoListSunday.removeChild(li);
-      let count = todoListSunday.querySelectorAll("li");
-      activityNumber.innerText="total number of activites is " + count.length;
-    });
-    // count number of activities Saturday
-     let countSunday= todoListSunday.querySelectorAll("li");
-     let activityNumber = document.querySelector("#countSunday");
-     activityNumber.innerText="total number of activites is " + countSunday.length;
+document.getElementById("hf").style.color = "DarkOliveGreen";
 
-     checkBox.addEventListener('click', function(e) {
-       if(e.target.checked == true){
-         numberCheckedSunday++;
-       } else {
-         numberCheckedSunday--;
-       }
-       sundayCompleted.innerText = "You have " + numberCheckedSunday + " activities completed";
-     })
-  }
-});
+document.getElementById("hs").style.color = "DarkViolet";
 
+document.getElementById("hsu").style.color = "crimson";
 
-function moveToTomorrow() {
+function moveToTomorrow(i) {
+  selectedDay = i;
   incompleteActivities = [];
   incompleteActivitiesList.innerHTML = '';
-  todoListSunday.querySelectorAll('li').forEach(function(e){
+  todoList[i].querySelectorAll('li').forEach(function(e){
     if(!e.children[0].checked){
       incompleteActivities.push(e);
     }
@@ -685,9 +614,6 @@ function moveToTomorrow() {
     }
 }
 
-let incompleteActivities = [];
-let incompleteActivitiesList = document.querySelector('.incompleteActivities');
-
 moveBtn.addEventListener('click', function() {
   console.log(incompleteActivities);
   let i = 0;
@@ -695,9 +621,14 @@ moveBtn.addEventListener('click', function() {
     console.log(incompleteActivities[i]);
     i++;
     if(e.children[0].checked){
-      addInputMonday.value = e.children[1].value;
-      addButtonMonday.click();
+      addInput[(selectedDay+1)%7].value = e.children[1].value;
+      addButton[(selectedDay+1)%7].click();
     }
   })
 }) 
 
+function checkGoal() {
+  console.log(document.querySelector('.goal').value);
+  let goalLeft = document.querySelector('.goal').value - numberCheckedSunday;
+  console.log(goalLeft);
+}
