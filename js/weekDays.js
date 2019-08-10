@@ -40,14 +40,13 @@ function getWeekDate(day_name, day_num, month, year, date){
     if(month === 0){ 
         max_days = 31;
     } else {
-        if(month % 2 === 0){
+        if(month % 2 === 0 || month === 7){
             max_days = 31;
         } else if(date.getMonth() === 1){
             if(leap_year) { max_days = 29; }
             else max_days = 28;
         } else max_days = 30;
     }
-    console.log(max_days);
     // Get day name as reference
     switch(day_name){
         case 'Sun':
@@ -124,7 +123,6 @@ function getWeekDate(day_name, day_num, month, year, date){
                 break;
         }
     }
-    console.log(week_num);
     // Negative check to get start of the week (left-handside values)
     if(week_num[0] <= 0){
         var count = 0;
@@ -143,7 +141,6 @@ function getWeekDate(day_name, day_num, month, year, date){
                 else max_days = 28;
             } else max_days = 30;
         }
-        console.log(max_days);
         max_days = max_days - count + 1;
         j = 0;
         while(count > 0){

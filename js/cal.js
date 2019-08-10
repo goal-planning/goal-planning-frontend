@@ -182,146 +182,205 @@ cal_arrow_right.addEventListener("click", (e)=>{
     append_month(month_name[m], y, calendar);
 });
 
-    // var td0 = document.getElementById('td0');
-    var td1 = document.getElementById('td1');
-    var td2 = document.getElementById('td2');
-    var td3 = document.getElementById('td3');
-    var td4 = document.getElementById('td4');
-    var td5 = document.getElementById('td5');
-    var td6 = document.getElementById('td6');
-    var td7 = document.getElementById('td7');
-    var td8 = document.getElementById('td8');
-    var td9 = document.getElementById('td9');
-    var td10 = document.getElementById('td10');
-    var td11 = document.getElementById('td11');
-    var td12 = document.getElementById('td12');
-    var td13 = document.getElementById('td13');
-    var td14 = document.getElementById('td14');
-    var td15 = document.getElementById('td15');
-    var td16 = document.getElementById('td16');
-    var td17 = document.getElementById('td17');
-    var td18 = document.getElementById('td18');
-    var td19 = document.getElementById('td19');
-    var td20 = document.getElementById('td20');
-    var td21 = document.getElementById('td21');
-    var td22 = document.getElementById('td22');
-    var td23 = document.getElementById('td23');
-    var td24 = document.getElementById('td24');
-    var td25 = document.getElementById('td25');
-    var td26 = document.getElementById('td26');
-    var td27 = document.getElementById('td27');
-    var td28 = document.getElementById('td28');
-    var td29 = document.getElementById('td29');
-    var td30 = document.getElementById('td30');
-    var td31 = document.getElementById('td31');
-    var td32 = document.getElementById('td32');
-    var td33 = document.getElementById('td33');
-    var td34 = document.getElementById('td34');
-    var td35 = document.getElementById('td35');
+var td0 = document.getElementById('td0');
+var td1 = document.getElementById('td1');
+var td2 = document.getElementById('td2');
+var td3 = document.getElementById('td3');
+var td4 = document.getElementById('td4');
+var td5 = document.getElementById('td5');
+var td6 = document.getElementById('td6');
+var td7 = document.getElementById('td7');
+var td8 = document.getElementById('td8');
+var td9 = document.getElementById('td9');
+var td10 = document.getElementById('td10');
+var td11 = document.getElementById('td11');
+var td12 = document.getElementById('td12');
+var td13 = document.getElementById('td13');
+var td14 = document.getElementById('td14');
+var td15 = document.getElementById('td15');
+var td16 = document.getElementById('td16');
+var td17 = document.getElementById('td17');
+var td18 = document.getElementById('td18');
+var td19 = document.getElementById('td19');
+var td20 = document.getElementById('td20');
+var td21 = document.getElementById('td21');
+var td22 = document.getElementById('td22');
+var td23 = document.getElementById('td23');
+var td24 = document.getElementById('td24');
+var td25 = document.getElementById('td25');
+var td26 = document.getElementById('td26');
+var td27 = document.getElementById('td27');
+var td28 = document.getElementById('td28');
+var td29 = document.getElementById('td29');
+var td30 = document.getElementById('td30');
+var td31 = document.getElementById('td31');
+var td32 = document.getElementById('td32');
+var td33 = document.getElementById('td33');
+var td34 = document.getElementById('td34');
+var td35 = document.getElementById('td35');
 
-    // td0.addEventListener("click", (e)=>{
-    //     td0.children[0].innerHTML = 'wow!!!';
-    // });
-    // td1.addEventListener("click", (e)=>{
-    //     td1.children[0].innerHTML = 'wow!!!';
-    // });
-    // td2.addEventListener("click", (e)=>{
-    //     td2.children[0].innerHTML = 'wow!!!';
-    // });
-    // td3.addEventListener("click", (e)=>{
-    //     td3.children[0].innerHTML = 'wow!!!';
-    // });
-    // td4.addEventListener("click", (e)=>{
-    //     td4.children[0].innerHTML = 'wow!!!';
-    // });
-    // td5.addEventListener("click", (e)=>{
-    //     td5.children[0].innerHTML = 'wow!!!';
-    // });
-    // td6.addEventListener("click", (e)=>{
-    //     td6.children[0].innerHTML = 'wow!!!';
-    // });
-    // td7.addEventListener("click", (e)=>{
-    //     td7.children[0].innerHTML = 'wow!!!';
-    // });
-    // td8.addEventListener("click", (e)=>{
-    //     td8.children[0].innerHTML = 'wow!!!';
-    // });
-    // td9.addEventListener("click", (e)=>{
-    //     td9.children[0].innerHTML = 'wow!!!';
-    // });
-    // td10.addEventListener("click", (e)=>{
-    //     td10.children[0].innerHTML = 'wow!!!';
-    // });
-    // td11.addEventListener("click", (e)=>{
-    //     td11.children[0].innerHTML = 'wow!!!';
-    // });
-    // td12.addEventListener("click", (e)=>{
-    //     td12.children[0].innerHTML = 'wow!!!';
-    // });
-    // td13.addEventListener("click", (e)=>{
-    //     td13.children[0].innerHTML = 'wow!!!';
-    // });
-    // td14.addEventListener("click", (e)=>{
-    //     td14.children[0].innerHTML = 'wow!!!';
-    // });
-    // td15.addEventListener("click", (e)=>{
-    //     td15.children[0].innerHTML = 'wow!!!';
-    // });
-    // td16.addEventListener("click", (e)=>{
-    //     td16.children[0].innerHTML = 'wow!!!';
-    // });
-    // td17.addEventListener("click", (e)=>{
-    //     td17.children[0].innerHTML = 'wow!!!';
-    // });
-    // td18.addEventListener("click", (e)=>{
-    //     td18.children[0].innerHTML = 'wow!!!';
-    // });
-    // td19.addEventListener("click", (e)=>{
-    //     td19.children[0].innerHTML = 'wow!!!';
-    // });
-    // td20.addEventListener("click", (e)=>{
-    //     td20.children[0].innerHTML = 'wow!!!';
-    // });
-    // td21.addEventListener("click", (e)=>{
-    //     td21.children[0].innerHTML = 'wow!!!';
-    // });
-    // td22.addEventListener("click", (e)=>{
-    //     td22.children[0].innerHTML = 'wow!!!';
-    // });
-    // td23.addEventListener("click", (e)=>{
-    //     td23.children[0].innerHTML = 'wow!!!';
-    // });
-    // td24.addEventListener("click", (e)=>{
-    //     td24.children[0].innerHTML = 'wow!!!';
-    // });
-    // td25.addEventListener("click", (e)=>{
-    //     td25.children[0].innerHTML = 'wow!!!';
-    // });
-    // td26.addEventListener("click", (e)=>{
-    //     td26.children[0].innerHTML = 'wow!!!';
-    // });
-    // td27.addEventListener("click", (e)=>{
-    //     td27.children[0].innerHTML = 'wow!!!';
-    // });
-    // td28.addEventListener("click", (e)=>{
-    //     td28.children[0].innerHTML = 'wow!!!';
-    // });
-    // td29.addEventListener("click", (e)=>{
-    //     td29.children[0].innerHTML = 'wow!!!';
-    // });
-    // td30.addEventListener("click", (e)=>{
-    //     td30.children[0].innerHTML = 'wow!!!';
-    // });
-    // td31.addEventListener("click", (e)=>{
-    //     td31.children[0].innerHTML = 'wow!!!';
-    // });
-    // td32.addEventListener("click", (e)=>{
-    //     td32.children[0].innerHTML = 'wow!!!';
-    // });
-    // td33.addEventListener("click", (e)=>{
-    //     td33.children[0].innerHTML = 'wow!!!';
-    // });
-    // td34.addEventListener("click", (e)=>{
-    //     td34.children[0].innerHTML = 'wow!!!';
-    // });
-    
+var addID;
+var calAddIn = document.querySelector(".calAddIn");
+var calAddButton = document.querySelector("#calAddButton");
+
+var add0 = document.querySelector("#add0");
+var add1 = document.querySelector("#add1");
+var add2 = document.querySelector("#add2");
+var add3 = document.querySelector("#add3");
+var add4 = document.querySelector("#add4");
+var add5 = document.querySelector("#add5");
+var add6 = document.querySelector("#add6");
+var add7 = document.querySelector("#add7");
+var add8 = document.querySelector("#add8");
+var add9 = document.querySelector("#add9");
+var add10 = document.querySelector("#add10");
+var add11 = document.querySelector("#add11");
+var add12 = document.querySelector("#add12");
+var add13 = document.querySelector("#add13");
+var add14 = document.querySelector("#add14");
+var add15 = document.querySelector("#add15");
+var add16 = document.querySelector("#add16");
+var add17 = document.querySelector("#add17");
+var add18 = document.querySelector("#add18");
+var add19 = document.querySelector("#add19");
+var add20 = document.querySelector("#add20");
+var add21 = document.querySelector("#add21");
+var add22 = document.querySelector("#add22");
+var add23 = document.querySelector("#add23");
+var add24 = document.querySelector("#add24");
+var add25 = document.querySelector("#add25");
+var add26 = document.querySelector("#add26");
+var add27 = document.querySelector("#add27");
+var add28 = document.querySelector("#add28");
+var add29 = document.querySelector("#add29");
+var add30 = document.querySelector("#add30");
+var add31 = document.querySelector("#add31");
+var add32 = document.querySelector("#add32");
+var add33 = document.querySelector("#add33");
+var add34 = document.querySelector("#add34");
+
+add0.addEventListener("click", (e)=>{
+    this.addID = 0;
+});
+add1.addEventListener("click", (e)=>{
+    this.addID = 1;
+});
+add2.addEventListener("click", (e)=>{
+    this.addID = 2;
+});
+add3.addEventListener("click", (e)=>{
+    this.addID = 3;
+});
+add4.addEventListener("click", (e)=>{
+    this.addID = 4;
+});
+add5.addEventListener("click", (e)=>{
+    this.addID = 5;
+});
+add6.addEventListener("click", (e)=>{
+    this.addID = 6;
+});
+add7.addEventListener("click", (e)=>{
+    this.addID = 7;
+});
+add8.addEventListener("click", (e)=>{
+    this.addID = 8;
+});
+add9.addEventListener("click", (e)=>{
+    this.addID = 9;
+});
+add10.addEventListener("click", (e)=>{
+    this.addID = 10;
+});
+add11.addEventListener("click", (e)=>{
+    this.addID = 11;
+});
+add12.addEventListener("click", (e)=>{
+    this.addID = 12;
+});
+add13.addEventListener("click", (e)=>{
+    this.addID = 13;
+});
+add14.addEventListener("click", (e)=>{
+    this.addID = 14;
+});
+add15.addEventListener("click", (e)=>{
+    this.addID = 15;
+});
+add16.addEventListener("click", (e)=>{
+    this.addID = 16;
+});
+add17.addEventListener("click", (e)=>{
+    this.addID = 17;
+});
+add18.addEventListener("click", (e)=>{
+    this.addID = 18;
+});
+add19.addEventListener("click", (e)=>{
+    this.addID = 19;
+});
+add20.addEventListener("click", (e)=>{
+    this.addID = 20;
+});
+add21.addEventListener("click", (e)=>{
+    this.addID = 21;
+});
+add22.addEventListener("click", (e)=>{
+    this.addID = 22;
+});
+add23.addEventListener("click", (e)=>{
+    this.addID = 23;
+});
+add24.addEventListener("click", (e)=>{
+    this.addID = 24;
+});
+add25.addEventListener("click", (e)=>{
+    this.addID = 25;
+});
+add26.addEventListener("click", (e)=>{
+    this.addID = 26;
+});
+add27.addEventListener("click", (e)=>{
+    this.addID = 27;
+});
+add28.addEventListener("click", (e)=>{
+    this.addID = 28;
+});
+add29.addEventListener("click", (e)=>{
+    this.addID = 29;
+});
+add30.addEventListener("click", (e)=>{
+    this.addID = 30;
+});
+add31.addEventListener("click", (e)=>{
+    this.addID = 31;
+});
+add32.addEventListener("click", (e)=>{
+    this.addID = 32;
+});
+add33.addEventListener("click", (e)=>{
+    this.addID = 33;
+});
+add34.addEventListener("click", (e)=>{
+    this.addID = 34;
+});
+
+
+
+calAddIn.addEventListener("keyup", (e)=>{
+    if(e.keyCode === 13) {
+        calAddButton.click();
+    };
+});
+
+calAddButton.addEventListener("click", (e)=>{
+    let input = calAddIn.value.trim();
+    if (input === '') {
+      alert("Cannot add an empty todo")
+    } else {
+      let todo = document.createElement("div");
+      todo.innerText = input;
+      let targetBox = document.getElementById('hold'+this.addID);
+      targetBox.appendChild(todo);
+    }
+  });
