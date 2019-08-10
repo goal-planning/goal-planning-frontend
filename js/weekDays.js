@@ -7,10 +7,7 @@ var day_num = date.getDate();
 var month = _month[date.getMonth()];
 var year = date.getFullYear();
 
-console.log(month, day_num, day_name, year);
-
 var week = getWeekDate(day_name, day_num, _month, year, date);
-console.log(week);
 
 // Current week number elements
 var _SunNum = document.getElementById('SunNum');
@@ -30,7 +27,7 @@ _SatNum.innerText = week[6].toString();
 
 
 
-function getWeekDate(day_name, day_num, _month, year, date){
+function getWeekDate(day_name, day_num, month, year){
     var week_num = [0, 0, 0, 0, 0, 0, 0];
     var max_days = 0;
     var i = 0;
@@ -40,14 +37,13 @@ function getWeekDate(day_name, day_num, _month, year, date){
         leap_year = true;
     }
     // Check month and get maximum days
-    if(date.getMonth() % 2 === 0){
+    if(month % 2 === 0){
         max_days = 31;
-    } else if(date.getMonth() === 1){
+    } else if(month === 1){
         if(leap_year) { max_days = 29; }
         else max_days = 28;
     } else max_days = 30;
     // Get day name as reference
-    console.log(day_name);
     switch(day_name){
         case 'Sun':
             i = 0;
@@ -73,7 +69,6 @@ function getWeekDate(day_name, day_num, _month, year, date){
         default:
             break;
     }
-    console.log(i);
     // Week day number entry
     var r = 6 - (6 - i);
     for(i; i < 7; i++){
