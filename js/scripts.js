@@ -202,8 +202,10 @@ moveBtn.addEventListener('click', function() {
   })
 }) 
 
+
 function checkGoal() {
   console.log(document.querySelector('.goal').value);
   let goalLeft = document.querySelector('.goal').value - numberCheckedSunday;
   console.log(goalLeft);
 }
+
