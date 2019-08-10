@@ -23,6 +23,13 @@
         <div class="col-md-3 column height" id="column1">
           <span id="SunNum" class="weekNum"></span>
           <h2 id="hsu">Sunday</h2>
+          <button onclick="moveToTomorrow(0)" data-toggle="modal" data-target="#myModal">Move</button>
+          <button onclick="checkGoal()">Check Goal</button>
+          <select class='goal'name="" id="">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
           <div class="row">
             <div class="col-md-12">
             <div>
@@ -50,6 +57,8 @@
         <div class="col-md-3 column height" id="column2">
           <span id="MonNum" class="weekNum"></span>
           <h2 id="hm">Monday</h2>
+          <button onclick="moveToTomorrow(1)" data-toggle="modal" data-target="#myModal">Move</button>
+
             <div class="row">
               <div class="col-md-12">
               <div>
@@ -75,6 +84,8 @@
         <div class="col-md-3 column height" id="column3">
           <span id="TueNum" class="weekNum"></span>
           <h2 id="ht">Tuesday</h2>
+          <button onclick="moveToTomorrow(2)" data-toggle="modal" data-target="#myModal">Move</button>
+
             <div class="row">
               <div class="col-md-12">
               <div>
@@ -99,6 +110,8 @@
         <div class="col-md-3 column height" id="column3">
           <span id="WedNum" class="weekNum"></span>
           <h2 id="hwd">Wednesday</h2>
+          <button onclick="moveToTomorrow(3)" data-toggle="modal" data-target="#myModal">Move</button>
+
             <div class="row">
               <div class="col-md-12">
               <div>
@@ -128,6 +141,8 @@
           <div class="col-md-4 column height" id="column5">
               <span id="ThuNum" class="weekNum"></span>
               <h2 id="hth">Thursday</h2>
+              <button onclick="moveToTomorrow(4)" data-toggle="modal" data-target="#myModal">Move</button>
+
                 <div class="row">
                   <div class="col-md-12">
                   <div>
@@ -151,6 +166,8 @@
           <div class="col-md-4 column height" id="column6">
             <span id="FriNum" class="weekNum"></span>
             <h2 id="hf">Friday</h2>
+            <button onclick="moveToTomorrow(5)" data-toggle="modal" data-target="#myModal">Move</button>
+
               <div class="row">
                 <div class="col-md-12">
                 <div>
@@ -175,6 +192,8 @@
           <div class="col-md-4 column height" id="column7">
             <span id="SatNum" class="weekNum"></span>
             <h2 id="hs">Saturday</h2>
+            <button onclick="moveToTomorrow(6)" data-toggle="modal" data-target="#myModal">Move</button>
+
               <div class="row">
                 <div class="col-md-12">
                 <div>
@@ -473,6 +492,27 @@
         </div>
     
       </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Incomplete Actvities</h4>
+        </div>
+        <div class="modal-body">
+          <p>These are the activites you have not completed. Please select activities to reschedule.</p>
+          <ul class="incompleteActivities"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default move-activities-btn" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
   </div>
 
   <!-- End test calendar-->
@@ -480,6 +520,7 @@
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="js/cal.js"></script>
   <script type="text/javascript" src="js/weekDays.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>
