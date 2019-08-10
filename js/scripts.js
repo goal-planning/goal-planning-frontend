@@ -26,17 +26,20 @@ let todoListWednesday = document.querySelector(".todoListWednesday");
 let wednesdayCompleted = document.querySelector("#countCompletedWednesday");
 let wednesdayCount = document.querySelector("#countWednesday");
 
+
 let addInputThursday = document.querySelector(".newaddTaskThursday");
 let addButtonThursday = document.querySelector(".addButtonThursday");
 let todoListThursday= document.querySelector(".todoListThursday");
 let thursdayCompleted = document.querySelector("#countCompletedThursday");
 let thursdayCount = document.querySelector("#countThursday");
 
+
 let addInputFriday = document.querySelector(".newaddTaskFriday");
 let addButtonFriday = document.querySelector(".addButtonFriday");
 let todoListFriday= document.querySelector(".todoListFriday");
 let fridayCompleted = document.querySelector("#countCompletedFriday");
 let fridayCount = document.querySelector("#countFriday");
+
 
 let addInputSaturday = document.querySelector(".newaddTaskSaturday");
 let addButtonSaturday = document.querySelector(".addButtonSaturday");
@@ -99,6 +102,7 @@ function createActivity(day) {
     });
     item.type = "text";
     item.value = input;
+
     let trashButton = document.createElement("span");
     trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
     todoList[day].appendChild(li)
