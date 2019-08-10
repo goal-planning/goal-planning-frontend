@@ -16,6 +16,7 @@ td{
     height: 150px;
     position: relative;
     border: 1px solid black;
+    overflow-x: hidden;
 }
 #calendar-container>div{
     padding: 0;
@@ -46,10 +47,12 @@ td{
     text-align: center;
 }
 .calBoxNum{
-    position: relative;
-    bottom: 62px;
+    position: absolute;
+    top: 0;
+    right: 0;
     text-align: right;
     padding-right: 5px;
+    padding-top: 2px;
     margin: 0;
 }
 .cal_arrow_l{
@@ -87,6 +90,9 @@ td{
     color: #3CB371;
     transition-duration: .3s;
 }
+.calAddIn{
+    width: 100%;
+}
 .no-visible{
     visibility: hidden;
     position: absolute;
@@ -101,4 +107,15 @@ td{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.head_hold{
+    position: relative;
+    height: 26px;
+    bottom: 61px;
+}
+.hold{
+    position: absolute;
+    height: 26px;
+    padding-top: 26px;
+    top: 0;
 }
