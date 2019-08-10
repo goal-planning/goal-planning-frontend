@@ -7,10 +7,8 @@ body{
 }
 .header{
   background-color: blue;
-
-}
-.header{
-  color: yellow
+  color: yellow;
+  height: 39px;
 }
 .main-container{
   border: 1px dashed red;
@@ -19,6 +17,9 @@ body{
 }
 .week{
   width: 100%;
+}
+.height{
+  height: 201px;
 }
 .column{
   border: 1px dashed black;
@@ -34,7 +35,7 @@ body{
 	background-size: cover;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAAXNSR0IArs4c6QAAAGJJREFUCB0BVwCo/wFJHVH/IQ4fAFxaSgDlztYAKfkWACEYHQCZzcMAAbNmp//i2d4A6gr3AD1VSwDZusQANwsWADMiLgAE2ufmAOn56wDk9vUACNzXAB1AJwCjmroA1eT0AKqjI8Om18fNAAAAAElFTkSuQmCC);
 }
-.no-marging-padding{
+.no-margin-padding{
   padding: 0!important;
   margin: 0!important;
 

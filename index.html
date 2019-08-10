@@ -9,17 +9,18 @@
   <link rel="stylesheet" href="css/cal.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title>Document</title>
 </head>
 <body>
-  <div class="container-fluid main-container no-marging-padding">
-    <div class="row header text-center">
-       <h1>Weekly Activity list</h1>
+  <div class="container-fluid main-container no-margin-padding">
+    <div class="header text-center no-margin-padding">
+       <h1 class="no-margin-padding">Weekly Activity list</h1>
     </div>
-    <div class="row week container-fluid no-marging-padding">
-      <div class="col-md-7 no-marging-padding">
-        <div class="row container-fluid no-marging-padding">
-        <div class="col-md-3 column" id="column1">
+    <div class="row week container-fluid no-margin-padding">
+      <div class="col-md-7 no-margin-padding">
+        <div class="row container-fluid no-margin-padding">
+        <div class="col-md-3 column height" id="column1">
           <span id="SunNum" class="weekNum"></span>
           <h2 id="hsu">Sunday</h2>
           <button onclick="moveToTomorrow(0)" data-toggle="modal" data-target="#myModal">Move</button>
@@ -50,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 column" id="column2">
+        <div class="col-md-3 column height" id="column2">
           <span id="MonNum" class="weekNum"></span>
           <h2 id="hm">Monday</h2>
           <button onclick="moveToTomorrow(1)" data-toggle="modal" data-target="#myModal">Move</button>
@@ -77,7 +78,7 @@
             </div> <!-- first form row end -->
           </div>
         </div>
-        <div class="col-md-3 column" id="column3">
+        <div class="col-md-3 column height" id="column3">
           <span id="TueNum" class="weekNum"></span>
           <h2 id="ht">Tuesday</h2>
           <button onclick="moveToTomorrow(2)" data-toggle="modal" data-target="#myModal">Move</button>
@@ -103,7 +104,7 @@
           </div>
         </div>
         <!-- first form row end -->
-        <div class="col-md-3 column" id="column3">
+        <div class="col-md-3 column height" id="column3">
           <span id="WedNum" class="weekNum"></span>
           <h2 id="hwd">Wednesday</h2>
           <button onclick="moveToTomorrow(3)" data-toggle="modal" data-target="#myModal">Move</button>
@@ -132,9 +133,9 @@
 
       </div>
       </div>
-        <div class="col-md-5 no-marging-padding">
-          <div class="row container-fluid no-marging-padding">
-          <div class="col-md-4 column" id="column5">
+        <div class="col-md-5 no-margin-padding">
+          <div class="row container-fluid no-margin-padding">
+          <div class="col-md-4 column height" id="column5">
               <span id="ThuNum" class="weekNum"></span>
               <h2 id="hth">Thursday</h2>
               <button onclick="moveToTomorrow(4)" data-toggle="modal" data-target="#myModal">Move</button>
@@ -159,7 +160,7 @@
                 </div> <!-- first form row end -->
               </div>
           </div>
-          <div class="col-md-4 column" id="column6">
+          <div class="col-md-4 column height" id="column6">
             <span id="FriNum" class="weekNum"></span>
             <h2 id="hf">Friday</h2>
             <button onclick="moveToTomorrow(5)" data-toggle="modal" data-target="#myModal">Move</button>
@@ -185,7 +186,7 @@
             </div>
         </div>
 <!-- first form row Sunday begin -->
-          <div class="col-md-4 column" id="column7">
+          <div class="col-md-4 column height" id="column7">
             <span id="SatNum" class="weekNum"></span>
             <h2 id="hs">Saturday</h2>
             <button onclick="moveToTomorrow(6)" data-toggle="modal" data-target="#myModal">Move</button>
@@ -229,12 +230,267 @@
           <i class="material-icons noSelect">keyboard_arrow_right</i>
        </span>
      </div>
+     <div id="calendar-days">
+       <table>
+         <tr>
+            <td class="cal-days">Sun</td>
+            <td class="cal-days">Mon</td>
+            <td class="cal-days">Tue</td>
+            <td class="cal-days">Wed</td>
+            <td class="cal-days">Thu</td>
+            <td class="cal-days">Fri</td>
+            <td class="cal-days">Sat</td>           
+         </tr>
+       </table>
+     </div>
      <div id="calendar-dates">
-
+        <table id="cal_table">
+          <tr>
+            <td id="td0">
+                <button id="add0" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+              </div>
+              <div id="hold0" class="hold"></div>
+            </td>
+            <td id="td1">
+                <button id="add1" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold1" class="hold"></div>
+            </td>
+            <td id="td2">
+                <button id="add2" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold2" class="hold"></div>
+            </td>
+            <td id="td3">
+                <button id="add3" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold3" class="hold"></div>
+            </td>
+            <td id="td4">
+                <button id="add4" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold4" class="hold"></div>
+            </td>
+            <td id="td5">
+                <button id="add5" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold5" class="hold"></div>
+            </td>
+            <td id="td6">
+                <button id="add6" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold6" class="hold"></div>
+            </td>
+          </tr>
+          <tr>
+            <td id="td7">
+                <button id="add7" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold7" class="hold"></div>
+            </td>
+            <td id="td8">
+                <button id="add8" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold8" class="hold"></div>
+            </td>
+            <td id="td9">
+                <button id="add9" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold9" class="hold"></div>
+            </td>
+            <td id="td10">
+                <button id="add10" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold10" class="hold"></div>
+            </td>
+            <td id="td11">
+                <button id="add11" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold11" class="hold"></div>
+            </td>
+            <td id="td12">
+                <button id="add12" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold12" class="hold"></div>
+            </td>
+            <td id="td13">
+                <button id="add13" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold13" class="hold"></div>
+            </td>
+          </tr>
+          <tr>
+            <td id="td14">
+                <button id="add14" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold14" class="hold"></div>
+            </td>
+            <td id="td15">
+                <button id="add15" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold15" class="hold"></div>
+            </td>
+            <td id="td16">
+                <button id="add16" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold16" class="hold"></div>
+            </td>
+            <td id="td17">
+                <button id="add17" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold17" class="hold"></div>
+            </td>
+            <td id="td18">
+                <button id="add18" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold18" class="hold"></div>
+            </td>
+            <td id="td19">
+                <button id="add19" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold19" class="hold"></div>
+            </td>
+            <td id="td20">
+                <button id="add20" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold20" class="hold"></div>
+            </td>
+          </tr>
+          <tr>
+            <td id="td21">
+                <button id="add21" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold21" class="hold"></div>
+            </td>
+            <td id="td22">
+                <button id="add22" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold22" class="hold"></div>
+            </td>
+            <td id="td23">
+                <button id="add23" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold23" class="hold"></div>
+            </td>
+            <td id="td24">
+                <button id="add24" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold24" class="hold"></div>
+            </td>
+            <td id="td25">
+                <button id="add25" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold25" class="hold"></div>
+            </td>
+            <td id="td26">
+                <button id="add26" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold26" class="hold"></div>
+            </td>
+            <td id="td27">
+                <button id="add27" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold27" class="hold"></div>
+            </td>
+          </tr>
+          <tr>
+            <td id="td28">
+                <button id="add28" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold28" class="hold"></div>
+            </td>
+            <td id="td29">
+                <button id="add29" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold29" class="hold"></div>
+            </td>
+            <td id="td30">
+                <button id="add30" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold30" class="hold"></div>
+            </td>
+            <td id="td31">
+                <button id="add31" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold31" class="hold"></div>
+            </td>
+            <td id="td32">
+                <button id="add32" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold32" class="hold"></div>
+            </td>
+            <td id="td33">
+                <button id="add33" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold33" class="hold"></div>
+            </td>
+            <td id="td34">
+                <button id="add34" class="no-visible" data-toggle="modal" data-target="#calModal">
+                    <i class="material-icons noSelect cal_add">add_box</i>
+                </button>
+                <div id="hold34" class="hold"></div>
+            </td>
+          </tr>
+        </table>
      </div>
    </div>
 
-   <div class="modal fade" id="myModal" role="dialog">
+  <!-- Calendar Modal -->
+  <div id="calModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add a Todo</h4>
+          </div>
+          <div class="modal-body">
+            <input class="calAddIn" type="text">
+          </div>
+          <div class="modal-footer">
+            <button id="calAddButton" type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+          </div>
+        </div>
+    
+      </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
