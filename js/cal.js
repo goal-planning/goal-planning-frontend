@@ -374,8 +374,6 @@ add34.addEventListener("click", (e)=>{
     this.addID = 34;
 });
 
-
-
 calAddIn.addEventListener("keyup", (e)=>{
     if(e.keyCode === 13) {
         calAddButton.click();
@@ -388,13 +386,57 @@ calAddButton.addEventListener("click", (e)=>{
       alert("Cannot add an empty todo")
     } else {
       let todo = document.createElement("div");
-      let todoKill = document.createElement("span");
+      let todoKill = document.createElement("div");
       todoKill.innerText = "X";
-      console.log(todoKill, todo);
+      todoKill.className += "cal_todo_x";
       todo.className += "cal_todo";
       todo.innerText = input;
       todo.appendChild(todoKill);
       let targetBox = document.getElementById('hold'+this.addID);
       targetBox.appendChild(todo);
+      // Delete calendar todo
+      todoKill.addEventListener("click", (e)=>{
+        e.target.parentElement.remove();
+      })
+      // Edit calendar todo
+      todo.addEventListener("click", (e)=>{
+        let text_to_change = e.target.childNodes[0];
+        text_to_change.nodeValue = "???";
+      })
     }
-  });
+});
+
+// var calEditIn = document.querySelector(".calEditIn");
+// var calEditButton = document.querySelector("#calEditButton");
+
+// function calEditModal(modalID) {
+//     var text_output;
+//     $("#"+modalID).modal('show');
+    
+//     $("#"+modalID).on('shown.bs.modal', function (e) {
+//         $('.calEditIn').focus();
+//     })
+
+//     calEditIn.addEventListener("keyup", (e)=>{
+//         if(e.keyCode === 13) {
+//             calEditButton.click();
+//         };
+//     });
+    
+//     calEditButton.addEventListener("click", (e)=>{
+//         let input = this.calEditIn.value.trim();
+//         console.log(input);
+//         this.text_output = input;
+//     });    
+
+//     $("#"+modalID).on('hidden.bs.modal', function (e) {
+//         $(this)
+//         .find("input,textarea,select")
+//           .val('')
+//           .end()
+//         .find("input[type=checkbox], input[type=radio]")
+//           .prop("checked", "")
+//           .end();
+//         return text_output;
+//     })
+// }

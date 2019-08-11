@@ -120,6 +120,7 @@ td{
     top: 0;
 }
 .cal_todo{
+    position: relative;
     border: 1px solid #3CB371;
     background: #3CB371;
     border-radius: 10px;
@@ -140,4 +141,14 @@ td{
 }
 .cal_todo:hover{
     cursor: pointer;
+}
+.cal_todo_x {
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+    font-weight: 800;
+}
+.cal_todo_x:hover {
+    color: #ff0000;
+    transition-duration: .3s; 
 }
