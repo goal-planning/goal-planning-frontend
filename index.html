@@ -523,5 +523,19 @@
   <script type="text/javascript" src="js/weekDays.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('#calModal').on('hidden.bs.modal', function (e) {
+      $(this)
+      .find("input,textarea,select")
+        .val('')
+        .end()
+      .find("input[type=checkbox], input[type=radio]")
+        .prop("checked", "")
+        .end();
+    })
+    $('#calModal').on('shown.bs.modal', function () {
+      $('.calAddIn').focus();
+    })  
+  </script>
 </body>
 </html>

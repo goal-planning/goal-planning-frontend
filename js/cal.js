@@ -74,7 +74,7 @@ function get_calendar(day_no, days){
         var td = document.getElementById("td"+Ftd);
         var p = document.createElement('p');
         p.setAttribute("id", Ftd);
-        p.className += 'calBoxNum'
+        p.className += 'calBoxNum';
         p.innerText = "";
         td.appendChild(p);
         Ftd_count++;
@@ -86,7 +86,7 @@ function get_calendar(day_no, days){
         var td = document.getElementById('td'+Ftd);
         p = document.createElement('p');
         p.setAttribute("id", Ftd);
-        p.className += 'calBoxNum'
+        p.className += 'calBoxNum';
         p.innerText = count.toString();
         td.appendChild(p);
         count++;
@@ -100,7 +100,7 @@ function get_calendar(day_no, days){
                 var td = document.getElementById('td'+Ftd);
                 var p = document.createElement('p');
                 p.setAttribute("id", Ftd);
-                p.className += 'calBoxNum'
+                p.className += 'calBoxNum';
                 p.innerText = "";
                 td.appendChild(p);
                 Ftd_count++;
@@ -109,7 +109,7 @@ function get_calendar(day_no, days){
                 var td = document.getElementById('td'+Ftd);
                 p = document.createElement('p');
                 p.setAttribute("id", Ftd);
-                p.className += 'calBoxNum'
+                p.className += 'calBoxNum';
                 p.innerText = count.toString();
                 td.appendChild(p);
                 count++;
@@ -119,7 +119,7 @@ function get_calendar(day_no, days){
                 var td = document.getElementById('td'+Ftd);
                 p = document.createElement('p');
                 p.setAttribute("id", Ftd);
-                p.className += 'calBoxNum'
+                p.className += 'calBoxNum';
                 p.innerText = count.toString();
                 td.appendChild(p);
                 count++;
@@ -154,8 +154,12 @@ cal_arrow_left.addEventListener("click", (e)=>{
     let days = new Date(y, m+1, 0).getDate();
     for(let i=0; i<=34; i++){  
         var cntnt = document.getElementById("td"+i);
-        while (cntnt.lastChild.className !== 'no-visible') {
+        var holder = document.getElementById("hold"+i);
+        while (cntnt.lastChild.className !== 'hold') {
             cntnt.removeChild(cntnt.lastChild);
+        }
+        while (holder.firstChild) {
+            holder.removeChild(holder.firstChild);
         }
     }
     let calendar = get_calendar(day_no, days);
@@ -174,8 +178,13 @@ cal_arrow_right.addEventListener("click", (e)=>{
     let days = new Date(y, m+1, 0).getDate();
     for(let i=0; i<=34; i++){  
         var cntnt = document.getElementById("td"+i);
-        while (cntnt.lastChild.className !== 'no-visible') {
+        var holder = document.getElementById("hold"+i);
+        while (cntnt.lastChild.className !== 'hold') {
             cntnt.removeChild(cntnt.lastChild);
+        }
+        // TBD --> Removes todo from calendar
+        while (holder.firstChild) {
+            holder.removeChild(holder.firstChild);
         }
     }
     let calendar = get_calendar(day_no, days);
@@ -374,12 +383,17 @@ calAddIn.addEventListener("keyup", (e)=>{
 });
 
 calAddButton.addEventListener("click", (e)=>{
-    let input = calAddIn.value.trim();
+    let input = this.calAddIn.value.trim();
     if (input === '') {
       alert("Cannot add an empty todo")
     } else {
       let todo = document.createElement("div");
+      let todoKill = document.createElement("span");
+      todoKill.innerText = "X";
+      console.log(todoKill, todo);
+      todo.className += "cal_todo";
       todo.innerText = input;
+      todo.appendChild(todoKill);
       let targetBox = document.getElementById('hold'+this.addID);
       targetBox.appendChild(todo);
     }
