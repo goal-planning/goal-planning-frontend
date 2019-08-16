@@ -401,42 +401,46 @@ calAddButton.addEventListener("click", (e)=>{
       // Edit calendar todo
       todo.addEventListener("click", (e)=>{
         let text_to_change = e.target.childNodes[0];
-        text_to_change.nodeValue = "???";
+        let id = "calEditModal";
+        calEditModal(id, text_to_change);
       })
     }
 });
 
-// var calEditIn = document.querySelector(".calEditIn");
-// var calEditButton = document.querySelector("#calEditButton");
+var calEditIn = document.querySelector(".calEditIn");
+var calEditButton = document.querySelector("#calEditButton");
 
-// function calEditModal(modalID) {
-//     var text_output;
-//     $("#"+modalID).modal('show');
+function calEditModal(modalID, text_to_change) {
+    $("#"+modalID).modal('show');
     
-//     $("#"+modalID).on('shown.bs.modal', function (e) {
-//         $('.calEditIn').focus();
-//     })
+    $("#"+modalID).on('shown.bs.modal', function (e) {
+        $('.calEditIn').focus();
+        
+    })
 
-//     calEditIn.addEventListener("keyup", (e)=>{
-//         if(e.keyCode === 13) {
-//             calEditButton.click();
-//         };
-//     });
+    calEditIn.addEventListener("keyup", (e)=>{
+        if(e.keyCode === 13) {
+            calEditButton.click();
+        };
+    });
     
-//     calEditButton.addEventListener("click", (e)=>{
-//         let input = this.calEditIn.value.trim();
-//         console.log(input);
-//         this.text_output = input;
-//     });    
+    calEditButton.addEventListener("click", (e)=>{
+        let input = this.calEditIn.value.trim();
+        this.calEditIn.value = "";
+        console.log(input);
+        text_to_change.nodeValue = input;
+    });    
 
-//     $("#"+modalID).on('hidden.bs.modal', function (e) {
-//         $(this)
-//         .find("input,textarea,select")
-//           .val('')
-//           .end()
-//         .find("input[type=checkbox], input[type=radio]")
-//           .prop("checked", "")
-//           .end();
-//         return text_output;
-//     })
-// }
+    // $("#"+modalID).on('hidden.bs.modal', function (e) {
+    //     $(this)
+    //     .find("input,textarea,select")
+    //       .val('')
+    //       .end()
+    //     .find("input[type=checkbox], input[type=radio]")
+    //       .prop("checked", "")
+    //       .end();
+    //     console.log(this.input);
+    //     return this.input;
+    // })
+
+}

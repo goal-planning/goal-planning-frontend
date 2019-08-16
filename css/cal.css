@@ -147,6 +147,7 @@ td{
     right: 6px;
     bottom: 0;
     font-weight: 800;
+    z-index: 20;
 }
 .cal_todo_x:hover {
     color: #ff0000;
