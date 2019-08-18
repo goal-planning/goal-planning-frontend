@@ -98,6 +98,7 @@ function createActivity(day) {
         todoList[day].removeChild(li);
         let count = todoList[day].querySelectorAll("li");
         activityNumber.innerText="total number of activites is " + count.length;
+         alert(activityNumber.innerText);
       };
     });
     item.type = "text";
@@ -118,10 +119,11 @@ function createActivity(day) {
       todoList[day].removeChild(li);
       numberActivities[day] = todoList[day].querySelectorAll("li");
       numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
+       alert(numberActivitiesElements[day].innerText);
     });
     numberActivities[day] = todoList[day].querySelectorAll("li");
     numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
-
+    alert(numberActivitiesElements[day].innerText);
     checkBox.addEventListener('click', function(e) {
       if(e.target.checked == true){
         numberChecked[day]++;
@@ -129,6 +131,11 @@ function createActivity(day) {
         numberChecked[day]--;
       }
       completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
+      alert(completedCount[day].innerText);
+      if (day === 0) {
+        numberCheckedSunday ++;
+      }
+      console.log(numberCheckedSunday);
     })
 
 
@@ -200,12 +207,11 @@ moveBtn.addEventListener('click', function() {
       addButton[(selectedDay+1)%7].click();
     }
   })
-}) 
-
+})
 
 function checkGoal() {
   console.log(document.querySelector('.goal').value);
   let goalLeft = document.querySelector('.goal').value - numberCheckedSunday;
+  console.log(numberCheckedSunday);
   console.log(goalLeft);
 }
-
