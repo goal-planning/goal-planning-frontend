@@ -135,6 +135,7 @@ function createActivity(day) {
       if (day === 0) {
         numberCheckedSunday ++;
       }
+      // if()
       console.log(numberCheckedSunday);
     })
 
@@ -209,9 +210,15 @@ moveBtn.addEventListener('click', function() {
   })
 })
 
-function checkGoal() {
+function checkGoal(day) {
   console.log(document.querySelector('.goal').value);
-  let goalLeft = document.querySelector('.goal').value - numberCheckedSunday;
+  if(day === 0){
+    let goalLeft = document.querySelector('.goal').value - numberCheckedSunday;
+      alert("sunday works");
+  }
+  // if(){
+  //
+  // }
   console.log(numberCheckedSunday);
   console.log(goalLeft);
 }
