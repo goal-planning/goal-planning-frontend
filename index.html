@@ -13,6 +13,32 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- Template -->
+  <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('News', this, 'green')">News</button>
+  <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+  <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+  <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Home is where the heart is..</p>
+  </div>
+
+  <div id="News" class="tabcontent">
+    <h3>News</h3>
+    <p>Some news this fine day!</p> 
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Get in touch, or swing by for a cup of coffee.</p>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+  </div>
+  <!-- End of Template -->
   <div class="container-fluid main-container no-margin-padding">
     <div class="header text-center no-margin-padding">
        <h1 class="no-margin-padding">Weekly Activity list</h1>
@@ -543,6 +569,7 @@
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="js/cal.js"></script>
   <script type="text/javascript" src="js/weekDays.js"></script>
+  <script type="text/javascript" src="js/template.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script type="text/javascript">

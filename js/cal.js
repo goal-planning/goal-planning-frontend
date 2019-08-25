@@ -395,14 +395,34 @@ calAddButton.addEventListener("click", (e)=>{
       let targetBox = document.getElementById('hold'+this.addID);
       targetBox.appendChild(todo);
       // Delete calendar todo
-      todoKill.addEventListener("click", (e)=>{
+      todoKill.addEventListener("click", function(e){
         e.target.parentElement.remove();
       })
       // Edit calendar todo
-      todo.addEventListener("click", (e)=>{
+      todo.addEventListener("click", function(e){
+        console.log(this);
+        if(e.target !== this) {
+            return;
+        }
         let text_to_change = e.target.childNodes[0];
-        let id = "calEditModal";
-        calEditModal(id, text_to_change);
+        $("#calEditModal").modal('show');
+    
+        $("#calEditModal").on('shown.bs.modal', function (e) {
+            $('.calEditIn').focus();        
+        })
+        
+        calEditModal(text_to_change);
+
+        $("#calEditModal").on('hidden.bs.modal', function (e) {
+            $(this)
+            .find("input,textarea,select")
+                .val('')
+                .end()
+            .find("input[type=checkbox], input[type=radio]")
+                .prop("checked", "")
+                .end();
+        })
+    
       })
     }
 });
@@ -410,13 +430,12 @@ calAddButton.addEventListener("click", (e)=>{
 var calEditIn = document.querySelector(".calEditIn");
 var calEditButton = document.querySelector("#calEditButton");
 
-function calEditModal(modalID, text_to_change) {
-    $("#"+modalID).modal('show');
+function calEditModal(text_to_change) {
+    // $("#calEditModal").modal('show');
     
-    $("#"+modalID).on('shown.bs.modal', function (e) {
-        $('.calEditIn').focus();
-        
-    })
+    // $("#calEditModal").on('shown.bs.modal', function (e) {
+    //     $('.calEditIn').focus();        
+    // })
 
     calEditIn.addEventListener("keyup", (e)=>{
         if(e.keyCode === 13) {
@@ -426,12 +445,12 @@ function calEditModal(modalID, text_to_change) {
     
     calEditButton.addEventListener("click", (e)=>{
         let input = this.calEditIn.value.trim();
-        this.calEditIn.value = "";
+        // this.calEditIn.value = "";
         console.log(input);
         text_to_change.nodeValue = input;
     });    
 
-    // $("#"+modalID).on('hidden.bs.modal', function (e) {
+    // $("#calEditModal").on('hidden.bs.modal', function (e) {
     //     $(this)
     //     .find("input,textarea,select")
     //       .val('')
@@ -439,8 +458,5 @@ function calEditModal(modalID, text_to_change) {
     //     .find("input[type=checkbox], input[type=radio]")
     //       .prop("checked", "")
     //       .end();
-    //     console.log(this.input);
-    //     return this.input;
     // })
-
 }
