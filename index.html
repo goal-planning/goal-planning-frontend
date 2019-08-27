@@ -14,239 +14,237 @@
 </head>
 <body>
   <!-- Template -->
-  <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
-  <button class="tablink" onclick="openPage('News', this, 'green')">News</button>
+  <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Your Week</button>
+  <button class="tablink" onclick="openPage('Analyitics', this, 'green')">Analyitics</button>
   <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
   <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-  <div id="Home" class="tabcontent">
-    <h3>Home</h3>
-    <p>Home is where the heart is..</p>
+  <div id="Home" class="container-fluid tabcontent">
+    <div class="header text-center no-margin-padding">
+      <h1 class="no-margin-padding">Weekly Activity list</h1>
+   </div>
+   <div class="row week container-fluid no-margin-padding">
+     <div class="col-md-7 no-margin-padding">
+       <div class="row container-fluid no-margin-padding">
+       <div class="col-md-3 column height" id="column1">
+         <span id="SunNum" class="weekNum"></span>
+         <h2 id="hsu">Sunday</h2>
+         <button onclick="moveToTomorrow(0)" data-toggle="modal" data-target="#myModal">Move</button>
+         <button onclick="checkGoal()">Check Goal</button>
+         <select class='goal'name="" id="">
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+         </select>
+         <div class="row">
+           <div class="col-md-12">
+           <div>
+             <p>Add new acitivity </p>
+             <input type="text" class="newaddTaskSunday">
+             <span class="addButtonSunday glyphicon glyphicon-plus plus-icon"></span>
+           </div>
+           <div>
+             <ul class="todoListSunday">
+
+
+             </ul>
+             <p id="countSunday"> You have zero activities today </p>
+             <p id="countCompletedSunday">You have 0 activities completed</p>
+           </div>
+             <!-- //light bulb  -->
+             <!-- <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+             <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+             <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button> -->
+           </div>
+         </div>
+       </div>
+       <div class="col-md-3 column height" id="column2">
+         <span id="MonNum" class="weekNum"></span>
+         <h2 id="hm">Monday</h2>
+         <button onclick="moveToTomorrow(1)" data-toggle="modal" data-target="#myModal">Move</button>
+
+           <div class="row">
+             <div class="col-md-12">
+             <div>
+               <p>Add new acitivity </p>
+               <input type="text" class="newaddTaskMonday">
+               <span class="addButtonMonday glyphicon glyphicon-plus plus-icon"></span>
+             </div>
+             <div>
+               <ul class="todoListMonday">
+
+
+               </ul>
+               <p id="countMonday"> You have zero activities today </p>
+               <p id="countCompletedMonday">You have 0 activities completed</p>
+
+             </div>
+
+
+
+           </div> <!-- first form row end -->
+         </div>
+       </div>
+       <div class="col-md-3 column height" id="column3">
+         <span id="TueNum" class="weekNum"></span>
+         <h2 id="ht">Tuesday</h2>
+         <button onclick="moveToTomorrow(2)" data-toggle="modal" data-target="#myModal">Move</button>
+
+           <div class="row">
+             <div class="col-md-12">
+             <div>
+               <p>Add new acitivity </p>
+               <input type="text" class="newaddTaskTuesday">
+               <span class="addButtonTuesday glyphicon glyphicon-plus plus-icon"></span>
+             </div>
+             <div>
+               <ul class="todoListTuesday">
+
+
+               </ul>
+ <p id="countTuesday"> You have zero activities today </p>
+ <p id="countCompletedTuesday">You have 0 activities completed</p>
+
+             </div>
+
+           </div> <!-- first form row end -->
+         </div>
+       </div>
+       <!-- first form row end -->
+       <div class="col-md-3 column height" id="column3">
+         <span id="WedNum" class="weekNum"></span>
+         <h2 id="hwd">Wednesday</h2>
+         <button onclick="moveToTomorrow(3)" data-toggle="modal" data-target="#myModal">Move</button>
+
+           <div class="row">
+             <div class="col-md-12">
+             <div>
+               <p>Add new acitivity </p>
+               <input type="text" class="newaddTaskWednesday">
+               <span class="addButtonWednesday glyphicon glyphicon-plus plus-icon"></span>
+             </div>
+             <div>
+               <ul class="todoListWednesday">
+
+
+               </ul>
+ <p id="countWednesday"> You have zero activities today </p>
+ <p id="countCompletedWednesday">You have 0 activities completed</p>
+
+             </div>
+
+           </div> <!-- first form row end -->
+         </div>
+       </div>
+       <!-- first form row end  Friday-->
+
+     </div>
+     </div>
+       <div class="col-md-5 no-margin-padding">
+         <div class="row container-fluid no-margin-padding">
+         <div class="col-md-4 column height" id="column5">
+             <span id="ThuNum" class="weekNum"></span>
+             <h2 id="hth">Thursday</h2>
+             <button onclick="moveToTomorrow(4)" data-toggle="modal" data-target="#myModal">Move</button>
+
+               <div class="row">
+                 <div class="col-md-12">
+                 <div>
+                   <p>Add new acitivity </p>
+                   <input type="text" class="newaddTaskThursday">
+                   <span class="addButtonThursday glyphicon glyphicon-plus plus-icon"></span>
+                 </div>
+                 <div>
+                   <ul class="todoListThursday">
+
+
+                   </ul>
+     <p id="countThursday"> You have zero activities today </p>
+     <p id="countCompletedThursday">You have 0 activities completed</p>
+
+                 </div>
+
+               </div> <!-- first form row end -->
+             </div>
+         </div>
+         <div class="col-md-4 column height" id="column6">
+           <span id="FriNum" class="weekNum"></span>
+           <h2 id="hf">Friday</h2>
+           <button onclick="moveToTomorrow(5)" data-toggle="modal" data-target="#myModal">Move</button>
+
+             <div class="row">
+               <div class="col-md-12">
+               <div>
+                 <p>Add new acitivity </p>
+                 <input type="text" class="newaddTaskFriday">
+                 <span class="addButtonFriday glyphicon glyphicon-plus plus-icon"></span>
+               </div>
+               <div>
+                 <ul class="todoListFriday">
+
+
+                 </ul>
+   <p id="countFriday"> You have zero activities today </p>
+   <p id="countCompletedFriday">You have 0 activities completed</p>
+
+               </div>
+
+             </div> <!-- first form row end -->
+           </div>
+       </div>
+<!-- first form row Sunday begin -->
+         <div class="col-md-4 column height" id="column7">
+           <span id="SatNum" class="weekNum"></span>
+           <h2 id="hs">Saturday</h2>
+           <button onclick="moveToTomorrow(6)" data-toggle="modal" data-target="#myModal">Move</button>
+
+             <div class="row">
+               <div class="col-md-12">
+               <div>
+                 <p>Add new acitivity </p>
+                 <input type="text" class="newaddTaskSaturday">
+                 <span class="addButtonSaturday glyphicon glyphicon-plus plus-icon"></span>
+               </div>
+               <div>
+                 <ul class="todoListSaturday">
+
+
+                 </ul>
+   <p id="countSaturday"> You have zero activities today </p>
+   <p id="countCompletedSaturday">You have 0 activities completed</p>
+
+               </div>
+
+             </div> <!-- first form row end -->
+           </div>
+       </div>
+         </div>
+         </div>
+
+
+       </div>
+       </div>
   </div>
 
-  <div id="News" class="tabcontent">
-    <h3>News</h3>
-    <p>Some news this fine day!</p> 
+  <div id="Analyitics" class="container-fluid tabcontent">
+    <h3>Analyitics</h3>
+    <p>Analyitics information</p> 
   </div>
 
-  <div id="Contact" class="tabcontent">
+  <div id="Contact" class="container-fluid tabcontent">
     <h3>Contact</h3>
     <p>Get in touch, or swing by for a cup of coffee.</p>
   </div>
 
-  <div id="About" class="tabcontent">
+  <div id="About" class="container-fluid tabcontent">
     <h3>About</h3>
     <p>Who we are and what we do.</p>
   </div>
   <!-- End of Template -->
   <div class="container-fluid main-container no-margin-padding">
-    <div class="header text-center no-margin-padding">
-       <h1 class="no-margin-padding">Weekly Activity list</h1>
-    </div>
-    <div class="row week container-fluid no-margin-padding">
-      <div class="col-md-7 no-margin-padding">
-        <div class="row container-fluid no-margin-padding">
-        <div class="col-md-3 column height" id="column1">
-          <span id="SunNum" class="weekNum"></span>
-          <h2 id="hsu">Sunday</h2>
-          <button onclick="moveToTomorrow(0)" data-toggle="modal" data-target="#myModal">Move</button>
-          <button onclick="checkGoal()">Check Goal</button>
-          <select class='goal'name="" id="">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-          </select>
-          <div class="row">
-            <div class="col-md-12">
-            <div>
-              <p>Add new acitivity </p>
-              <input type="text" class="newaddTaskSunday">
-              <span class="addButtonSunday glyphicon glyphicon-plus plus-icon"></span>
-            </div>
-            <div>
-              <ul class="todoListSunday">
-
-
-              </ul>
-              <p id="countSunday"> You have zero activities today </p>
-              <p id="countCompletedSunday">You have 0 activities completed</p>
-            </div>
-              <!-- //light bulb  -->
-              <!-- <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
-
-              <img id="myImage" src="pic_bulboff.gif" style="width:100px">
-
-              <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button> -->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 column height" id="column2">
-          <span id="MonNum" class="weekNum"></span>
-          <h2 id="hm">Monday</h2>
-          <button onclick="moveToTomorrow(1)" data-toggle="modal" data-target="#myModal">Move</button>
-
-            <div class="row">
-              <div class="col-md-12">
-              <div>
-                <p>Add new acitivity </p>
-                <input type="text" class="newaddTaskMonday">
-                <span class="addButtonMonday glyphicon glyphicon-plus plus-icon"></span>
-              </div>
-              <div>
-                <ul class="todoListMonday">
-
-
-                </ul>
-                <p id="countMonday"> You have zero activities today </p>
-                <p id="countCompletedMonday">You have 0 activities completed</p>
-
-              </div>
-
-
-
-            </div> <!-- first form row end -->
-          </div>
-        </div>
-        <div class="col-md-3 column height" id="column3">
-          <span id="TueNum" class="weekNum"></span>
-          <h2 id="ht">Tuesday</h2>
-          <button onclick="moveToTomorrow(2)" data-toggle="modal" data-target="#myModal">Move</button>
-
-            <div class="row">
-              <div class="col-md-12">
-              <div>
-                <p>Add new acitivity </p>
-                <input type="text" class="newaddTaskTuesday">
-                <span class="addButtonTuesday glyphicon glyphicon-plus plus-icon"></span>
-              </div>
-              <div>
-                <ul class="todoListTuesday">
-
-
-                </ul>
-  <p id="countTuesday"> You have zero activities today </p>
-  <p id="countCompletedTuesday">You have 0 activities completed</p>
-
-              </div>
-
-            </div> <!-- first form row end -->
-          </div>
-        </div>
-        <!-- first form row end -->
-        <div class="col-md-3 column height" id="column3">
-          <span id="WedNum" class="weekNum"></span>
-          <h2 id="hwd">Wednesday</h2>
-          <button onclick="moveToTomorrow(3)" data-toggle="modal" data-target="#myModal">Move</button>
-
-            <div class="row">
-              <div class="col-md-12">
-              <div>
-                <p>Add new acitivity </p>
-                <input type="text" class="newaddTaskWednesday">
-                <span class="addButtonWednesday glyphicon glyphicon-plus plus-icon"></span>
-              </div>
-              <div>
-                <ul class="todoListWednesday">
-
-
-                </ul>
-  <p id="countWednesday"> You have zero activities today </p>
-  <p id="countCompletedWednesday">You have 0 activities completed</p>
-
-              </div>
-
-            </div> <!-- first form row end -->
-          </div>
-        </div>
-        <!-- first form row end  Friday-->
-
-      </div>
-      </div>
-        <div class="col-md-5 no-margin-padding">
-          <div class="row container-fluid no-margin-padding">
-          <div class="col-md-4 column height" id="column5">
-              <span id="ThuNum" class="weekNum"></span>
-              <h2 id="hth">Thursday</h2>
-              <button onclick="moveToTomorrow(4)" data-toggle="modal" data-target="#myModal">Move</button>
-
-                <div class="row">
-                  <div class="col-md-12">
-                  <div>
-                    <p>Add new acitivity </p>
-                    <input type="text" class="newaddTaskThursday">
-                    <span class="addButtonThursday glyphicon glyphicon-plus plus-icon"></span>
-                  </div>
-                  <div>
-                    <ul class="todoListThursday">
-
-
-                    </ul>
-      <p id="countThursday"> You have zero activities today </p>
-      <p id="countCompletedThursday">You have 0 activities completed</p>
-
-                  </div>
-
-                </div> <!-- first form row end -->
-              </div>
-          </div>
-          <div class="col-md-4 column height" id="column6">
-            <span id="FriNum" class="weekNum"></span>
-            <h2 id="hf">Friday</h2>
-            <button onclick="moveToTomorrow(5)" data-toggle="modal" data-target="#myModal">Move</button>
-
-              <div class="row">
-                <div class="col-md-12">
-                <div>
-                  <p>Add new acitivity </p>
-                  <input type="text" class="newaddTaskFriday">
-                  <span class="addButtonFriday glyphicon glyphicon-plus plus-icon"></span>
-                </div>
-                <div>
-                  <ul class="todoListFriday">
-
-
-                  </ul>
-    <p id="countFriday"> You have zero activities today </p>
-    <p id="countCompletedFriday">You have 0 activities completed</p>
-
-                </div>
-
-              </div> <!-- first form row end -->
-            </div>
-        </div>
-<!-- first form row Sunday begin -->
-          <div class="col-md-4 column height" id="column7">
-            <span id="SatNum" class="weekNum"></span>
-            <h2 id="hs">Saturday</h2>
-            <button onclick="moveToTomorrow(6)" data-toggle="modal" data-target="#myModal">Move</button>
-
-              <div class="row">
-                <div class="col-md-12">
-                <div>
-                  <p>Add new acitivity </p>
-                  <input type="text" class="newaddTaskSaturday">
-                  <span class="addButtonSaturday glyphicon glyphicon-plus plus-icon"></span>
-                </div>
-                <div>
-                  <ul class="todoListSaturday">
-
-
-                  </ul>
-    <p id="countSaturday"> You have zero activities today </p>
-    <p id="countCompletedSaturday">You have 0 activities completed</p>
-
-                </div>
-
-              </div> <!-- first form row end -->
-            </div>
-        </div>
-          </div>
-          </div>
-
-
-        </div>
-        </div>
-
+    
   <!-- Test calendar -->
 
    <div id="calendar-container">

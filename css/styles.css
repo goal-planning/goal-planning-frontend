@@ -19,13 +19,14 @@ body{
   width: 100%;
 }
 .height{
-  height: 201px;
+  height: 250px;
 }
 .column{
-  border: 1px dashed black;
-  /* height: 100px; */
   padding: 0px;
-  overflow: hidden;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
 }
 .icon{
   color: red;
@@ -172,11 +173,11 @@ body, html {
   color: white;
   display: none;
   padding: 100px 20px;
-  height: 100%;
+  padding-bottom: 60px;
 }
 
 #Home {background-color: red;}
-#News {background-color: green;}
+#Analyitics {background-color: green;}
 #Contact {background-color: blue;}
 #About {background-color: orange;}
 
