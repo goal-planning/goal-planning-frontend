@@ -380,12 +380,16 @@ calAddIn.addEventListener("keyup", (e)=>{
     };
 });
 
+var todo_counts = 1;
+
 calAddButton.addEventListener("click", (e)=>{
     let input = this.calAddIn.value.trim();
     if (input === '') {
       alert("Cannot add an empty todo")
     } else {
       let todo = document.createElement("div");
+      todo.setAttribute('id', "todo" + this.todo_counts);
+      this.todo_counts++;
       let todoKill = document.createElement("div");
       todoKill.innerText = "X";
       todoKill.className += "cal_todo_x";
@@ -400,7 +404,6 @@ calAddButton.addEventListener("click", (e)=>{
       })
       // Edit calendar todo
       todo.addEventListener("click", function(e){
-        console.log(this);
         if(e.target !== this) {
             return;
         }
@@ -444,9 +447,8 @@ function calEditModal(text_to_change) {
     });
     
     calEditButton.addEventListener("click", (e)=>{
+        console.log('run');
         let input = this.calEditIn.value.trim();
-        // this.calEditIn.value = "";
-        console.log(input);
         text_to_change.nodeValue = input;
     });    
 
