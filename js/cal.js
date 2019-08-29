@@ -380,23 +380,23 @@ calAddIn.addEventListener("keyup", (e)=>{
     };
 });
 
-var todo_counts = 1;
+let todo_counts = 1;
 
-calAddButton.addEventListener("click", (e)=>{
-    let input = this.calAddIn.value.trim();
+calAddButton.addEventListener("click", function(e) {
+    let input = calAddIn.value.trim();
     if (input === '') {
       alert("Cannot add an empty todo")
     } else {
       let todo = document.createElement("div");
-      todo.setAttribute('id', "todo" + this.todo_counts);
-      this.todo_counts++;
+      todo.setAttribute('id', "todo" + todo_counts);
+      todo_counts++;
       let todoKill = document.createElement("div");
       todoKill.innerText = "X";
       todoKill.className += "cal_todo_x";
       todo.className += "cal_todo";
       todo.innerText = input;
       todo.appendChild(todoKill);
-      let targetBox = document.getElementById('hold'+this.addID);
+      let targetBox = document.getElementById('hold'+addID);
       targetBox.appendChild(todo);
       // Delete calendar todo
       todoKill.addEventListener("click", function(e){
@@ -407,58 +407,60 @@ calAddButton.addEventListener("click", (e)=>{
         if(e.target !== this) {
             return;
         }
-        let text_to_change = e.target.childNodes[0];
+        editTarget = todo.id;
         $("#calEditModal").modal('show');
     
         $("#calEditModal").on('shown.bs.modal', function (e) {
             $('.calEditIn').focus();        
         })
-        
-        calEditModal(text_to_change);
 
         $("#calEditModal").on('hidden.bs.modal', function (e) {
             $(this)
             .find("input,textarea,select")
-                .val('')
-                .end()
+            .val('')
+            .end()
             .find("input[type=checkbox], input[type=radio]")
-                .prop("checked", "")
-                .end();
+            .prop("checked", "")
+            .end();
         })
-    
       })
     }
 });
 
-var calEditIn = document.querySelector(".calEditIn");
-var calEditButton = document.querySelector("#calEditButton");
+let calEditIn = document.querySelector(".calEditIn");
+let calEditButton = document.querySelector("#calEditButton");
+let editTarget;
 
-function calEditModal(text_to_change) {
-    // $("#calEditModal").modal('show');
+calEditIn.addEventListener("keyup", function(e){
+    if(e.keyCode === 13) {
+        calEditButton.click();
+    };
+});
+
+calEditButton.addEventListener("click", function(e){
+    let todoEdit = document.getElementById(editTarget);
+    todoEdit.childNodes[0].nodeValue = calEditIn.value;
+    if(calEditIn.value == '') {
+        todoEdit.remove();
+    }
+});    
+
+function calEditModal() {
+    let editTodo = document.getElementById(editTarget);
+    $("#calEditModal").modal('show');
     
-    // $("#calEditModal").on('shown.bs.modal', function (e) {
-    //     $('.calEditIn').focus();        
-    // })
+    $("#calEditModal").on('shown.bs.modal', function (e) {
+        $('.calEditIn').focus();        
+    })
 
-    calEditIn.addEventListener("keyup", (e)=>{
-        if(e.keyCode === 13) {
-            calEditButton.click();
-        };
-    });
-    
-    calEditButton.addEventListener("click", (e)=>{
-        console.log('run');
-        let input = this.calEditIn.value.trim();
-        text_to_change.nodeValue = input;
-    });    
+    $("#calEditModal").on('hidden.bs.modal', function (e) {
+        $(this)
+        .find("input,textarea,select")
+          .val('')
+          .end()
+        .find("input[type=checkbox], input[type=radio]")
+          .prop("checked", "")
+          .end();
+    })
 
-    // $("#calEditModal").on('hidden.bs.modal', function (e) {
-    //     $(this)
-    //     .find("input,textarea,select")
-    //       .val('')
-    //       .end()
-    //     .find("input[type=checkbox], input[type=radio]")
-    //       .prop("checked", "")
-    //       .end();
-    // })
 }
