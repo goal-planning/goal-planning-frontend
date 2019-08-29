@@ -74,7 +74,7 @@ function get_calendar(day_no, days){
         var td = document.getElementById("td"+Ftd);
         var p = document.createElement('p');
         p.setAttribute("id", Ftd);
-        p.className += 'calBoxNum'
+        p.className += 'calBoxNum';
         p.innerText = "";
         td.appendChild(p);
         Ftd_count++;
@@ -86,7 +86,7 @@ function get_calendar(day_no, days){
         var td = document.getElementById('td'+Ftd);
         p = document.createElement('p');
         p.setAttribute("id", Ftd);
-        p.className += 'calBoxNum'
+        p.className += 'calBoxNum';
         p.innerText = count.toString();
         td.appendChild(p);
         count++;
@@ -100,7 +100,7 @@ function get_calendar(day_no, days){
                 var td = document.getElementById('td'+Ftd);
                 var p = document.createElement('p');
                 p.setAttribute("id", Ftd);
-                p.className += 'calBoxNum'
+                p.className += 'calBoxNum';
                 p.innerText = "";
                 td.appendChild(p);
                 Ftd_count++;
@@ -109,7 +109,7 @@ function get_calendar(day_no, days){
                 var td = document.getElementById('td'+Ftd);
                 p = document.createElement('p');
                 p.setAttribute("id", Ftd);
-                p.className += 'calBoxNum'
+                p.className += 'calBoxNum';
                 p.innerText = count.toString();
                 td.appendChild(p);
                 count++;
@@ -119,7 +119,7 @@ function get_calendar(day_no, days){
                 var td = document.getElementById('td'+Ftd);
                 p = document.createElement('p');
                 p.setAttribute("id", Ftd);
-                p.className += 'calBoxNum'
+                p.className += 'calBoxNum';
                 p.innerText = count.toString();
                 td.appendChild(p);
                 count++;
@@ -154,8 +154,12 @@ cal_arrow_left.addEventListener("click", (e)=>{
     let days = new Date(y, m+1, 0).getDate();
     for(let i=0; i<=34; i++){  
         var cntnt = document.getElementById("td"+i);
-        while (cntnt.lastChild.className !== 'no-visible') {
+        var holder = document.getElementById("hold"+i);
+        while (cntnt.lastChild.className !== 'hold') {
             cntnt.removeChild(cntnt.lastChild);
+        }
+        while (holder.firstChild) {
+            holder.removeChild(holder.firstChild);
         }
     }
     let calendar = get_calendar(day_no, days);
@@ -174,8 +178,13 @@ cal_arrow_right.addEventListener("click", (e)=>{
     let days = new Date(y, m+1, 0).getDate();
     for(let i=0; i<=34; i++){  
         var cntnt = document.getElementById("td"+i);
-        while (cntnt.lastChild.className !== 'no-visible') {
+        var holder = document.getElementById("hold"+i);
+        while (cntnt.lastChild.className !== 'hold') {
             cntnt.removeChild(cntnt.lastChild);
+        }
+        // TBD --> Removes todo from calendar
+        while (holder.firstChild) {
+            holder.removeChild(holder.firstChild);
         }
     }
     let calendar = get_calendar(day_no, days);
@@ -365,22 +374,93 @@ add34.addEventListener("click", (e)=>{
     this.addID = 34;
 });
 
-
-
 calAddIn.addEventListener("keyup", (e)=>{
     if(e.keyCode === 13) {
         calAddButton.click();
     };
 });
 
-calAddButton.addEventListener("click", (e)=>{
+let todo_counts = 1;
+
+calAddButton.addEventListener("click", function(e) {
     let input = calAddIn.value.trim();
     if (input === '') {
       alert("Cannot add an empty todo")
     } else {
       let todo = document.createElement("div");
+      todo.setAttribute('id', "todo" + todo_counts);
+      todo_counts++;
+      let todoKill = document.createElement("div");
+      todoKill.innerText = "X";
+      todoKill.className += "cal_todo_x";
+      todo.className += "cal_todo";
       todo.innerText = input;
-      let targetBox = document.getElementById('hold'+this.addID);
+      todo.appendChild(todoKill);
+      let targetBox = document.getElementById('hold'+addID);
       targetBox.appendChild(todo);
+      // Delete calendar todo
+      todoKill.addEventListener("click", function(e){
+        e.target.parentElement.remove();
+      })
+      // Edit calendar todo
+      todo.addEventListener("click", function(e){
+        if(e.target !== this) {
+            return;
+        }
+        editTarget = todo.id;
+        $("#calEditModal").modal('show');
+    
+        $("#calEditModal").on('shown.bs.modal', function (e) {
+            $('.calEditIn').focus();        
+        })
+
+        $("#calEditModal").on('hidden.bs.modal', function (e) {
+            $(this)
+            .find("input,textarea,select")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end();
+        })
+      })
     }
-  });
+});
+
+let calEditIn = document.querySelector(".calEditIn");
+let calEditButton = document.querySelector("#calEditButton");
+let editTarget;
+
+calEditIn.addEventListener("keyup", function(e){
+    if(e.keyCode === 13) {
+        calEditButton.click();
+    };
+});
+
+calEditButton.addEventListener("click", function(e){
+    let todoEdit = document.getElementById(editTarget);
+    todoEdit.childNodes[0].nodeValue = calEditIn.value;
+    if(calEditIn.value == '') {
+        todoEdit.remove();
+    }
+});    
+
+function calEditModal() {
+    let editTodo = document.getElementById(editTarget);
+    $("#calEditModal").modal('show');
+    
+    $("#calEditModal").on('shown.bs.modal', function (e) {
+        $('.calEditIn').focus();        
+    })
+
+    $("#calEditModal").on('hidden.bs.modal', function (e) {
+        $(this)
+        .find("input,textarea,select")
+          .val('')
+          .end()
+        .find("input[type=checkbox], input[type=radio]")
+          .prop("checked", "")
+          .end();
+    })
+
+}
