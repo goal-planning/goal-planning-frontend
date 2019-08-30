@@ -1,8 +1,3 @@
-let tranferTodo = {
-    name: null,
-    dayNum: null,
-}
-
 window.onload = function ready(){
     var d = new Date();
     var month_name = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -22,7 +17,6 @@ window.onload = function ready(){
 
     append_month(month_name[month], year);
 }
-
 function append_month(month_name, year){
     document.getElementById("calendar-month-year").innerHTML = month_name+" "+year;
     var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -231,9 +225,9 @@ var td33 = document.getElementById('td33');
 var td34 = document.getElementById('td34');
 var td35 = document.getElementById('td35');
 
-var addID;
-var calAddIn = document.querySelector(".calAddIn");
-var calAddButton = document.querySelector("#calAddButton");
+let addID;
+let calAddIn = document.querySelector(".calAddIn");
+let calAddButton = document.querySelector("#calAddButton");
 
 var add0 = document.querySelector("#add0");
 var add1 = document.querySelector("#add1");
@@ -272,109 +266,109 @@ var add33 = document.querySelector("#add33");
 var add34 = document.querySelector("#add34");
 
 add0.addEventListener("click", (e)=>{
-    this.addID = 0;
+    addID = 0;
 });
 add1.addEventListener("click", (e)=>{
-    this.addID = 1;
+    addID = 1;
 });
 add2.addEventListener("click", (e)=>{
-    this.addID = 2;
+    addID = 2;
 });
 add3.addEventListener("click", (e)=>{
-    this.addID = 3;
+    addID = 3;
 });
 add4.addEventListener("click", (e)=>{
-    this.addID = 4;
+    addID = 4;
 });
 add5.addEventListener("click", (e)=>{
-    this.addID = 5;
+    addID = 5;
 });
 add6.addEventListener("click", (e)=>{
-    this.addID = 6;
+    addID = 6;
 });
 add7.addEventListener("click", (e)=>{
-    this.addID = 7;
+    addID = 7;
 });
 add8.addEventListener("click", (e)=>{
-    this.addID = 8;
+    addID = 8;
 });
 add9.addEventListener("click", (e)=>{
-    this.addID = 9;
+    addID = 9;
 });
 add10.addEventListener("click", (e)=>{
-    this.addID = 10;
+    addID = 10;
 });
 add11.addEventListener("click", (e)=>{
-    this.addID = 11;
+    addID = 11;
 });
 add12.addEventListener("click", (e)=>{
-    this.addID = 12;
+    addID = 12;
 });
 add13.addEventListener("click", (e)=>{
-    this.addID = 13;
+    addID = 13;
 });
 add14.addEventListener("click", (e)=>{
-    this.addID = 14;
+    addID = 14;
 });
 add15.addEventListener("click", (e)=>{
-    this.addID = 15;
+    addID = 15;
 });
 add16.addEventListener("click", (e)=>{
-    this.addID = 16;
+    addID = 16;
 });
 add17.addEventListener("click", (e)=>{
-    this.addID = 17;
+    addID = 17;
 });
 add18.addEventListener("click", (e)=>{
-    this.addID = 18;
+    addID = 18;
 });
 add19.addEventListener("click", (e)=>{
-    this.addID = 19;
+    addID = 19;
 });
 add20.addEventListener("click", (e)=>{
-    this.addID = 20;
+    addID = 20;
 });
 add21.addEventListener("click", (e)=>{
-    this.addID = 21;
+    addID = 21;
 });
 add22.addEventListener("click", (e)=>{
-    this.addID = 22;
+    addID = 22;
 });
 add23.addEventListener("click", (e)=>{
-    this.addID = 23;
+    addID = 23;
 });
 add24.addEventListener("click", (e)=>{
-    this.addID = 24;
+    addID = 24;
 });
 add25.addEventListener("click", (e)=>{
-    this.addID = 25;
+    addID = 25;
 });
 add26.addEventListener("click", (e)=>{
-    this.addID = 26;
+    addID = 26;
 });
 add27.addEventListener("click", (e)=>{
-    this.addID = 27;
+    addID = 27;
 });
 add28.addEventListener("click", (e)=>{
-    this.addID = 28;
+    addID = 28;
 });
 add29.addEventListener("click", (e)=>{
-    this.addID = 29;
+    addID = 29;
 });
 add30.addEventListener("click", (e)=>{
-    this.addID = 30;
+    addID = 30;
 });
 add31.addEventListener("click", (e)=>{
-    this.addID = 31;
+    addID = 31;
 });
 add32.addEventListener("click", (e)=>{
-    this.addID = 32;
+    addID = 32;
 });
 add33.addEventListener("click", (e)=>{
-    this.addID = 33;
+    addID = 33;
 });
 add34.addEventListener("click", (e)=>{
-    this.addID = 34;
+    addID = 34;
 });
 
 calAddIn.addEventListener("keyup", (e)=>{
@@ -390,43 +384,7 @@ calAddButton.addEventListener("click", function(e) {
     if (input === '') {
       alert("Cannot add an empty todo")
     } else {
-      let todo = document.createElement("div");
-      todo.setAttribute('id', "todo" + todo_counts);
-      todo_counts++;
-      let todoKill = document.createElement("div");
-      todoKill.innerText = "X";
-      todoKill.className += "cal_todo_x";
-      todo.className += "cal_todo";
-      todo.innerText = input;
-      todo.appendChild(todoKill);
-      let targetBox = document.getElementById('hold'+addID);
-      targetBox.appendChild(todo);
-      // Delete calendar todo
-      todoKill.addEventListener("click", function(e){
-        e.target.parentElement.remove();
-      })
-      // Edit calendar todo
-      todo.addEventListener("click", function(e){
-        if(e.target !== this) {
-            return;
-        }
-        editTarget = todo.id;
-        $("#calEditModal").modal('show');
-    
-        $("#calEditModal").on('shown.bs.modal', function (e) {
-            $('.calEditIn').focus();        
-        })
-
-        $("#calEditModal").on('hidden.bs.modal', function (e) {
-            $(this)
-            .find("input,textarea,select")
-            .val('')
-            .end()
-            .find("input[type=checkbox], input[type=radio]")
-            .prop("checked", "")
-            .end();
-        })
-      })
+      addCalTask(input);
     }
 });
 
@@ -447,3 +405,43 @@ calEditButton.addEventListener("click", function(e){
         todoEdit.remove();
     }
 });    
+
+function addCalTask(input) {
+    let todo = document.createElement("div");
+    todo.setAttribute('id', "todo" + todo_counts);
+    todo_counts++;
+    let todoKill = document.createElement("div");
+    todoKill.innerText = "X";
+    todoKill.className += "cal_todo_x";
+    todo.className += "cal_todo";
+    todo.innerText = input;
+    todo.appendChild(todoKill);
+    let targetBox = document.getElementById('hold'+addID);
+    targetBox.appendChild(todo);
+    // Delete calendar todo
+    todoKill.addEventListener("click", function(e){
+        e.target.parentElement.remove();
+    })
+    // Edit calendar todo
+    todo.addEventListener("click", function(e){
+        if(e.target !== this) {
+            return;
+        }
+        editTarget = todo.id;
+        $("#calEditModal").modal('show');
+
+        $("#calEditModal").on('shown.bs.modal', function (e) {
+            $('.calEditIn').focus();        
+        })
+
+        $("#calEditModal").on('hidden.bs.modal', function (e) {
+            $(this)
+            .find("input,textarea,select")
+            .val('')
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end();
+        })
+    })
+}

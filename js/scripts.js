@@ -73,18 +73,72 @@ addInput.forEach(function(e){
   selectedDay++;
   e.addEventListener("keyup", (event)=>{
     if(event.keyCode === 13) {
-      console.log(selectedButton)
+      // console.log(selectedButton)
       selectedButton.click();
     }
   })
 })
 
-function createActivity(day) {
+function createActivity(day, dNum, dName) {
   console.log(day);
+  console.log(dNum);
+  console.log(dName);
   let input = addInput[day].value.trim();
   if (input === '') {
     alert("Write down a minimum of five activities")
   } else {
+    for(let i = 0; i<=34; i++) {
+      if($('#' + i).text() == dNum ) {
+        console.log('here');
+        switch(dName){
+          case 'Sunday':
+            if(i == 0 || i == 7 || i == 14 || i == 21 || i == 28) {
+              addID = i;
+              console.log('close now');
+              addCalTask(input);
+            }
+            break;
+          case 'Monday':
+            if(i == 1 || i == 8 || i == 15 || i == 22 || i == 29) {
+              addID = i;
+              addCalTask(input);
+            }
+            break;
+          case 'Tuesday':
+            if(i == 2 || i == 9 || i == 16 || i == 23 || i == 30) {
+              addID = i;
+              addCalTask(input);
+            }
+            break;
+          case 'Wednesday':
+            if(i == 3 || i == 10 || i == 17 || i == 24 || i == 31) {
+              addID = i;
+              addCalTask(input);
+            }
+            break;
+          case 'Thursday':
+            if(i == 4 || i == 11 || i == 18 || i == 25 || i == 32) {
+              addID = i;
+              addCalTask(input);
+            }
+            break;
+          case 'Friday':
+            if(i == 5 || i == 12 || i == 19 || i == 26 || i == 33) {
+              addID = i;
+              addCalTask(input);
+            }
+            break;
+          case 'Saturday':
+            if(i == 6 || i == 13 || i == 20 || i == 27 || i == 34) {
+              addID = i;
+              addCalTask(input);
+            }
+            break;
+          default:
+            break;
+        }
+      }
+    }
     let li = document.createElement("li");
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
@@ -135,13 +189,13 @@ function createActivity(day) {
   }
 }
 
-addButtonSunday.addEventListener("click", function() {createActivity(0)});
-addButtonMonday.addEventListener("click", function(){createActivity(1)});
-addButtonTuesday.addEventListener("click", function() {createActivity(2)});
-addButtonWednesday.addEventListener("click", function() {createActivity(3)});
-addButtonThursday.addEventListener("click", function(){createActivity(4)});
-addButtonFriday.addEventListener("click", function() {createActivity(5)});
-addButtonSaturday.addEventListener("click", function() {createActivity(6)});
+addButtonSunday.addEventListener("click", function() {createActivity(0, document.getElementById('SunNum').innerText, "Sunday")});
+addButtonMonday.addEventListener("click", function(){createActivity(1, document.getElementById('MonNum').innerText, "Monday")});
+addButtonTuesday.addEventListener("click", function() {createActivity(2, document.getElementById('TueNum').innerText, "Tuesday")});
+addButtonWednesday.addEventListener("click", function() {createActivity(3, document.getElementById('WedNum').innerText, 'Wednesday')});
+addButtonThursday.addEventListener("click", function(){createActivity(4,document.getElementById('ThuNum').innerText, 'Thursday')});
+addButtonFriday.addEventListener("click", function() {createActivity(5, document.getElementById('FriNum').innerText, 'Friday')});
+addButtonSaturday.addEventListener("click", function() {createActivity(6, document.getElementById('SatNum').innerText, 'Saturday')});
 
 // Click on a close button to hide the current list item
 let i;

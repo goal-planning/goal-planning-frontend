@@ -1,5 +1,5 @@
 var date = new Date();
-var _day_name = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+let _day_name = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 var _month = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
 var day_name = _day_name[date.getDay()];
