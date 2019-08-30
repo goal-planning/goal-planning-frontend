@@ -447,23 +447,3 @@ calEditButton.addEventListener("click", function(e){
         todoEdit.remove();
     }
 });    
-
-function calEditModal() {
-    let editTodo = document.getElementById(editTarget);
-    $("#calEditModal").modal('show');
-    
-    $("#calEditModal").on('shown.bs.modal', function (e) {
-        $('.calEditIn').focus();        
-    })
-
-    $("#calEditModal").on('hidden.bs.modal', function (e) {
-        $(this)
-        .find("input,textarea,select")
-          .val('')
-          .end()
-        .find("input[type=checkbox], input[type=radio]")
-          .prop("checked", "")
-          .end();
-    })
-
-}
