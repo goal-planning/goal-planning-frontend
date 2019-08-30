@@ -1,4 +1,7 @@
-/* Reference Repository: https://github.com/yusufshakeel/Web-App */
+let tranferTodo = {
+    name: null,
+    dayNum: null,
+}
 
 window.onload = function ready(){
     var d = new Date();
