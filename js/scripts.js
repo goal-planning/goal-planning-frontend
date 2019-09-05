@@ -6,6 +6,8 @@ let numberCheckedThursday = 0;
 let numberCheckedFriday = 0;
 let numberCheckedSaturday = 0;
 
+let removeCalFromWeek;
+
 let moveBtn = document.querySelector('.move-activities-btn')
 
 let addInputMonday = document.querySelector(".newaddTaskMonday");
@@ -79,22 +81,17 @@ addInput.forEach(function(e){
   })
 })
 
-function createActivity(day, dNum, dName) {
-  console.log(day);
-  console.log(dNum);
-  console.log(dName);
+function createActivity(day, dNum, dName, todo_counts) {
   let input = addInput[day].value.trim();
   if (input === '') {
     alert("Write down a minimum of five activities")
   } else {
     for(let i = 0; i<=34; i++) {
       if($('#' + i).text() == dNum ) {
-        console.log('here');
         switch(dName){
           case 'Sunday':
             if(i == 0 || i == 7 || i == 14 || i == 21 || i == 28) {
               addID = i;
-              console.log('close now');
               addCalTask(input);
             }
             break;
@@ -169,6 +166,8 @@ function createActivity(day, dNum, dName) {
         numberChecked[day]--;
         completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
       }
+      removeCalFromWeek = e.target.parentElement.children[1].value;
+      syncCalRemoveFromWeek(removeCalFromWeek, dName, dNum, todo_counts);
       todoList[day].removeChild(li);
       numberActivities[day] = todoList[day].querySelectorAll("li");
       numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
@@ -189,13 +188,13 @@ function createActivity(day, dNum, dName) {
   }
 }
 
-addButtonSunday.addEventListener("click", function() {createActivity(0, document.getElementById('SunNum').innerText, "Sunday")});
-addButtonMonday.addEventListener("click", function(){createActivity(1, document.getElementById('MonNum').innerText, "Monday")});
-addButtonTuesday.addEventListener("click", function() {createActivity(2, document.getElementById('TueNum').innerText, "Tuesday")});
-addButtonWednesday.addEventListener("click", function() {createActivity(3, document.getElementById('WedNum').innerText, 'Wednesday')});
-addButtonThursday.addEventListener("click", function(){createActivity(4,document.getElementById('ThuNum').innerText, 'Thursday')});
-addButtonFriday.addEventListener("click", function() {createActivity(5, document.getElementById('FriNum').innerText, 'Friday')});
-addButtonSaturday.addEventListener("click", function() {createActivity(6, document.getElementById('SatNum').innerText, 'Saturday')});
+addButtonSunday.addEventListener("click", function() {createActivity(0, document.getElementById('SunNum').innerText, "Sunday", todo_counts)});
+addButtonMonday.addEventListener("click", function(){createActivity(1, document.getElementById('MonNum').innerText, "Monday", todo_counts)});
+addButtonTuesday.addEventListener("click", function() {createActivity(2, document.getElementById('TueNum').innerText, "Tuesday", todo_counts)});
+addButtonWednesday.addEventListener("click", function() {createActivity(3, document.getElementById('WedNum').innerText, 'Wednesday', todo_counts)});
+addButtonThursday.addEventListener("click", function(){createActivity(4,document.getElementById('ThuNum').innerText, 'Thursday', todo_counts)});
+addButtonFriday.addEventListener("click", function() {createActivity(5, document.getElementById('FriNum').innerText, 'Friday', todo_counts)});
+addButtonSaturday.addEventListener("click", function() {createActivity(6, document.getElementById('SatNum').innerText, 'Saturday', todo_counts)});
 
 // Click on a close button to hide the current list item
 let i;

@@ -420,7 +420,7 @@ function addCalTask(input) {
     targetBox.appendChild(todo);
     // Delete calendar todo
     todoKill.addEventListener("click", function(e){
-        e.target.parentElement.remove();
+        killCalTodo(e);
     })
     // Edit calendar todo
     todo.addEventListener("click", function(e){
@@ -444,4 +444,13 @@ function addCalTask(input) {
             .end();
         })
     })
+}
+
+function killCalTodo(todo) {
+    todo.target.parentElement.remove();
+}
+
+function syncCalRemoveFromWeek(todoName, dName, dNum, todoCount) {
+    let kill = document.getElementById("todo" + todoCount);
+    kill.remove();
 }
