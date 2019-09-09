@@ -1,19 +1,20 @@
 #calendar-container{
     padding: 10px;
     width: 100%;
-    height: 810px;
-    border: 1px solid #eee;
-    border-radius: 10px;
+    height: 835px;
     font-size: 16px;
-    font-family: Arial;
-    background-image: linear-gradient(#fff, #d3d3d3);
+    font-family: Univers LT std;
+    background-color: #555;
 }
 table{
+    table-layout: fixed;
     width: 100%;
 }
 td{
     height: 150px;
+    position: relative;
     border: 1px solid black;
+    overflow-x: hidden;
 }
 #calendar-container>div{
     padding: 0;
@@ -23,6 +24,7 @@ td{
     text-align: center;
     background: #f0f0f0;
     border-radius: 25px;
+    font-weight: 600;
 }
 #calendar-month-year{
     margin: 5px;
@@ -30,12 +32,29 @@ td{
 
 #calendar-dates{
     padding: 5px;
+    background-color: white;
+}
+#calendar-days{
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0 !important;
+    background-color: white;
+}
+.cal-days{
+    height: 25px;
+    font-weight: 400;
+    text-align: center;
 }
 .calBoxNum{
-    position: relative;
-    bottom: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
     text-align: right;
-    padding: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    margin: 0;
 }
 .cal_arrow_l{
     background: #f0f0f0;
@@ -60,7 +79,30 @@ td{
     transition-duration: .3s;
 }
 .non_current_month_num{
-    color: gray;
+    color: lightgray;
+}
+.cal_add{
+    color: #00FA9A;
+    visibility: visible !important;
+    z-index: 2;
+}
+.cal_add:hover{
+    cursor: pointer;
+    color: #3CB371;
+    transition-duration: .3s;
+}
+.calAddIn{
+    width: 100%;
+}
+.calEditIn{
+    width: 100%;
+}
+.no-visible{
+    visibility: hidden;
+    position: absolute;
+    top: -2px;
+    left: -6px;
+    z-index: 2;
 }
 .noSelect {
     -webkit-touch-callout: none;
@@ -69,4 +111,49 @@ td{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.head_hold{
+    position: relative;
+    height: 26px;
+    bottom: 61px;
+}
+.hold{
+    position: absolute;
+    height: 26px;
+    padding-top: 26px;
+    top: 0;
+}
+.cal_todo{
+    position: relative;
+    border: 1px solid #3CB371;
+    background: #3CB371;
+    border-radius: 10px;
+    color: white;
+    height: 20px;
+    font-size: small;
+    padding-left: 10px;
+    padding-right: 25px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 145px;
+    display: block;
+    overflow: hidden;
+}
+.cal_todo:hover{
+    cursor: pointer;
+}
+.cal_todo_x {
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+    font-weight: 800;
+    z-index: 20;
+}
+.cal_todo_x:hover {
+    color: #ff0000;
+    transition-duration: .3s; 
 }
