@@ -450,7 +450,13 @@ function killCalTodo(todo) {
     todo.target.parentElement.remove();
 }
 
-function syncCalRemoveFromWeek(todoName, dName, dNum, todoCount) {
+function syncCalRemoveFromWeek(todoCount) {
     let kill = document.getElementById("todo" + todoCount);
     kill.remove();
+}
+
+function updateTodoName(newName, todoCount) {
+    let update = document.getElementById("todo" + todoCount);
+    update.childNodes[0].nodeValue = newName;
+    console.log(update.childNodes[0].nodeValue);
 }
