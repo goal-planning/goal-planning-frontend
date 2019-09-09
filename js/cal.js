@@ -457,6 +457,8 @@ function syncCalRemoveFromWeek(todoCount) {
 
 function updateTodoName(newName, todoCount) {
     let update = document.getElementById("todo" + todoCount);
+    if(update == null){
+        return;
+    }
     update.childNodes[0].nodeValue = newName;
-    console.log(update.childNodes[0].nodeValue);
 }
