@@ -146,10 +146,12 @@ function createActivity(day, dNum, dName, todo_counts) {
           numberChecked[day]--;
           completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
         }
+        syncCalRemoveFromWeek(todo_counts);
         todoList[day].removeChild(li);
         let count = todoList[day].querySelectorAll("li");
-        activityNumber.innerText="total number of activites is " + count.length;
+        numberActivitiesElements[day].innerText="total number of activites is " + count.length;
       };
+      updateTodoName(item.value, todo_counts);      
     });
     item.type = "text";
     item.value = input;
@@ -167,7 +169,7 @@ function createActivity(day, dNum, dName, todo_counts) {
         completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
       }
       removeCalFromWeek = e.target.parentElement.children[1].value;
-      syncCalRemoveFromWeek(removeCalFromWeek, dName, dNum, todo_counts);
+      syncCalRemoveFromWeek(todo_counts);
       todoList[day].removeChild(li);
       numberActivities[day] = todoList[day].querySelectorAll("li");
       numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
