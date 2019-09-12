@@ -1,3 +1,69 @@
+/* To be deleted after test complete */
+hr {
+  color: white;
+  position: relative;
+  margin: 0;
+}
+.hr1 {
+  top: 448px;
+}
+.hr2 {
+  top: 454px;
+}
+.hr3 {
+  top: 463px;
+}
+.hr4 {
+  top: 486px;
+}
+.hr5 {
+  top: 536px;
+}
+.hr6 {
+  top: 440px;
+}
+.hr7 {
+  top: 437px;
+}
+.animateButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.animateReset {
+  position: absolute;
+  bottom:0;
+  right: 40px;
+}
+.canoeNext {
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute !important;
+  bottom: 4px !important;
+  right: 28px !important;
+}
+.poleNext{
+  height: 100px !important;
+  width: 5px !important;
+  background-color: black !important;
+  float: left !important;
+}
+.flagNext{
+  height:40px !important;
+  width: 55px !important;
+  background-color: white !important;
+  border: 1px solid black !important;
+  float: left !important;
+  margin-bottom: 60px !important;
+}
+.flagBoxNext{
+  position: absolute !important;
+  background-color: transparent !important;
+  z-index: 3 !important;
+  bottom: 153px !important;
+  right: 135px !important;
+}
+/*************************************/
 .picture{
   width: 100%;
   height: 100%;
@@ -25,8 +91,8 @@
   text-align: center;
   padding-top: 8px;
 }
-/* frame one flag/canoe placement
-.canoe{
+/* frame one flag/canoe placement <DONE> */
+.canoe1{
   width: 300px;
   height: 300px;
   position: absolute;
@@ -34,13 +100,13 @@
   right: 0;
 
 }
-.pole{
+.pole1{
   height: 100px;
   width: 5px;
   background-color: black;
   float: left;
 }
-.flag{
+.flag1{
   height:40px;
   width: 55px;
   background-color: white;
@@ -48,30 +114,30 @@
   float: left;
   margin-bottom: 60px;
 }
-.flagBox{
+.flagBox1{
   position: absolute;
   background-color: transparent;
   z-index: 3;
   bottom: 149px;
   right: 107px;
 }
-end of frame one */
-/* beginning of frame two
-.canoe{
+/* end of frame one */
+/* beginning of frame two <DONE> */
+.canoe2{
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 2px;
-  right: 2px;
+  bottom: 1px;
+  right: 7px;
 
 }
-.pole{
+.pole2{
   height: 100px;
   width: 5px;
   background-color: black;
   float: left;
 }
-.flag{
+.flag2{
   height:40px;
   width: 55px;
   background-color: white;
@@ -79,31 +145,91 @@ end of frame one */
   float: left;
   margin-bottom: 60px;
 }
-.flagBox{
+.flagBox2{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 150px;
+  right: 114px;
+}
+/* end of frame 2 */
+/* beginning of frame 3 <DONE> */
+.canoe3{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 2px;
+  right: 14px;
+
+}
+.pole3{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag3{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox3{
   position: absolute;
   background-color: transparent;
   z-index: 3;
   bottom: 151px;
-  right: 109px;
+  right: 121px;
 }
-end of frame 2 */
-/* beginning of frame 3 */
-/* 
-.canoe{
-  width: 298px;
-  height: 298px;
+/*end of frame 3 pole and canoe*/
+/* beginning of fram 4 pole and canoe <DONE> */
+.canoe4{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 3px;
+  right: 21px;
+}
+.pole4{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag4{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox4{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 152px;
+  right: 128px;
+}
+/* end of frame 4 pole and canoe */
+/* beginning of frame 5 pole and canoe */
+.canoe5{
+  width: 300px;
+  height: 300px;
   position: absolute;
   bottom: 4px;
-  right: 4px;
+  right: 28px;
 
 }
-.pole{
-  height: 99px;
+.pole5{
+  height: 100px;
   width: 5px;
   background-color: black;
   float: left;
 }
-.flag{
+.flag5{
   height:40px;
   width: 55px;
   background-color: white;
@@ -111,71 +237,11 @@ end of frame 2 */
   float: left;
   margin-bottom: 60px;
 }
-.flagBox{
+.flagBox5{
   position: absolute;
   background-color: transparent;
   z-index: 3;
-  bottom: 151px;
-  right: 111px;
-} */
-/*end of frame 3 pole and canoe*/
-/* beginning of fram 4 pole and canoe
-.canoe{
-  width: 296px;
-  height: 296px;
-  position: absolute;
-  bottom: 6px;
-  right: 6px;
+  bottom: 153px;
+  right: 135px;
 }
-.pole{
-  height: 99px;
-  width: 5px;
-  background-color: black;
-  float: left;
-}
-.flag{
-  height:39px;
-  width: 54px;
-  background-color: white;
-  border: 1px solid black;
-  float: left;
-  margin-bottom: 60px;
-}
-.flagBox{
-  position: absolute;
-  background-color: transparent;
-  z-index: 3;
-  bottom: 152px;
-  right: 112px;
-}
-end of frame 4 pole and canoe */
-/* beginning of frame 5 pole and canoe */
-.canoe{
-  width: 294px;
-  height: 294px;
-  position: absolute;
-  bottom: 5px;
-  right: 8px;
-
-}
-.pole{
-  height: 99px;
-  width: 5px;
-  background-color: black;
-  float: left;
-}
-.flag{
-  height:39px;
-  width: 54px;
-  background-color: white;
-  border: 1px solid black;
-  float: left;
-  margin-bottom: 60px;
-}
-.flagBox{
-  position: absolute;
-  background-color: transparent;
-  z-index: 3;
-  bottom: 152px;
-  right: 112px;
-}
+/* end of frame 5 pole and canoe */

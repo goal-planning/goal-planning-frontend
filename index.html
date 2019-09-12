@@ -30,15 +30,35 @@
   <!--Reward section begin-->
   <div class="outerBox">
     <div class="rewardBox">
-      <div class="flagBox">
-        <div class="pole"></div>
-        <div class="flag">
+      <hr class="hr1">
+      <hr class="hr2">
+      <hr class="hr3">
+      <hr class="hr4">
+      <hr class="hr5">
+      <hr class="hr6">
+      <hr class="hr7">
+      <div id="flagBoxAnimate" class="flagBox4">
+        <div id="poleAnimate" class="pole4"></div>
+        <div id="flagAnimate" class="flag4">
           <div class= "flagNumber">0</div>
         </div>
       </div>
-      <div class="canoe">
+      <div id="canoeAnimate" class="canoe4">
         <img id="canoePicture" class="picture" src="img/canoe-two.png" alt="canoe">
       </div>
+      <!-- Duplicate used to test position of next frame -->
+      <!-- <div id="flagBoxAnimate" class="flagBox4 flagBoxNext">
+        <div id="poleAnimate" class="pole4 poleNext"></div>
+        <div id="flagAnimate" class="flag4 flagNext">
+          <div class= "flagNumber">0</div>
+        </div>
+      </div>
+      <div id="canoeAnimate" class="canoe4 canoeNext">
+        <img id="canoePicture" class="picture" src="img/canoe-two.png" alt="canoe">
+      </div> -->
+      <button class="animateButton" onclick="runRewardAnimation()">Run</button>
+      <button class="animateReset" onclick="resetAnimation()">Reset</button>
+      <!-- This duplicated section & the animation button will be deleted when test is complete -->
     </div>
   </div>
   <!--Reward section end -->
@@ -631,6 +651,7 @@
   <script type="text/javascript" src="js/cal.js"></script>
   <script type="text/javascript" src="js/weekDays.js"></script>
   <script type="text/javascript" src="js/template.js"></script>
+  <script type="text/javascript" src="js/rewardAnimation.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <!-- <script type="text/javascript" src="js/MindFusion.Scheduling.js"></script>

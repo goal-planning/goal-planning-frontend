@@ -4,6 +4,7 @@ body{
   height: 100%;
   width: 100%;
   position: relative;
+  background-color: #555555;
 }
 .header{
   background-color: blue;
