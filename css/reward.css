@@ -35,12 +35,14 @@ hr {
   bottom:0;
   right: 40px;
 }
+/* next section to update*** */
 .canoeNext {
   width: 300px !important;
   height: 300px !important;
   position: absolute !important;
-  bottom: 4px !important;
-  right: 28px !important;
+  z-index: 4;
+  bottom: 7px !important;
+  right: 49px !important;
 }
 .poleNext{
   height: 100px !important;
@@ -59,9 +61,9 @@ hr {
 .flagBoxNext{
   position: absolute !important;
   background-color: transparent !important;
-  z-index: 3 !important;
-  bottom: 153px !important;
-  right: 135px !important;
+  z-index: 5 !important;
+  bottom: 156px !important;
+  right: 156px !important;
 }
 /*************************************/
 .picture{
@@ -245,3 +247,96 @@ hr {
   right: 135px;
 }
 /* end of frame 5 pole and canoe */
+/* beginning of frame 6 pole and canoe */
+.canoe6{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 5px;
+  right: 35px;
+
+}
+.pole6{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag6{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox6{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 154px;
+  right: 142px;
+}
+/* end of frame 6 pole and canoe */
+/* beginning of frame 7 pole and canoe */
+.canoe7{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 6px;
+  right: 42px;
+
+}
+.pole7{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag7{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox7{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 155px;
+  right: 149px;
+}
+/* end of frame 7 pole and canoe */
+/* beginning of frame 8 pole and canoe */
+.canoe8{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 7px;
+  right: 49px;
+
+}
+.pole8{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag8{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox8{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 156px;
+  right: 156px;
+}
+/* end of frame 8 pole and canoe */
