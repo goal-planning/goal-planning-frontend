@@ -385,6 +385,8 @@ calAddButton.addEventListener("click", function(e) {
       alert("Cannot add an empty todo")
     } else {
       addCalTask(input);
+      let findBoxDay = document.getElementById('hold' + addID);
+      console.log(findBoxDay);
     }
 });
 
