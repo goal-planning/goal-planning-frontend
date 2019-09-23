@@ -29,11 +29,13 @@ hr {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 10;
 }
 .animateReset {
   position: absolute;
   bottom:0;
   right: 40px;
+  z-index: 10;
 }
 .canoeNext {
   width: 300px !important;
