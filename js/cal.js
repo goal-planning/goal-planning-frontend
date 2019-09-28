@@ -387,6 +387,7 @@ calAddButton.addEventListener("click", function(e) {
       addCalTask(input);
       let findBoxDay = document.getElementById(addID);
       console.log(findBoxDay.innerText);
+      
     }
 });
 

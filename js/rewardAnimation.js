@@ -3,7 +3,6 @@ let flag = document.getElementById('flagAnimate');
 let pole = document.getElementById('poleAnimate');
 let flagBox = document.getElementById('flagBoxAnimate');
 let flagNumber = document.querySelector('.flagNumber');
-console.log(flagNumber.innerText);
 
 let frameCount = 5;
 let iAnime = 1;
@@ -25,7 +24,6 @@ function runRewardAnimation() {
 function resetAnimation() {
     testCount++;
     flagNumber.innerText = testCount.toString();
-    console.log(flagNumber.innerText);
     canoe.className = 'canoe1';
     flag.className = 'flag1';
     pole.className = 'pole1';
