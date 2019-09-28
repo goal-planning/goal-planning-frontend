@@ -1,4 +1,4 @@
-/* To be deleted after test complete */
+/* To be deleted after test complete; hr=white lines */
 hr {
   color: white;
   position: relative;
@@ -29,20 +29,23 @@ hr {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 10;
 }
 .animateReset {
   position: absolute;
   bottom:0;
   right: 40px;
+  z-index: 10;
 }
-/* next section to update*** */
+/* next section to update
+the bottom and right should match the last frame*** */
 .canoeNext {
   width: 300px !important;
   height: 300px !important;
   position: absolute !important;
   z-index: 4;
-  bottom: 7px !important;
-  right: 49px !important;
+  bottom: 20px !important;
+  right: 140px !important;
 }
 .poleNext{
   height: 100px !important;
@@ -50,6 +53,7 @@ hr {
   background-color: black !important;
   float: left !important;
 }
+/*  keep up to date with the last canoe frame */
 .flagNext{
   height:40px !important;
   width: 55px !important;
@@ -58,12 +62,13 @@ hr {
   float: left !important;
   margin-bottom: 60px !important;
 }
+/* increment by +1 bottom and +7 for right */
 .flagBoxNext{
   position: absolute !important;
   background-color: transparent !important;
   z-index: 5 !important;
-  bottom: 156px !important;
-  right: 156px !important;
+  bottom: 169px !important;
+  right: 247px !important;
 }
 /*************************************/
 .picture{
@@ -186,7 +191,7 @@ hr {
   right: 121px;
 }
 /*end of frame 3 pole and canoe*/
-/* beginning of fram 4 pole and canoe <DONE> */
+/* beginning of frame4 pole and canoe <DONE> */
 .canoe4{
   width: 300px;
   height: 300px;
@@ -340,3 +345,422 @@ hr {
   right: 156px;
 }
 /* end of frame 8 pole and canoe */
+/* beginning of frame 9 pole and canoe */
+.canoe9{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 8px;
+  right: 56px;
+
+}
+.pole9{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag9{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+  /* bottom +1; right +7*/
+}
+.flagBox9{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 157px;
+  right: 163px;
+}
+/* end of frame 9 pole and canoe */
+/* beginning of frame 10 pole and canoe */
+.canoe10{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 9px;
+  right: 63px;
+
+}
+.pole10{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag10{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox10{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 158px;
+  right: 170px;
+}
+/* end of frame 10 pole and canoe */
+/* beginning of frame 11 pole and canoe */
+.canoe11{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+
+}
+.pole11{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag11{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox11{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 159px;
+  right: 177px;
+}
+/* end of frame 11 pole and canoe */
+/* beginning of frame 12 pole and canoe */
+.canoe12{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 11px;
+  right: 77px;
+
+}
+.pole12{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag12{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox12{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 160px;
+  right: 184px;
+}
+/* end of frame 12 pole and canoe */
+/* beginning of frame 13 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe13{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 12px;
+  right: 84px;
+
+}
+.pole13{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag13{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox13{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 161px;
+  right: 191px;
+}
+/* end of frame 13 pole and canoe */
+/* beginning of frame 14 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe14{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 13px;
+  right: 91px;
+
+}
+.pole14{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag14{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox14{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 162px;
+  right: 198px;
+}
+/* end of frame 14 pole and canoe */
+/* beginning of frame 15 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe15{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 14px;
+  right: 98px;
+
+}
+.pole15{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag15{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+.flagBox15{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 163px;
+  right: 205px;
+}
+/* end of frame 15 pole and canoe */
+/* beginning of frame 16 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe16{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 15px;
+  right: 105px;
+
+}
+.pole16{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag16{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox16{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 164px;
+  right: 212px;
+}
+/* end of frame 16pole and canoe */
+/* beginning of frame 17 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe17{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 16px;
+  right: 112px;
+
+}
+.pole17{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag17{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox17{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 165px;
+  right: 219px;
+}
+/* end of frame 17 pole and canoe */
+/* beginning of frame 18 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe18{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 17px;
+  right: 119px;
+
+}
+.pole18{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag18{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox18{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 166px;
+  right: 226px;
+}
+/* end of frame 18 pole and canoe */
+/* beginning of frame 19 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe19{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 18px;
+  right: 126px;
+
+}
+.pole19{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag19{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox19{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 167px;
+  right: 233px;
+}
+/* end of frame 19 pole and canoe */
+/* beginning of frame 20 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe20{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 19px;
+  right: 133px;
+
+}
+.pole20{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag20{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox20{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 168px;
+  right: 240px;
+}
+/* end of frame 20 pole and canoe */
+/* beginning of frame 21 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe21{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 20px;
+  right: 140px;
+
+}
+.pole21{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag21{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox21{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 169px;
+  right: 247px;
+}
+/* end of frame 21 pole and canoe */

@@ -3,7 +3,8 @@ let flag = document.getElementById('flagAnimate');
 let pole = document.getElementById('poleAnimate');
 let flagBox = document.getElementById('flagBoxAnimate');
 let flagNumber = document.getElementById('testNum');
-let frameCount = 7;
+//  increment for each canoe movement frame count should match frame #
+let frameCount = 21;
 let iAnime = 1;
 let testCounter = 0;
 
