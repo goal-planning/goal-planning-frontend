@@ -151,7 +151,7 @@ function createActivity(day, dNum, dName, todo_counts) {
         let count = todoList[day].querySelectorAll("li");
         numberActivitiesElements[day].innerText="total number of activites is " + count.length;
       };
-      updateTodoName(item.value, todo_counts);      
+      updateTodoName(item.value, todo_counts);
     });
     item.type = "text";
     item.value = input;
@@ -173,11 +173,11 @@ function createActivity(day, dNum, dName, todo_counts) {
       todoList[day].removeChild(li);
       numberActivities[day] = todoList[day].querySelectorAll("li");
       numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
-       alert(numberActivitiesElements[day].innerText);
+      // alert(numberActivitiesElements[day].innerText);
     });
     numberActivities[day] = todoList[day].querySelectorAll("li");
     numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
-    alert(numberActivitiesElements[day].innerText);
+    //alert(numberActivitiesElements[day].innerText);
     checkBox.addEventListener('click', function(e) {
       if(e.target.checked == true){
         numberChecked[day]++;
