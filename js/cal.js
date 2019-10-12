@@ -76,7 +76,7 @@ function get_calendar(day_no, days){
         td.appendChild(p);
         Ftd_count++;
     }
-    
+
     var count = 1;
     for(; c<=6; c++){
         Ftd = Ftd_count;
@@ -88,7 +88,7 @@ function get_calendar(day_no, days){
         td.appendChild(p);
         count++;
         Ftd_count++;
-    }    
+    }
     //rest of the date rows
     for(var r=3; r<=6; r++){
         for(var c=0; c<=6; c++){
@@ -149,7 +149,7 @@ cal_arrow_left.addEventListener("click", (e)=>{
     d.setFullYear(y, m, 1);
     let day_no = d.getDay();
     let days = new Date(y, m+1, 0).getDate();
-    for(let i=0; i<=34; i++){  
+    for(let i=0; i<=34; i++){
         var cntnt = document.getElementById("td"+i);
         var holder = document.getElementById("hold"+i);
         while (cntnt.lastChild.className !== 'hold') {
@@ -173,7 +173,7 @@ cal_arrow_right.addEventListener("click", (e)=>{
     d.setFullYear(y, m, 1);
     let day_no = d.getDay();
     let days = new Date(y, m+1, 0).getDate();
-    for(let i=0; i<=34; i++){  
+    for(let i=0; i<=34; i++){
         var cntnt = document.getElementById("td"+i);
         var holder = document.getElementById("hold"+i);
         while (cntnt.lastChild.className !== 'hold') {
@@ -388,7 +388,16 @@ calAddButton.addEventListener("click", function(e) {
       addCalTask(input);
       let findBoxDay = document.getElementById(addID);
       console.log(findBoxDay.innerText);
-      
+      let SunNumCheck = document.getElementById("SunNum")
+      console.log(SunNumCheck.innerText);
+      if (findBoxDay.innerText === SunNumCheck.innerText){
+        console.log ("working");
+        let textCount = todo_counts-1;
+        let toDoText = document.getElementById("todo" + textCount);
+        console.log(toDoText.childNodes[0].nodeValue);
+
+      }
+
     }
 });
 
@@ -408,7 +417,7 @@ calEditButton.addEventListener("click", function(e){
     if(calEditIn.value == '') {
         todoEdit.remove();
     }
-});    
+});
 
 function addCalTask(input) {
     let todo = document.createElement("div");
@@ -435,7 +444,7 @@ function addCalTask(input) {
         $("#calEditModal").modal('show');
 
         $("#calEditModal").on('shown.bs.modal', function (e) {
-            $('.calEditIn').focus();        
+            $('.calEditIn').focus();
         })
 
         $("#calEditModal").on('hidden.bs.modal', function (e) {
