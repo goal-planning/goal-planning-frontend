@@ -378,6 +378,7 @@ calAddIn.addEventListener("keyup", (e)=>{
 });
 
 let todo_counts = 1;
+let calToWeekLabel;
 
 calAddButton.addEventListener("click", function(e) {
     let input = calAddIn.value.trim();
