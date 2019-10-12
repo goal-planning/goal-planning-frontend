@@ -44,8 +44,8 @@ the bottom and right should match the last frame*** */
   height: 300px !important;
   position: absolute !important;
   z-index: 4;
-  bottom: 20px !important;
-  right: 140px !important;
+  bottom: 23px !important;
+  right: 161px !important;
 }
 .poleNext{
   height: 100px !important;
@@ -67,8 +67,8 @@ the bottom and right should match the last frame*** */
   position: absolute !important;
   background-color: transparent !important;
   z-index: 5 !important;
-  bottom: 169px !important;
-  right: 247px !important;
+  bottom: 172px !important;
+  right: 268px !important;
 }
 /*************************************/
 .picture{
@@ -764,3 +764,102 @@ the bottom and right should match the last frame*** */
   right: 247px;
 }
 /* end of frame 21 pole and canoe */
+/* beginning of frame 22pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe22{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 21px;
+  right: 147px;
+
+}
+.pole22{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag22{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox22{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 170px;
+  right: 254px;
+}
+/* end of frame 22 pole and canoe */
+/* beginning of frame 23 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe23{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 22px;
+  right: 154px;
+
+}
+.pole23{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag23{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox23{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 171px;
+  right: 261px;
+}
+/* end of frame 23 pole and canoe */
+/* beginning of frame 24 pole and canoe */
+/* increment by 1 on bottom and 7 on right */
+.canoe24{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 23px;
+  right: 161px;
+
+}
+.pole24{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag24{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox24{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 172px;
+  right: 268px;
+}
+/* end of frame 24 pole and canoe */
