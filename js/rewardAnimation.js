@@ -4,7 +4,7 @@ let pole = document.getElementById('poleAnimate');
 let flagBox = document.getElementById('flagBoxAnimate');
 let flagNumber = document.getElementById('testNum');
 //  increment for each canoe movement frame count should match frame #
-let frameCount = 21;
+let frameCount = 40;
 let iAnime = 1;
 let testCounter = 0;
 
@@ -18,7 +18,7 @@ function runRewardAnimation() {
         if (iAnime <= frameCount) {   //  if the counter < frameCount, call the loop function
             runRewardAnimation();     //  .. again which will trigger another
         }                        //  .. setTimeout()
-     }, 200)
+     }, 1000)
 };
 
 function resetAnimation() {
