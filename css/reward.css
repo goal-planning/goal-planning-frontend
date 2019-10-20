@@ -44,8 +44,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   height: 300px !important;
   position: absolute !important;
   z-index: 4;
-  bottom: 36px !important;
-  right: 255px !important;
+  bottom: 38px !important;
+  right: 268px !important;
 }
 .poleNext{
   height: 100px !important;
@@ -67,8 +67,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   position: absolute !important;
   background-color: transparent !important;
   z-index: 5 !important;
-  bottom: 194px !important;
-  right: 376px !important;
+  bottom: 196px !important;
+  right: 390px !important;
 }
 /*************************************/
 .picture{
@@ -1200,8 +1200,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 33px;
-  right: 234px;
+  bottom: 34px;
+  right: 241px;
 
 }
 .pole35{
@@ -1233,8 +1233,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 34px;
-  right: 241px;
+  bottom: 35px;
+  right: 248px;
 
 }
 .pole36{
@@ -1266,8 +1266,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 34px;
-  right: 241px;
+  bottom: 36px;
+  right: 255px;
 
 }
 .pole37{
@@ -1299,8 +1299,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 34px;
-  right: 241px;
+  bottom: 37px;
+  right: 262px;
 
 }
 .pole38{
@@ -1332,8 +1332,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 35px;
-  right: 248px;
+  bottom: 38px;
+  right: 269px;
 
 }
 .pole39{
@@ -1365,8 +1365,8 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 36px;
-  right: 255px;
+  bottom: 39px;
+  right: 276px;
 
 }
 .pole40{
@@ -1392,3 +1392,134 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   right: 380px;
 }
 /* end of frame 40 pole and canoe  add to reward amination.js frameCount*/
+/* increment by 1 on bottom and 7 on right */
+.canoe41{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 40px;
+  right: 283px;
+
+}
+.pole41{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag41{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox41{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 189px;
+  right: 387px;
+}
+/* end of frame 41 pole and canoe  add to reward amination.js frameCount
+beginning of 42*/
+/* increment by 1 on bottom and 7 on right */
+.canoe42{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 41px;
+  right: 295px;
+
+}
+.pole42{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag42{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox42{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 190px;
+  right: 394px;
+}
+/* end of frame 42 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 43*/
+/* increment by 1 on bottom and 7 on right */
+.canoe43{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 41px;
+  right: 303px;
+
+}
+.pole43{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag43{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox43{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 190px;
+  right: 394px;
+}
+/* end of frame 43 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 44*/
+/* increment by 1 on bottom and 7 on right */
+.canoe44{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 41px;
+  right: 301px;
+
+}
+.pole44{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag44{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox44{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 190px;
+  right: 394px;
+}
+/* end of frame 44 pole and canoe  add to reward amination.js frameCount*/
