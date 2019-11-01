@@ -195,7 +195,7 @@ function createActivity(day, dNum, dName, todo_counts) {
 
 
   }
-  todo_counts++;
+  // todo_counts++;
 }
 
 addButtonSunday.addEventListener("click", function() {createActivity(0, document.getElementById('SunNum').innerText, "Sunday", todo_counts)});
@@ -278,7 +278,7 @@ function checkGoal(day) {
   console.log(goalLeft);
 }
 
-function calToWeek(activity, day, todo_counts){
+function calToWeek(activity, day, todo_counts_here){
   let input = activity;
   let li = document.createElement("li");
   let checkBox = document.createElement("input");
@@ -290,12 +290,12 @@ function calToWeek(activity, day, todo_counts){
         numberChecked[day]--;
         completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
       }
-      syncCalRemoveFromWeek(todo_counts);
+      syncCalRemoveFromWeek(todo_counts_here);
       todoList[day].removeChild(li);
       let count = todoList[day].querySelectorAll("li");
       numberActivitiesElements[day].innerText="total number of activites is " + count.length;
     };
-    updateTodoName(item.value, todo_counts);      
+    updateTodoName(item.value, todo_counts_here);      
   });
   item.type = "text";
   item.value = input;
@@ -313,7 +313,7 @@ function calToWeek(activity, day, todo_counts){
       completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
     }
     removeCalFromWeek = e.target.parentElement.children[1].value;
-    syncCalRemoveFromWeek(todo_counts);
+    syncCalRemoveFromWeek(todo_counts_here);
     todoList[day].removeChild(li);
     numberActivities[day] = todoList[day].querySelectorAll("li");
     numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;

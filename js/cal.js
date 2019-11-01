@@ -395,7 +395,7 @@ calAddButton.addEventListener("click", function(e) {
         let textCount = todo_counts-1;
         let toDoText = document.getElementById("todo" + textCount);
         console.log(toDoText.childNodes[0].nodeValue);
-        calToWeek(toDoText.childNodes[0].nodeValue, 0, todo_counts);
+        calToWeek(toDoText.childNodes[0].nodeValue, 0, textCount);
       }
 
     }
@@ -464,8 +464,8 @@ function killCalTodo(todo) {
 }
 
 function syncCalRemoveFromWeek(todoCount) {
-    todoCount--;
-    let kill = document.getElementById("todo" + todoCount);
+    let itemDelete = todoCount;
+    let kill = document.getElementById("todo" + itemDelete);
     console.log(todoCount);
     kill.remove();
 }
