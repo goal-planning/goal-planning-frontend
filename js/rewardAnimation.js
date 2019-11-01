@@ -5,34 +5,38 @@ let flagBox = document.getElementById('flagBoxAnimate');
 let flagNumber = document.getElementById('testNum');
 let canoePicture = document.getElementById('canoePicture');
 //  increment for each canoe movement frame count should match frame #
-let frameCount = 44;
+let frameCount = 50;
 let iAnime = 1;
 let testCounter = 0;
-
+//play the animation to loop through frame count
 function runRewardAnimation() {
     canoe.className = 'canoe' + iAnime;
     flag.className = 'flag' + iAnime;
     pole.className = 'pole' + iAnime;
     flagBox.className = 'flagBox' + iAnime;
-    setTimeout(function () {    //  call a 0.5s setTimeout when the loop is called
+    setTimeout(function () {
+
+        //  call a 0.5s setTimeout when the loop is called
         iAnime++;                     //  increment the counter
-        if (iAnime <= 42) {   //  if the counter < frameCount, call the loop function
+        flagNumber.innerText= iAnime.toString();
+        console.log(iAnime.toString());
+        if (iAnime <= 52) {   //  if the counter < frameCount, call the loop function
             runRewardAnimation();     //  .. again which will trigger another
         }                        //  .. setTimeout()
-        if (iAnime == 43) {
-          canoePicture.src = "/img/canoe-one.png";
-          runRewardAnimation();
-        }
-
-        if (iAnime == 44) {
-          canoePicture.src = "/img/canoe-three.png";
-        }
+        // if (iAnime == 50) {
+        //   canoePicture.src = "/img/canoe-one.png";
+        //   runRewardAnimation();
+        // }
+        //
+        // if (iAnime == 51) {
+        //   canoePicture.src = "/img/canoe-three.png";
+        // }
      }, 150)
 
      console.log(canoePicture.src);
 
 };
-
+//reset to frame 1; iAnime is frame reference
 function resetAnimation() {
     canoe.className = 'canoe1';
     flag.className = 'flag1';
@@ -40,7 +44,6 @@ function resetAnimation() {
     flagBox.className = 'flagBox1';
     iAnime = 1;
     testCounter ++;
-    flagNumber.innerText= testCounter.toString();
+    flagNumber.innerText= iAnime.toString();
     canoePicture.src = "/img/canoe-two.png";
-
 }
