@@ -20,17 +20,17 @@ function runRewardAnimation() {
         iAnime++;                     //  increment the counter
         flagNumber.innerText= iAnime.toString();
         console.log(iAnime.toString());
-        if (iAnime <= 52) {   //  if the counter < frameCount, call the loop function
+        if (iAnime <= 57) {   //  if the counter < frameCount, call the loop function
             runRewardAnimation();     //  .. again which will trigger another
         }                        //  .. setTimeout()
-        // if (iAnime == 50) {
-        //   canoePicture.src = "/img/canoe-one.png";
-        //   runRewardAnimation();
-        // }
-        //
-        // if (iAnime == 51) {
-        //   canoePicture.src = "/img/canoe-three.png";
-        // }
+        if (iAnime == 58) {
+          canoePicture.src = "/img/canoe-one.png";
+          runRewardAnimation();
+        }
+
+        if (iAnime == 59) {
+          canoePicture.src = "/img/canoe-three.png";
+        }
      }, 150)
 
      console.log(canoePicture.src);

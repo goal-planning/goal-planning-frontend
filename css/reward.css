@@ -1788,30 +1788,24 @@ beginning of 42*/
   right: 464px;
 }
 /* end of frame 52pole and canoe  add to reward amination.js frameCount*/
-
-
-
-
-
-
-
-/* beginning of 50*/
+/* beginning of 53*/
 /* increment by 1 on bottom and 7 on right */
-/* change canoe image to canoe-three */
-.xcanoe50{
+/*  increment by 1 iAnime line 23*/
+.canoe53{
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 48px;
-  right: 344px;
+  bottom: 52px;
+  right: 367px;
+
 }
-.xpole50{
+.pole53{
   height: 100px;
   width: 5px;
   background-color: black;
   float: left;
 }
-.xflag50{
+.flag53{
   height:40px;
   width: 55px;
   background-color: white;
@@ -1820,32 +1814,32 @@ beginning of 42*/
   margin-bottom: 60px;
 }
 /* add 1 to bottom and 7 to right */
-.xflagBox50{
+.flagBox53{
   position: absolute;
   background-color: transparent;
   z-index: 3;
-  bottom: 197px;
-  right: 443px;
+  bottom: 200px;
+  right: 471px;
 }
-/* end of frame 50 pole and canoe  add to reward amination.js frameCount*/
-/* beginning of 51*/
+/* end of frame 53pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 54*/
 /* increment by 1 on bottom and 7 on right */
-/* change canoe image to canoe-three */
-.xcanoe51{
+/*  increment by 1 iAnime line 23*/
+.canoe54{
   width: 300px;
   height: 300px;
   position: absolute;
-  bottom: 48px;
-  right: 339px;
+  bottom: 53px;
+  right: 374px;
 
 }
-.xpole51{
+.pole54{
   height: 100px;
   width: 5px;
   background-color: black;
   float: left;
 }
-.xflag51{
+.flag54{
   height:40px;
   width: 55px;
   background-color: white;
@@ -1854,11 +1848,190 @@ beginning of 42*/
   margin-bottom: 60px;
 }
 /* add 1 to bottom and 7 to right */
-.xflagBox51{
+.flagBox54{
   position: absolute;
   background-color: transparent;
   z-index: 3;
-  bottom: 197px;
-  right: 443px;
+  bottom: 201px;
+  right: 478px;
 }
-/* end of frame 51 pole and canoe  add to reward amination.js frameCount*/
+/* end of frame 54pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 55*/
+/* increment by 1 on bottom and 7 on right */
+/*  increment by 1 iAnime line 23*/
+.canoe55{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 54px;
+  right: 381px;
+
+}
+.pole55{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag55{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox55{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 202px;
+  right: 485px;
+}
+/* end of frame 55pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 56*/
+/* increment by 1 on bottom and 7 on right */
+/*  increment by 1 iAnime line 23*/
+.canoe56{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 55px;
+  right: 388px;
+
+}
+.pole56{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag56{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox56{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 203px;
+  right: 492px;
+}
+/* end of frame 56pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 57*/
+/* increment by 1 on bottom and 7 on right */
+/*  increment by 1 iAnime line 23*/
+.canoe57{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 56px;
+  right: 395px;
+
+}
+.pole57{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag57{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox57{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 204px;
+  right: 499px;
+}
+/* end of frame 57pole and canoe  add to reward amination.js frameCount*/
+
+
+
+
+
+
+
+
+
+
+/* beginning of 58*/
+/* increment by 1 on bottom and 7 on right */
+/* change canoe image to canoe-three */
+.canoe58{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 58px;
+  right: 405px;
+}
+.pole58{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag58{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox58{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 204px;
+  right: 499px;
+}
+/* end of frame 58 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 59*/
+/* increment by 1 on bottom and 7 on right */
+/* change canoe image to canoe-three */
+.canoe59{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 58px;
+  right: 405px;
+
+}
+.pole59{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag59{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox59{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 204px;
+  right: 499px;
+}
+/* end of frame 59 pole and canoe  add to reward amination.js frameCount*/
