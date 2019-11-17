@@ -23,14 +23,20 @@ function runRewardAnimation() {
         if (iAnime <= 57) {   //  if the counter < frameCount, call the loop function
             runRewardAnimation();     //  .. again which will trigger another
         }                        //  .. setTimeout()
-        if (iAnime == 58) {
+        else if (iAnime == 58)  {
           canoePicture.src = "/img/canoe-one.png";
           runRewardAnimation();
         }
-
-        if (iAnime == 59) {
+        else if (iAnime == 59)  {
           canoePicture.src = "/img/canoe-three.png";
+          runRewardAnimation();
         }
+        else if (iAnime <=71)  {
+          runRewardAnimation();
+
+        }
+
+        else {}
      }, 150)
 
      console.log(canoePicture.src);

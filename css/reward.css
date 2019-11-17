@@ -39,37 +39,40 @@ hr {
 }
 /* next section to update
 the bottom and right should match the last frame add 1 to bottom and 7 to right in canoeNext***/
-.canoeNext {
-  width: 300px !important;
-  height: 300px !important;
-  position: absolute !important;
-  z-index: 4;
-  bottom: 38px !important;
-  right: 268px !important;
+
+.canoe{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 59px;
+  right: 412px;
+
 }
-.poleNext{
-  height: 100px !important;
-  width: 5px !important;
-  background-color: black !important;
-  float: left !important;
+.pole{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
 }
-/*  keep up to date with the last canoe frame */
-.flagNext{
-  height:40px !important;
-  width: 55px !important;
-  background-color: white !important;
-  border: 1px solid black !important;
-  float: left !important;
-  margin-bottom: 60px !important;
+.flag{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
 }
-/* increment by +1 bottom and +7 for right */
-.flagBoxNext{
-  position: absolute !important;
-  background-color: transparent !important;
-  z-index: 5 !important;
-  bottom: 196px !important;
-  right: 390px !important;
+/* add 1 to bottom and 7 to right */
+.flagBox{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 205px;
+  right: 506px;
 }
+/* end of frame 59 pole and canoe  add to reward amination.js frameCount*/
+
+
 /*************************************/
 .picture{
   width: 100%;
@@ -2035,3 +2038,400 @@ beginning of 42*/
   right: 499px;
 }
 /* end of frame 59 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 60*/
+/* increment by 1 on bottom and 7 on right */
+/* change canoe image to canoe-three; after canoe stra*/
+.canoe60{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 59px;
+  right: 405px;
+
+}
+.pole60{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag60{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to right */
+.flagBox60{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 205px;
+  right: 499px;
+}
+/* end of frame 59 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 61*/
+/* increment by 4 on bottom*/
+.canoe61{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 63px;
+  right: 405px;
+
+}
+.pole61{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag61{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox61{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 209px;
+  right: 499px;
+}
+/* end of frame 61 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 62*/
+/* increment by 4 on bottom*/
+.canoe62{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 67px;
+  right: 405px;
+
+}
+.pole62{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag62{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox62{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 213px;
+  right: 499px;
+}
+/* end of frame 62 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 63*/
+/* increment by 4 on bottom*/
+.canoe63{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 71px;
+  right: 405px;
+
+}
+.pole63{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag63{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox63{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 217px;
+  right: 499px;
+}
+/* end of frame 63 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 64*/
+/* increment by 4 on bottom*/
+.canoe64{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 75px;
+  right: 405px;
+
+}
+.pole64{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag64{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox64{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 221px;
+  right: 499px;
+}
+/* end of frame 64 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 65*/
+/* increment by 4 on bottom*/
+.canoe65{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 79px;
+  right: 405px;
+
+}
+.pole65{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag65{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox65{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 225px;
+  right: 499px;
+}
+/* end of frame 65 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 66*/
+/* increment by 4 on bottom*/
+.canoe66{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 83px;
+  right: 405px;
+
+}
+.pole66{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag66{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox66{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 229px;
+  right: 499px;
+}
+/* end of frame 66 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 67*/
+/* increment by 4 on bottom*/
+.canoe67{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 87px;
+  right: 405px;
+
+}
+.pole67{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag67{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox67{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 233px;
+  right: 499px;
+}
+/* end of frame 67 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 68*/
+/* increment by 4 on bottom*/
+.canoe68{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 91px;
+  right: 405px;
+
+}
+.pole68{
+  height: 100px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag68{
+  height:40px;
+  width: 55px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox68{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 237px;
+  right: 499px;
+}
+/* end of frame 68 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 69*/
+/* increment by 4 on bottom*/
+.canoe69{
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  bottom: 95px;
+  right: 410px;
+
+}
+.pole69{
+  height: 96px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag69{
+  height:38px;
+  width: 53px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox69{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 234px;
+  right: 500px;
+}
+/* end of frame 69 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 70*/
+/* increment by 4 on bottom*/
+.canoe70{
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  bottom: 99px;
+  right: 410px;
+
+}
+.pole70{
+  height: 96px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag70{
+  height:38px;
+  width: 53px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox70{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 238px;
+  right: 500px;
+}
+/* end of frame 70 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 71*/
+/* increment by 4 on bottom*/
+.canoe71{
+  width: 290px;
+  height: 290px;
+  position: absolute;
+  bottom: 103px;
+  right: 410px;
+
+}
+.pole71{
+  height: 96px;
+  width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag71{
+  height:38px;
+  width: 53px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 60px;
+}
+/* add 4 to bottom */
+.flagBox71{
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  bottom: 242px;
+  right: 500px;
+}
+/* end of frame 71 pole and canoe  add to reward amination.js frameCount*/
