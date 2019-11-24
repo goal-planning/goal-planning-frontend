@@ -195,6 +195,7 @@ function createActivity(day, dNum, dName, todo_counts) {
 
 
   }
+  // todo_counts++;
 }
 
 addButtonSunday.addEventListener("click", function() {createActivity(0, document.getElementById('SunNum').innerText, "Sunday", todo_counts)});
@@ -275,4 +276,62 @@ function checkGoal(day) {
   // }
   console.log(numberCheckedSunday);
   console.log(goalLeft);
+}
+
+function calToWeek(activity, day, todo_counts_here){
+  let input = activity;
+  let li = document.createElement("li");
+  let checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  let item = document.createElement("input");
+  item.addEventListener('keyup', function(e){
+    if(item.value.trim() === ''){
+      if(e.target.parentElement.children[0].checked == true){
+        numberChecked[day]--;
+        completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
+      }
+      syncCalRemoveFromWeek(todo_counts_here);
+      todoList[day].removeChild(li);
+      let count = todoList[day].querySelectorAll("li");
+      numberActivitiesElements[day].innerText="total number of activites is " + count.length;
+    };
+    updateTodoName(item.value, todo_counts_here);      
+  });
+  item.type = "text";
+  item.value = input;
+
+  let trashButton = document.createElement("span");
+  trashButton.classList.add('glyphicon', 'glyphicon-minus', 'minus-icon');
+  todoList[day].appendChild(li)
+  li.appendChild(checkBox);
+  li.appendChild(item);
+  li.appendChild(trashButton);
+  addInput[day].value = "";
+  trashButton.addEventListener('click', function(e) {
+    if(e.target.parentElement.children[0].checked == true){
+      numberChecked[day]--;
+      completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
+    }
+    removeCalFromWeek = e.target.parentElement.children[1].value;
+    syncCalRemoveFromWeek(todo_counts_here);
+    todoList[day].removeChild(li);
+    numberActivities[day] = todoList[day].querySelectorAll("li");
+    numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
+  });
+  numberActivities[day] = todoList[day].querySelectorAll("li");
+  numberActivitiesElements[day].innerText="total number of activites is " + numberActivities[day].length;
+  checkBox.addEventListener('click', function(e) {
+    if(e.target.checked == true){
+      numberChecked[day]++;
+    } else {
+      numberChecked[day]--;
+    }
+    completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
+    if (day === 0) {
+      numberCheckedSunday ++;
+    }
+    // if()
+    console.log(numberCheckedSunday);
+  })
+
 }
