@@ -33,7 +33,6 @@ function runRewardAnimation() {
         }
         else if (iAnime <=75)  {
           runRewardAnimation();
-
         }
 
         else {}
@@ -44,6 +43,8 @@ function runRewardAnimation() {
 };
 //reset to frame 1; iAnime is frame reference
 function resetAnimation() {
+    testCount++;
+    flagNumber.innerText = testCount.toString();
     canoe.className = 'canoe1';
     flag.className = 'flag1';
     pole.className = 'pole1';
