@@ -6,7 +6,7 @@ let flagNumber = document.querySelector('.flagNumber');
 
 let frameCount = 5;
 let iAnime = 1;
-let testCount = 0;
+let testCounter = 0;
 
 function runRewardAnimation() {
     canoe.className = 'canoe' + iAnime;
@@ -22,7 +22,7 @@ function runRewardAnimation() {
 };
 
 function resetAnimation() {
-    testCount++;
+    testCounter++;
     flagNumber.innerText = testCount.toString();
     canoe.className = 'canoe1';
     flag.className = 'flag1';
@@ -30,4 +30,6 @@ function resetAnimation() {
     flagBox.className = 'flagBox1';
     iAnime = 1;
 }
+
+
 
