@@ -169,7 +169,18 @@ body, html {
 .tablink:hover {
   background-color: #777;
 }
+.dotPath {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 
+}
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   color: white;
@@ -178,9 +189,38 @@ body, html {
   padding-bottom: 60px;
 }
 
-#Home {background-color: red;}
+#Home {background-color:  #d2b48c;}
 #Analyitics {background-color: green;}
 #Contact {background-color: blue;}
 #About {background-color: orange;}
 
+#activity-tracking {
+  height: 400px;
+  background-color: black;
+
+}
+.boxfield {
+  background-color: white;
+  height: 100px;
+
+}
+.boxfield2 {
+  background-color: white;
+  height: 50px;
+
+}
+.card-spacing {
+  padding: 10px;
+
+}
+.bottom-padding {
+  margin-bottom: 10px;
+}
 /* End of Template Styles */
+
+.pictureClimber {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+
+}
