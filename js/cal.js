@@ -460,7 +460,91 @@ function addCalTask(input) {
 }
 
 function killCalTodo(todo) {
+    // GET DELETED ACTIVITY NAME
+    // console.log(todo.srcElement.parentNode.childNodes[0].nodeValue);
+
+    // GET DAY NUMBER LOCATION OF THE DELETED ACTIVITY
+    // console.log(todo.srcElement.parentNode.parentNode.parentNode.lastChild.innerText);
+
+    // RUN FUNCTION TO DELETE FROM WEEK TOO "IF ACTIVITY IS PRESENT"
+    checkAndDeleteFromWeek(todo.srcElement.parentNode.childNodes[0].nodeValue, todo.srcElement.parentNode.parentNode.parentNode.lastChild.innerText)
     todo.target.parentElement.remove();
+}
+
+function checkAndDeleteFromWeek(item, day) {
+    let weekSun = document.getElementById('SunNum');
+    let weekMon = document.getElementById('MonNum');
+    let weekTue = document.getElementById('TueNum');
+    let weekWed = document.getElementById('WedNum');
+    let weekThu = document.getElementById('ThuNum');
+    let weekFri = document.getElementById('FriNum');
+    let weekSat = document.getElementById('SatNum');
+    // console.log(weekSun.innerText);
+    // console.log(typeof(day));
+    switch(day) {
+        case weekSun.innerText:
+            // Check Sunday on current week and update a delete if an activity matches
+            // console.log(todoListSunday);
+            // console.log(todoListSunday.children[0].childNodes[1].value);
+            for(let i = 0; i < todoListSunday.children.length; i++) {
+                if(item == todoListSunday.children[i].childNodes[1].value){
+                    todoListSunday.removeChild(todoListSunday.children[i]); 
+                    break;
+                }
+            }
+            break;
+        case weekMon.innerText:
+            for(let i = 0; i < todoListMonday.children.length; i++) {
+                if(item == todoListMonday.children[i].childNodes[1].value){
+                    todoListMonday.removeChild(todoListMonday.children[i]); 
+                    break;
+                }
+            }
+            break;
+        case weekTue.innerText:
+            for(let i = 0; i < todoListTuesday.children.length; i++) {
+                if(item == todoListTuesday.children[i].childNodes[1].value){
+                    todoListTuesday.removeChild(todoListTuesday.children[i]); 
+                    break;
+                }
+            }
+            break;
+        case weekWed.innerText:
+            for(let i = 0; i < todoListWednesday.children.length; i++) {
+                if(item == todoListWednesday.children[i].childNodes[1].value){
+                    todoListWednesday.removeChild(todoListWednesday.children[i]); 
+                    break;
+                }
+            }
+            break;
+        case weekThu.innerText:
+            for(let i = 0; i < todoListThursday.children.length; i++) {
+                if(item == todoListThursday.children[i].childNodes[1].value){
+                    todoListThursday.removeChild(todoListThursday.children[i]); 
+                    break;
+                }
+            }
+            break;
+        case weekFri.innerText:
+            for(let i = 0; i < todoListFriday.children.length; i++) {
+                if(item == todoListFriday.children[i].childNodes[1].value){
+                    todoListFriday.removeChild(todoListFriday.children[i]); 
+                    break;
+                }
+            }
+            break;
+        case weekSat.innerText:
+            for(let i = 0; i < todoListSaturday.children.length; i++) {
+                if(item == todoListSaturday.children[i].childNodes[1].value){
+                    todoListSaturday.removeChild(todoListSaturday.children[i]); 
+                    break;
+                }
+            }
+            break;
+        default:
+            console.log('not current week');
+    }
+
 }
 
 function syncCalRemoveFromWeek(todoCount) {
