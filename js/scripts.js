@@ -330,8 +330,6 @@ function calToWeek(activity, day, todo_counts_here){
     if (day === 0) {
       numberCheckedSunday ++;
     }
-    // if()
-    console.log(numberCheckedSunday);
   })
 
 }

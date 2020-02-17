@@ -386,16 +386,53 @@ calAddButton.addEventListener("click", function(e) {
       alert("Cannot add an empty todo")
     } else {
       addCalTask(input);
+      // Add task from calendar to current Week
       let findBoxDay = document.getElementById(addID);
-      console.log(findBoxDay.innerText);
       let SunNumCheck = document.getElementById("SunNum")
-      console.log(SunNumCheck.innerText);
+      let MonNumCheck = document.getElementById("MonNum")
+      let TueNumCheck = document.getElementById("TueNum")
+      let WedNumCheck = document.getElementById("WedNum")
+      let ThuNumCheck = document.getElementById("ThuNum")
+      let FriNumCheck = document.getElementById("FriNum")
+      let SatNumCheck = document.getElementById("SatNum")
+      console.log(MonNumCheck);
       if (findBoxDay.innerText === SunNumCheck.innerText){
-        console.log ("working");
         let textCount = todo_counts-1;
         let toDoText = document.getElementById("todo" + textCount);
-        console.log(toDoText.childNodes[0].nodeValue);
         calToWeek(toDoText.childNodes[0].nodeValue, 0, textCount);
+      }
+      else if (findBoxDay.innerText === MonNumCheck.innerText) {
+        let textCount = todo_counts-1;
+        let toDoText = document.getElementById("todo" + textCount);
+        calToWeek(toDoText.childNodes[0].nodeValue, 1, textCount);
+      }
+      else if (findBoxDay.innerText === TueNumCheck.innerText) {
+        let textCount = todo_counts-1;
+        let toDoText = document.getElementById("todo" + textCount);
+        calToWeek(toDoText.childNodes[0].nodeValue, 2, textCount);
+      }
+      else if (findBoxDay.innerText === WedNumCheck.innerText) {
+        let textCount = todo_counts-1;
+        let toDoText = document.getElementById("todo" + textCount);
+        calToWeek(toDoText.childNodes[0].nodeValue, 3, textCount);
+      }
+      else if (findBoxDay.innerText === ThuNumCheck.innerText) {
+        let textCount = todo_counts-1;
+        let toDoText = document.getElementById("todo" + textCount);
+        calToWeek(toDoText.childNodes[0].nodeValue, 4, textCount);
+      }
+      else if (findBoxDay.innerText === FriNumCheck.innerText) {
+        let textCount = todo_counts-1;
+        let toDoText = document.getElementById("todo" + textCount);
+        calToWeek(toDoText.childNodes[0].nodeValue, 5, textCount);
+      }
+      else if (findBoxDay.innerText === SatNumCheck.innerText) {
+        let textCount = todo_counts-1;
+        let toDoText = document.getElementById("todo" + textCount);
+        calToWeek(toDoText.childNodes[0].nodeValue, 6, textCount);
+      }
+      else {
+
       }
 
     }
