@@ -2,10 +2,9 @@ let canoe = document.getElementById('canoeAnimate');
 let flag = document.getElementById('flagAnimate');
 let pole = document.getElementById('poleAnimate');
 let flagBox = document.getElementById('flagBoxAnimate');
-let flagNumber = document.getElementById('testNum');
-let canoePicture = document.getElementById('canoePicture');
+let flagNumber = document.getElementById('testNum'); document.getElementById('canoePicture');
 //  increment for each canoe movement frame count should match frame #
-let frameCount = 67;
+let frameCount = 100;
 let iAnime = 1;
 let testCounter = 0;
 //play the animation to loop through frame count
@@ -40,9 +39,6 @@ function runRewardAnimation() {
           runRewardAnimation();
         }
      }, 150)
-
-     console.log(canoePicture.src);
-
 };
 //reset to frame 1; iAnime is frame reference
 function resetAnimation() {
