@@ -23,7 +23,7 @@ function runRewardAnimation() {
 
 function resetAnimation() {
     testCounter++;
-    flagNumber.innerText = testCount.toString();
+    flagNumber.innerText = testCounter.toString();
     canoe.className = 'canoe1';
     flag.className = 'flag1';
     pole.className = 'pole1';
