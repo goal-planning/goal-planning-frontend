@@ -3273,7 +3273,7 @@ z-index: 3;
 bottom: 243px;
 right: 772px;
 }
-/* end of frame 96 pole and canoe  add to reward amination.js frameCount*/ 
+/* end of frame 96 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 97*/
 /* increment by 1 on bottom & 7 on right*/
 .canoe97{
@@ -3379,8 +3379,8 @@ right: 793px;
 width: 300px;
 height: 300px;
   position: absolute;
-bottom: 99px;
-right: 696px;
+bottom: 100px;
+right: 703px;
 
 }
 .pole100{
@@ -3406,3 +3406,102 @@ bottom: 247px;
 right: 800px;
 }
 /* end of frame 100 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 101/
+/* increment by 1 on bottom & 7 on right*/
+.canoe101{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 100px;
+right: 703px;
+
+}
+.pole101{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag101{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom */
+.flagBox101{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 248px;
+right: 807px;
+}
+/* end of frame 101 pole and canoe  add to reward amination.js frameCount*/
+/* beginning of 102/
+/* increment by 1 on bottom & 7 on right*/
+.canoe102{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 101px;
+right: 710px;
+
+}
+.pole102{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag102{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to the righ*/
+.flagBox102{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 249px;
+right: 814px;
+}
+/* end of frame 102 pole and canoe  add to reward amination.js frameCount*//*
+/* beginning of 103/
+/* increment by 1 on bottom & 7 on right*/
+.canoe103{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 102px;
+right: 717px;
+
+}
+.pole103{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: left;
+}
+.flag103{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and 7 to the righ*/
+.flagBox103{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 250px;
+right: 821px;
+}
+/* end of frame 103 pole and canoe  add to reward amination.js frameCount*/
