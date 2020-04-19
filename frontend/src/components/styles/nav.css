@@ -5,3 +5,33 @@
 .white-font{
   color: white !important;
 }
+.relative-position{
+  position: relative;
+}
+.absolute-position{
+  position: absolute;
+}
+.homelink{
+  color: white;
+}
+.homelink: hover{
+  text-decoration: underline;
+}
+.analyticlink{
+  color: white;
+}
+.analyticlink: hover{
+  text-decoration: underline;
+}
+.resourcelink{
+  color: white;
+}
+.resourcelink: hover{
+  text-decoration: underline;
+}
+.communitylink{
+  color: white;
+}
+.communitylink: hover{
+  text-decoration: underline;
+}
