@@ -14,23 +14,23 @@ export default class header extends Component {
 
                 <div className="collapse navbar-collapse relative-position" id="navbarSupportedContent">
                     <ul className="navbar-nav relative-position mr-auto">
-                    <li className="nav-item relative-position">
-                        <Link className="nav-link white-font homelink" to="/">
+                    <li className="nav-item relative-position homelink">
+                        <Link className="nav-link white-font" to="/">
                             Home
                         </Link>
                     </li>
-                    <li className="nav-item relative-position">
-                        <Link className="nav-link white-font analyticlink" to="/analytics">
+                    <li className="nav-item relative-position analyticlink">
+                        <Link className="nav-link white-font" to="/analytics">
                             Analytics
                         </Link>
                     </li>
-                    <li className="nav-item relative-position">
-                        <Link className="nav-link white-font resourcelink" to="/resources">
+                    <li className="nav-item relative-position resourcelink">
+                        <Link className="nav-link white-font" to="/resources">
                             Resources
                         </Link>
                     </li>
-                    <li className="nav-item relative-position">
-                        <Link className="nav-link white-font communitylink" to="/community">
+                    <li className="nav-item relative-position communitylink">
+                        <Link className="nav-link white-font" to="/community">
                             Community
                         </Link>
                     </li>
