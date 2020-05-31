@@ -98,7 +98,6 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
 .picture{
   width: 100%;
   height: 100%;
-  postion:relative;
 }
 .outerBox{
   width: 100%;
@@ -113,6 +112,7 @@ the bottom and right should match the last frame add 1 to bottom and 7 to right 
   background-size: cover;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 }
 .testBox{
   height: 200px;
@@ -4920,6 +4920,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 293px;
 right: 1122px;
+width: 60px;
 }
 /* end of frame 146 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 147/
@@ -4953,6 +4954,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 294px;
 right: 1129px;
+width: 60px;
 }
 /* end of frame 147 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 148/
@@ -4986,6 +4988,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 295px;
 right: 1136px;
+width: 60px;
 }
 /* end of frame 148 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 149/
@@ -5019,6 +5022,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 296px;
 right: 1143px;
+width: 60px;
 }
 /* end of frame 149 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 150/
@@ -5052,6 +5056,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 297px;
 right: 1150px;
+width: 60px;
 }
 /* end of frame 150 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 151/
@@ -5085,6 +5090,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 298px;
 right: 1157px;
+width: 60px;
 }
 /* end of frame 151 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 152/
@@ -5118,6 +5124,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 299px;
 right: 1164px;
+width: 60px;
 }
 /* end of frame 152 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 153/
@@ -5151,6 +5158,7 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 300px;
 right: 1171px;
+width: 60px;
 }
 /* end of frame 153 pole and canoe  add to reward amination.js frameCount*/
 /* beginning of 154/
@@ -5184,4 +5192,5 @@ margin-bottom: 60px;
 z-index: 3;
 bottom: 301px;
 right: 1178px;
+width: 60px;
 }
