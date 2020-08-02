@@ -181,8 +181,10 @@ function createActivity(day, dNum, dName, todo_counts) {
     checkBox.addEventListener('click', function(e) {
       if(e.target.checked == true){
         numberChecked[day]++;
+        accmulateActivityReward();
       } else {
         numberChecked[day]--;
+        dropActivityReward();
       }
       completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
       alert(completedCount[day].innerText);
@@ -323,8 +325,10 @@ function calToWeek(activity, day, todo_counts_here){
   checkBox.addEventListener('click', function(e) {
     if(e.target.checked == true){
       numberChecked[day]++;
+      accmulateActivityReward();
     } else {
       numberChecked[day]--;
+      dropActivityReward();
     }
     completedCount[day].innerText = "You have " + numberChecked[day] + " activities completed";
     if (day === 0) {
