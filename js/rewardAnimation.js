@@ -5,7 +5,7 @@ let flagBox = document.getElementById('flagBoxAnimate');
 let flagNumber = document.getElementById('testNum'); document.getElementById('canoePicture');
 //  increment for each canoe movement frame count should match frame #
 let frameCount = 168;
-let iAnime = 120;
+let iAnime = 0;
 let testCounter = 0;
 //play the animation to loop through frame coun8
 function runRewardAnimation() {
