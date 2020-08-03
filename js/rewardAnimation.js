@@ -21,6 +21,8 @@ function runRewardAnimation() {
         console.log(iAnime.toString());
         if (iAnime == 168) {   //  if the counter < frameCount, call the loop function
             canoePicture.src = "/img/canoe-park.png";
+            document.getElementById('ballId').style.top = "107px";
+
             runRewardAnimation();     //  .. again which will trigger another
         }                        //  .. setTimeout()
         // else if (iAnime == 58)  {
