@@ -4,7 +4,7 @@ let pole = document.getElementById('poleAnimate');
 let flagBox = document.getElementById('flagBoxAnimate');
 let flagNumber = document.getElementById('testNum'); document.getElementById('canoePicture');
 //  increment for each canoe movement frame count should match frame #
-let frameCount = 168;
+let frameCount = 172;
 let iAnime = 0;
 let testCounter = 0;
 //play the animation to loop through frame coun8
@@ -21,7 +21,8 @@ function runRewardAnimation() {
         console.log(iAnime.toString());
         if (iAnime == 168) {   //  if the counter < frameCount, call the loop function
             canoePicture.src = "/img/canoe-park.png";
-            document.getElementById('ballId').style.top = "107px";
+            document.getElementById('ballId').style.top = "113px";
+            document.getElementById('ballId').style.left = "120px";
 
             runRewardAnimation();     //  .. again which will trigger another
         }                        //  .. setTimeout()
@@ -54,4 +55,5 @@ function resetAnimation() {
     iAnime = 1;
     flagNumber.innerText= iAnime.toString();
     canoePicture.src = "/img/canoe-two.png";
+    document.getElementById('ballId').style.top = "119px";
 }
