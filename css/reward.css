@@ -5835,3 +5835,895 @@ bottom: 348px;
 right: 1242x;
 width: 60px;
 }
+/* beginning of 174/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe174{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 196px;
+right: 1130px;
+
+}
+.pole174{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag174{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox174{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 349px;
+right: 1235x;
+width: 60px;
+}
+/* beginning of 175/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe175{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 197px;
+right: 1123px;
+
+}
+.pole175{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag175{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox175{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 350px;
+right: 1228x;
+width: 60px;
+}
+/* beginning of 176/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe176{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 198px;
+right: 1116px;
+
+}
+.pole176{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag176{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox176{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 351px;
+right: 1221px;
+width: 60px;
+}
+/* beginning of 177/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe177{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 199px;
+right: 1109px;
+
+}
+.pole177{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag177{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox177{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 352px;
+right: 1214px;
+width: 60px;
+}
+/* beginning of 178/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe178{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 200px;
+right: 1102px;
+
+}
+.pole178{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag178{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox178{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 353px;
+right: 1207px;
+width: 60px;
+}
+/* beginning of 179/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe179{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 201px;
+right: 1095px;
+
+}
+.pole179{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag179{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox179{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 354px;
+right: 1200px;
+width: 60px;
+}
+/* beginning of 180/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe180{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 202px;
+right: 1088px;
+
+}
+.pole180{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag180{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox180{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 355px;
+right: 1193px;
+width: 60px;
+}
+/* beginning of 181/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe181{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 203px;
+right: 1081px;
+
+}
+.pole181{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag181{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox181{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 356px;
+right: 1186px;
+width: 60px;
+}
+/* beginning of 182/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe182{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 204px;
+right: 1074px;
+
+}
+.pole182{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag182{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox182{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 357px;
+right: 1179px;
+width: 60px;
+}
+/* beginning of 183/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe183{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 205px;
+right: 1067px;
+
+}
+.pole183{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag183{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox183{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 358px;
+right: 1172px;
+width: 60px;
+}
+/* beginning of 184/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe184{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 206px;
+right: 1060px;
+
+}
+.pole184{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag184{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox184{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 359px;
+right: 1165px;
+width: 60px;
+}
+/* beginning of 185/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe185{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 207px;
+right: 1053px;
+
+}
+.pole185{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag185{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox185{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 360px;
+right: 1158px;
+width: 60px;
+}
+/* beginning of 186/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe186{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 208px;
+right: 1046px;
+
+}
+.pole186{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag186{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox186{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 361px;
+right: 1151px;
+width: 60px;
+}
+/* beginning of 187/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe187{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 209px;
+right: 1039px;
+
+}
+.pole187{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag187{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left;
+margin-bottom: 60px;
+}
+/* add 1 to bottom and -7 to the right*/
+.flagBox187{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 362px;
+right: 1144px;
+width: 60px;
+}
+/* beginning of 188/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe188{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 210px;
+right: 1032px;
+
+}
+.pole188{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag188{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox188{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 363px;
+right: 1137px;
+width: 60px;
+}
+/* beginning of 189/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+/* increment by 1 on bottom & -7 on right*/
+.canoe189{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 211px;
+right: 1025px;
+
+}
+.pole189{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag189{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox189{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 364px;
+right: 1130px;
+width: 60px;
+}
+/* beginning of 190/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe190{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 212px;
+right: 1018px;
+
+}
+.pole190{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag190{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox190{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 365px;
+right: 1123px;
+width: 60px;
+}
+/* beginning of 191/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe191{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 213px;
+right: 1011px;
+
+}
+.pole191{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag191{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox191{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 366px;
+right: 1116px;
+width: 60px;
+}
+/* beginning of 192/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe192{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 214px;
+right: 1004px;
+
+}
+.pole192{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag192{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox192{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 367px;
+right: 1109px;
+width: 60px;
+}
+/* beginning of 193/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe193{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 215px;
+right: 997px;
+
+}
+.pole193{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag193{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox193{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 368px;
+right: 1102px;
+width: 60px;
+}
+/* beginning of 194/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe194{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 216px;
+right: 990px;
+
+}
+.pole194{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag194{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox194{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 369px;
+right: 1095px;
+width: 60px;
+}
+/* beginning of 195/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe195{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 217px;
+right: 983px;
+
+}
+.pole195{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag195{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox195{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 370px;
+right: 1088px;
+width: 60px;
+}
+/* beginning of 196/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe196{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 218px;
+right: 976px;
+
+}
+.pole196{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag196{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox196{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 371px;
+right: 1081px;
+width: 60px;
+}
+/* beginning of 197px/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe197{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 219px;
+right: 969px;
+
+}
+.pole197{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag197{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox197{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 372px;
+right: 1074px;
+width: 60px;
+}
+/* beginning of 198/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe198{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 220px;
+right: 962px;
+
+}
+.pole198{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag198{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox198{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 373px;
+right: 1067px;
+width: 60px;
+}
+/* beginning of 199/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe199{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 221px;
+right: 955px;
+
+}
+.pole199{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag199{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox199{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 374px;
+right: 1060px;
+width: 60px;
+}
+/* beginning of 200/ starts to minus on right:
+/* increment by 1 on bottom & -7 on right*/
+.canoe200{
+width: 300px;
+height: 300px;
+  position: absolute;
+bottom: 222px;
+right: 948px;
+
+}
+.pole200{
+height: 100px;
+width: 5px;
+  background-color: black;
+  float: right;
+}
+.flag200{
+height:40px;
+width: 55px;
+  background-color: white;
+border: 1px solid black;
+  float: left1
+margin-bottom: 60px;
+}
+/* add 1 t6 bottom and -7 to the right*/
+.flagBox200{
+  position: absolute;
+  background-color: transparent;
+z-index: 3;
+bottom: 375px;
+right: 1053px;
+width: 60px;
+}
